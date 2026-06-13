@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PWA / App -->
+  <meta name="theme-color" content="#1a2030">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="604 Tri Club">
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22604%20Tri%20Club%22%2C%20%22short_name%22%3A%20%22604%20Tri%22%2C%20%22description%22%3A%20%22Plataforma%20de%20entrenamiento%20604%20Tri%20Club%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22background_color%22%3A%20%22%23f4f6f9%22%2C%20%22theme_color%22%3A%20%22%231a2030%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%2C%253Csvg%2520xmlns%253D%2522http%253A//www.w3.org/2000/svg%2522%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520viewBox%253D%25220%25200%2520512%2520512%2522%253E%250A%253Crect%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520rx%253D%2522112%2522%2520fill%253D%2522%25231a2030%2522/%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522248%2522%2520font-family%253D%2522Arial%2520Black%252C%2520sans-serif%2522%2520font-weight%253D%2522900%2522%2520font-size%253D%2522170%2522%2520fill%253D%2522%2523f0c842%2522%2520text-anchor%253D%2522middle%2522%253E604%253C/text%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522330%2522%2520font-family%253D%2522Arial%252C%2520sans-serif%2522%2520font-weight%253D%2522700%2522%2520font-size%253D%252252%2522%2520fill%253D%2522%2523ffffff%2522%2520text-anchor%253D%2522middle%2522%2520letter-spacing%253D%25226%2522%253ETRI%2520CLUB%253C/text%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522410%2522%2520font-family%253D%2522Arial%252C%2520sans-serif%2522%2520font-size%253D%252258%2522%2520text-anchor%253D%2522middle%2522%253E%25F0%259F%258F%258A%2520%25F0%259F%259A%25B4%2520%25F0%259F%258F%2583%253C/text%253E%250A%253C/svg%253E%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%0A%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%231a2030%22/%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22248%22%20font-family%3D%22Arial%20Black%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%22170%22%20fill%3D%22%23f0c842%22%20text-anchor%3D%22middle%22%3E604%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22330%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2252%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%226%22%3ETRI%20CLUB%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22410%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2258%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%8A%20%F0%9F%9A%B4%20%F0%9F%8F%83%3C/text%3E%0A%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%0A%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%231a2030%22/%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22248%22%20font-family%3D%22Arial%20Black%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%22170%22%20fill%3D%22%23f0c842%22%20text-anchor%3D%22middle%22%3E604%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22330%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2252%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%226%22%3ETRI%20CLUB%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22410%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2258%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%8A%20%F0%9F%9A%B4%20%F0%9F%8F%83%3C/text%3E%0A%3C/svg%3E">
+
+<title>604 Tri Club — Training Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f6f9;
+  --bg2: #ffffff;
+  --bg3: #f0f2f5;
+  --border: #dde2ea;
+  --border2: #c8d0dc;
+  --gold: #b07e0a;
+  --gold-bg: #fdf3d7;
+  --gold-border: #f0c842;
+  --purple: #6d28d9;
+  --teal: #0d9488;
+  --red: #dc2626;
+  --green: #059669;
+  --blue: #2563eb;
+  --orange: #ea580c;
+  --text: #1a2030;
+  --text2: #445566;
+  --text3: #8899aa;
+  --swim: #0284c7;
+  --bike: #d97706;
+  --run: #059669;
+  --str: #db2777;
+  --rest: #7c3aed;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: #1a2030;
+  border-bottom: 3px solid var(--gold-border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--gold-border);
+  text-transform: uppercase;
+}
+.logo span { color: #8899aa; font-weight: 400; font-size: 13px; margin-left: 10px; letter-spacing: 1px; }
+.header-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #8899aa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.today-badge {
+  background: var(--gold-border);
+  color: #1a2030;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── ATHLETE TABS ── */
+.athlete-nav {
+  display: flex;
+  gap: 2px;
+  padding: 0 24px;
+  background: var(--bg2);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.ath-tab {
+  padding: 12px 22px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.ath-tab:hover { color: var(--text2); background: var(--bg3); }
+.ath-tab.active { color: #1a2030; border-bottom-color: var(--gold-border); background: transparent; }
+.ath-tab .ath-sub { font-weight: 400; font-size: 10px; display: block; color: var(--text3); letter-spacing: 0; margin-top: 1px; }
+
+/* ── MAIN ── */
+.main-inner { max-width: 1100px; }
+.athlete-panel { display: none; }
+.athlete-panel.active { display: block; }
+
+/* ── WEEK HEADER ── */
+.week-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.week-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+.week-range { font-size: 13px; color: var(--text3); }
+.phase-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.phase-base { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.tss-total { margin-left: auto; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text3); }
+.tss-total strong { color: var(--gold); font-size: 14px; }
+
+/* ── WEEK GRID ── */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.day-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 8px;
+  cursor: pointer;
+  transition: all .15s;
+  position: relative;
+  min-height: 84px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.day-card:hover { border-color: var(--border2); box-shadow: 0 2px 8px rgba(0,0,0,.1); transform: translateY(-1px); }
+.day-card.selected { border-color: #1a2030 !important; box-shadow: 0 2px 8px rgba(26,32,48,.15); }
+.day-card.today-card { border-color: var(--gold-border); background: #fffef5; }
+.today-pip {
+  position: absolute; top: 7px; right: 7px;
+  width: 6px; height: 6px;
+  background: var(--gold-border);
+  border-radius: 50%;
+}
+.day-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 1px;
+}
+.day-date { font-size: 10px; color: var(--text3); margin-bottom: 7px; }
+.day-icon { font-size: 20px; margin-bottom: 4px; display: block; }
+.day-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text);
+}
+.day-dur { font-size: 10px; color: var(--text3); margin-top: 3px; }
+.type-bar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 0 0 6px 6px;
+}
+.tb-swim { background: var(--swim); }
+.tb-bike { background: var(--bike); }
+.tb-run { background: var(--run); }
+.tb-str { background: var(--str); }
+.tb-rest { background: var(--rest); }
+
+/* ── SESSION DETAIL ── */
+.session-detail {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  animation: fadeIn .2s ease;
+}
+@keyframes fadeIn { from { opacity:0; transform: translateY(4px); } to { opacity:1; transform:translateY(0); } }
+.sd-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.sd-icon { font-size: 36px; }
+.sd-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+.sd-meta { font-size: 12px; color: var(--text3); margin-top: 3px; }
+.sd-tags { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.tag-swim { background: #e0f2fe; color: var(--swim); border: 1px solid #bae6fd; }
+.tag-bike { background: #fef3c7; color: var(--bike); border: 1px solid #fde68a; }
+.tag-run  { background: #d1fae5; color: var(--run); border: 1px solid #6ee7b7; }
+.tag-str  { background: #fce7f3; color: var(--str); border: 1px solid #fbcfe8; }
+.tag-rest { background: #ede9fe; color: var(--rest); border: 1px solid #c4b5fd; }
+.tag-today { background: var(--gold-bg); color: var(--gold); border: 1px solid var(--gold-border); }
+
+/* Stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.stat-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a2030;
+  display: block;
+}
+.stat-lbl { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+/* Section head */
+.section-head {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text2);
+  margin-bottom: 8px;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-head::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 14px;
+  background: #1a2030;
+  border-radius: 2px;
+}
+
+/* Table */
+table { width: 100%; border-collapse: collapse; border-radius: 6px; overflow: hidden; }
+th {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text3);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+}
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  vertical-align: top;
+  line-height: 1.5;
+  color: var(--text2);
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--bg3); }
+td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; color: var(--text); }
+
+/* Notes */
+.coach-note {
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-border);
+  border-left: 4px solid var(--gold-border);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 16px;
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #5a3e00;
+}
+.coach-note strong { color: var(--gold); }
+
+.info-box {
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  border-left: 4px solid var(--swim);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 16px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #0c4a6e;
+}
+.info-box strong { color: var(--swim); }
+
+.trainer-tip {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.trainer-tip strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* Rest */
+.rest-card {
+  text-align: center;
+  padding: 32px;
+  color: var(--text3);
+}
+.rest-card .big-icon { font-size: 48px; margin-bottom: 12px; }
+.rest-card p { font-size: 14px; line-height: 1.8; max-width: 400px; margin: 0 auto; color: var(--text2); }
+
+/* ── LAYOUT WITH SIDEBAR ── */
+.app-body {
+  display: flex;
+  min-height: calc(100vh - 56px - 52px);
+}
+
+/* ── WEEK SIDEBAR ── */
+.week-sidebar {
+  width: 200px;
+  min-width: 200px;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 108px;
+  height: calc(100vh - 108px);
+  overflow-y: auto;
+}
+.sidebar-section {
+  padding: 0 12px 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text3);
+  margin-top: 8px;
+}
+.week-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all .15s;
+  gap: 2px;
+}
+.week-item:hover { background: var(--bg3); }
+.week-item.active { border-left-color: #1a2030; background: var(--bg3); }
+.week-item.current { border-left-color: var(--gold-border); }
+.week-item.current.active { border-left-color: var(--gold-border); background: var(--gold-bg); }
+.wi-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: .5px;
+}
+.week-item.active .wi-label { color: #1a2030; }
+.wi-range { font-size: 10px; color: var(--text3); }
+.wi-phase {
+  font-size: 9px;
+  font-family: 'Space Mono', monospace;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-top: 1px;
+}
+.wi-badge {
+  display: inline-block;
+  font-size: 9px;
+  background: var(--gold-bg);
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 1px 5px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: .5px;
+  margin-top: 2px;
+  width: fit-content;
+}
+
+/* ── MAIN CONTENT ── */
+.main {
+  flex: 1;
+  padding: 20px 24px 40px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+
+
+/* ── CYCLE AUTO-TRACKER ── */
+.cycle-status {
+  background: #fff;
+  border: 1px solid #fbcfe8;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.cs-today {
+  display: flex;
+  flex-direction: column;
+  padding-right: 14px;
+  border-right: 1px solid #fbcfe8;
+}
+.cs-day {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #db2777;
+  line-height: 1;
+}
+.cs-day-lbl { font-size: 9px; color: #be185d; text-transform: uppercase; letter-spacing: .5px; }
+.cs-phase {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #9d174d;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.cs-next { font-size: 11px; color: #be185d; margin-top: 1px; }
+.cs-forecast {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cs-fc-item {
+  background: #fdf2f8;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+.cs-fc-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9d174d;
+  display: block;
+}
+.cs-fc-lbl { font-size: 8px; color: #be185d; text-transform: uppercase; letter-spacing: .5px; }
+.cs-config {
+  font-size: 10px;
+  color: #be185d;
+  margin-top: 6px;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* ── CYCLE PHASE MODULE (Valeria) ── */
+.cycle-banner {
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+  border: 1px solid #fbcfe8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.cycle-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.cycle-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9d174d;
+}
+.cycle-sub { font-size: 11px; color: #be185d; margin-bottom: 10px; line-height: 1.5; }
+.cycle-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+@media (max-width: 600px) { .cycle-phases { grid-template-columns: repeat(2, 1fr); } }
+.cphase {
+  background: #fff;
+  border: 1.5px solid #fbcfe8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all .15s;
+  text-align: center;
+}
+.cphase:hover { border-color: #f472b6; }
+.cphase.active { border-color: #db2777; background: #fdf2f8; box-shadow: 0 2px 6px rgba(219,39,119,.15); }
+.cphase-emoji { font-size: 16px; }
+.cphase-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #9d174d;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-top: 2px;
+}
+.cphase-days { font-size: 9px; color: #be185d; font-family: 'Space Mono', monospace; }
+.cphase-intensity {
+  font-size: 9px;
+  margin-top: 3px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: 600;
+}
+.int-high { background: #d1fae5; color: #065f46; }
+.int-mod  { background: #fef3c7; color: #92400e; }
+.int-low  { background: #e0e7ff; color: #3730a3; }
+.int-caution { background: #fed7aa; color: #9a3412; }
+.cycle-guidance {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 6px;
+  border-left: 3px solid #db2777;
+  font-size: 12px;
+  color: #831843;
+  line-height: 1.6;
+  display: none;
+}
+.cycle-guidance.show { display: block; }
+.cycle-disclaimer {
+  font-size: 10px;
+  color: #be185d;
+  margin-top: 8px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* intensity option box in sessions */
+.intensity-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+@media (max-width: 600px) { .intensity-options { grid-template-columns: 1fr; } }
+.int-opt {
+  border-radius: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+}
+.int-opt.green { background: #f0fdf4; border-color: #bbf7d0; }
+.int-opt.blue { background: #eff6ff; border-color: #bfdbfe; }
+.int-opt-head {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 6px;
+}
+.int-opt.green .int-opt-head { color: #15803d; }
+.int-opt.blue .int-opt-head { color: #1d4ed8; }
+.int-opt-body { font-size: 11.5px; line-height: 1.6; color: var(--text2); }
+
+/* ── METRICS VIEW ── */
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+  width: fit-content;
+}
+.vt-btn {
+  padding: 7px 18px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text3);
+  transition: all .15s;
+}
+.vt-btn:hover { color: var(--text); }
+.vt-btn.active { background: var(--bg2); color: #1a2030; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+
+.metrics-panel { display: none; }
+.metrics-panel.active { display: block; }
+.plan-view { }
+.plan-view.hidden { display: none; }
+
+/* metrics grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+@media (max-width: 700px) { .metrics-grid { grid-template-columns: 1fr; } }
+
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.metric-card.full { grid-column: 1 / -1; }
+.mc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.mc-icon { font-size: 20px; }
+.mc-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--text);
+}
+.mc-sub { font-size: 11px; color: var(--text3); margin-top: 1px; }
+.mc-badge {
+  margin-left: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.badge-done { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.badge-warn { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+/* stat summary row in metrics */
+.m-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.m-stat {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 7px 12px;
+  text-align: center;
+  min-width: 70px;
+}
+.ms-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a2030;
+  display: block;
+}
+.ms-lbl { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; }
+
+/* SVG charts */
+.chart-wrap {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.chart-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text3);
+  margin-bottom: 6px;
+}
+.chart-legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text2);
+}
+.legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* empty metrics */
+.metrics-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text3);
+}
+.metrics-empty .big { font-size: 40px; margin-bottom: 12px; }
+.metrics-empty p { font-size: 14px; line-height: 1.8; color: var(--text2); max-width: 380px; margin: 0 auto; }
+
+/* profile card */
+.profile-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.profile-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a2030;
+}
+.profile-goal {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+.profile-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.p-stat {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 6px 12px;
+  text-align: center;
+}
+.ps-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a2030;
+  display: block;
+}
+.ps-lbl { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; }
+.trend-up { color: var(--green); }
+.trend-down { color: var(--red); }
+
+@media (max-width: 900px) {
+  .week-sidebar { display: none; }
+}
+@media (max-width: 800px) { .week-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 500px) { .week-grid { grid-template-columns: repeat(3, 1fr); } .main { padding: 12px; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">604 Tri Club <span>Training Platform</span></div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="today-badge">Hoy: Vie 12 Jun</div>
+    <div class="header-date">Semana 6 · Junio 2026</div>
+  </div>
+</header>
+
+<nav class="athlete-nav">
+  <div class="ath-tab active" data-ath="jorge" onclick="switchAth('jorge')">Jorge<span class="ath-sub">T100 + 70.3 Cozumel</span></div>
+  <div class="ath-tab" data-ath="valeria" onclick="switchAth('valeria')">Valeria<span class="ath-sub">T100 + 70.3 Cozumel</span></div>
+  <div class="ath-tab" data-ath="charly" onclick="switchAth('charly')">Carlos<span class="ath-sub">70.3 Cozumel</span></div>
+  <div class="ath-tab" data-ath="santiago" onclick="switchAth('santiago')">Santiago<span class="ath-sub">T100 Vancouver</span></div>
+</nav>
+
+<div class="app-body">
+
+<!-- ── WEEK SIDEBAR ── -->
+<div class="week-sidebar">
+  <div class="sidebar-section">Ciclo actual</div>
+
+  <div class="sidebar-section" style="margin-top:4px;">Fase 1 — Base</div>
+  <div class="week-item" onclick="selectWeek(1)">
+    <span class="wi-label">Semana 1</span>
+    <span class="wi-range">4–10 Mayo</span>
+    <span class="wi-phase">Base aeróbica</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(2)">
+    <span class="wi-label">Semana 2</span>
+    <span class="wi-range">11–17 Mayo</span>
+    <span class="wi-phase">Base aeróbica</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(3)">
+    <span class="wi-label">Semana 3</span>
+    <span class="wi-range">18–24 Mayo</span>
+    <span class="wi-phase">Base aeróbica</span>
+  </div>
+  <div class="week-item" id="sidebar-w4" onclick="selectWeek(4)">
+    <span class="wi-label">Semana 4</span>
+    <span class="wi-range">25–31 Mayo</span>
+    <span class="wi-phase">Base · completada ✓</span>
+  </div>
+
+  <div class="sidebar-section" style="margin-top:8px;">Fase 2 — Construcción</div>
+  <div class="week-item" onclick="selectWeek(5)">
+    <span class="wi-label">Semana 5</span>
+    <span class="wi-range">1–7 Jun</span>
+    <span class="wi-phase">✅ Completada · finde modelo</span>
+  </div>
+  <div class="week-item current active" onclick="selectWeek(6)">
+    <span class="wi-label">Semana 6</span>
+    <span class="wi-range">8–14 Jun</span>
+    <span class="wi-phase">🟢 Folicular · Tests</span>
+    <span class="wi-badge">← Actual</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(7)">
+    <span class="wi-label">Semana 7</span>
+    <span class="wi-range">15–21 Jun</span>
+    <span class="wi-phase">🔵 Base · Construcción 1</span>
+    <span class="wi-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;">Valeria ✓</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(8)">
+    <span class="wi-label">Semana 8</span>
+    <span class="wi-range">22–28 Jun</span>
+    <span class="wi-phase">📉 Deload · lútea tardía</span>
+    <span class="wi-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;">Valeria ✓</span>
+  </div>
+
+  <div class="sidebar-section" style="margin-top:8px;">Fase 3 — Peak</div>
+  <div class="week-item" onclick="selectWeek(9)">
+    <span class="wi-label">Semana 9</span>
+    <span class="wi-range">29 Jun–5 Jul</span>
+    <span class="wi-phase">🔵 Base · Construcción 2 🩸</span>
+    <span class="wi-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;">Valeria ✓</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(10)">
+    <span class="wi-label">Semana 10</span>
+    <span class="wi-range">6–12 Jul</span>
+    <span class="wi-phase">🔵 Base · fin fase 1 🟢</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(11)">
+    <span class="wi-label">Semana 11</span>
+    <span class="wi-range">13–19 Jul</span>
+    <span class="wi-phase">Peak</span>
+  </div>
+
+  <div class="sidebar-section" style="margin-top:8px;">Taper + Competencia</div>
+  <div class="week-item" onclick="selectWeek(12)">
+    <span class="wi-label">Semana 12</span>
+    <span class="wi-range">20–26 Jul</span>
+    <span class="wi-phase">Taper</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(13)">
+    <span class="wi-label">Semana 13</span>
+    <span class="wi-range">27 Jul–2 Ago</span>
+    <span class="wi-phase">Taper</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(14)" style="border-left-color:var(--red);">
+    <span class="wi-label" style="color:var(--red);">T100 Vancouver</span>
+    <span class="wi-range">15–16 Agosto</span>
+    <span class="wi-phase" style="color:var(--red);">🏁 Competencia</span>
+  </div>
+  <div class="week-item" onclick="selectWeek(15)" style="border-left-color:var(--run);">
+    <span class="wi-label" style="color:var(--run);">70.3 Cozumel</span>
+    <span class="wi-range">Sep 2026</span>
+    <span class="wi-phase" style="color:var(--run);">🏁 Competencia</span>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="main">
+  <div class="athlete-panel active" id="panel-jorge">
+    
+  <div class="view-toggle">
+    <button class="vt-btn active" id="vt-plan-jorge" onclick="setView('jorge','plan')">Plan Semanal</button>
+    <button class="vt-btn" id="vt-metrics-jorge" onclick="setView('jorge','metrics')">Métricas</button>
+  </div>
+  <div class="plan-view" id="planview-jorge">
+  <div class="week-header"><div class="week-title">Semana 4</div><div class="week-range">25–31 Mayo</div><div class="phase-tag phase-base">Base Aeróbica</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">80/20 · Semana Test</div><div class="tss-total">TSS est. <strong>~290</strong></div></div>
+    <div class="week-grid" id="grid-jorge"></div>
+    <div class="session-detail" id="detail-jorge"></div>
+  </div><!-- /planview-jorge -->
+  <div class="metrics-panel" id="metrics-jorge"></div>
+  </div>
+  <div class="athlete-panel" id="panel-valeria">
+    
+  <div class="view-toggle">
+    <button class="vt-btn active" id="vt-plan-valeria" onclick="setView('valeria','plan')">Plan Semanal</button>
+    <button class="vt-btn" id="vt-metrics-valeria" onclick="setView('valeria','metrics')">Métricas</button>
+  </div>
+  <div class="plan-view" id="planview-valeria">
+  <div class="week-header"><div class="week-title">Semana 5</div><div class="week-range">1–7 Junio</div><div class="phase-tag phase-base">Base · Menstrual</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#fdf2f8;color:#9d174d;border:1px solid #fbcfe8;">✅ S5 completa · finde modelo</div><div class="tss-total">TSS est. <strong>~190</strong></div></div>
+    <div class="week-grid" id="grid-valeria"></div>
+    <div class="session-detail" id="detail-valeria"></div>
+  </div><!-- /planview-valeria -->
+  <div class="metrics-panel" id="metrics-valeria"></div>
+  </div>
+  <div class="athlete-panel" id="panel-charly">
+    
+  <div class="view-toggle">
+    <button class="vt-btn active" id="vt-plan-charly" onclick="setView('charly','plan')">Plan Semanal</button>
+    <button class="vt-btn" id="vt-metrics-charly" onclick="setView('charly','metrics')">Métricas</button>
+  </div>
+  <div class="plan-view" id="planview-charly">
+  <div class="week-header"><div class="week-title">Semana 4</div><div class="week-range">25–31 Mayo</div><div class="phase-tag phase-base">Base Aeróbica</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;">80/20 · Ajustado ✅</div><div class="tss-total">TSS est. <strong>~295</strong></div></div>
+    <div class="week-grid" id="grid-charly"></div>
+    <div class="session-detail" id="detail-charly"></div>
+  </div><!-- /planview-charly -->
+  <div class="metrics-panel" id="metrics-charly"></div>
+  </div>
+  <div class="athlete-panel" id="panel-santiago">
+    
+  <div class="view-toggle">
+    <button class="vt-btn active" id="vt-plan-santiago" onclick="setView('santiago','plan')">Plan Semanal</button>
+    <button class="vt-btn" id="vt-metrics-santiago" onclick="setView('santiago','metrics')">Métricas</button>
+  </div>
+  <div class="plan-view" id="planview-santiago">
+  <div class="week-header"><div class="week-title">Semana 4</div><div class="week-range">25–31 Mayo</div><div class="phase-tag phase-base">Tests + Base</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;">80/20 · LTHR→S5 ✅</div><div class="tss-total">TSS est. <strong>~195</strong></div></div>
+    <div class="week-grid" id="grid-santiago"></div>
+    <div class="session-detail" id="detail-santiago"></div>
+  </div><!-- /planview-santiago -->
+  <div class="metrics-panel" id="metrics-santiago"></div>
+  </div>
+</div>
+
+<script>
+const TODAY_DATE = '12 Jun';
+
+const JORGE = [
+  { dayLabel:'LUN', dayDate:'25 May', type:'rest', icon:'🧘', title:'Descanso Activo ✓', tag:'rest', dur:'20 min',
+    content:{kind:'rest', note:'Completado. Semana 4 arranca limpia.'} },
+  { dayLabel:'MAR', dayDate:'26 May', type:'bike', icon:'🚴', title:'Rodada Z2', tag:'bike', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'45 min',l:'Duración'},{v:'Z2',l:'Zona'},{v:'120–135',l:'FC bpm'},{v:'ERG ON',l:'Tacx'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','Zona','Watts %FTP','Nota'], rows:[
+        ['Calentamiento','10 min','Z1','55%','Piernas suaves, cadencia libre'],
+        ['Bloque Z2','30 min','Z2','62–67%','Cadencia 85–92 rpm. FC 120–135 bpm'],
+        ['Enfriamiento','5 min','Z1','50%','Bajar FC <115'],
+      ]}], tip:'Primera rodada semana 4. Mantener cadencia alta — eficiencia, no potencia.' } },
+  { dayLabel:'MIÉ', dayDate:'27 May', type:'swim', icon:'🏊', title:'Test CSS · 1,200m', tag:'swim', dur:'~45 min', today:true,
+    content:{ kind:'session', stats:[{v:'1,200m',l:'Total'},{v:'400m+200m',l:'Protocolo'},{v:'CSS',l:'Objetivo'},{v:'Alberca',l:'Lugar'}],
+      sections:[{head:'Protocolo Test CSS', cols:['Set','Distancia','Instrucción','Descanso'], rows:[
+        ['Calentamiento','300m','Nado suave Z1 — aclimatación','—'],
+        ['200m base','200m','Ritmo técnico, sin esfuerzo. Marcar tiempo.','2 min'],
+        ['⏱ 400m TT','400m','All-out controlado. MARCAR TIEMPO EXACTO.','10 min'],
+        ['⏱ 200m TT','200m','All-out. MARCAR TIEMPO EXACTO.','—'],
+        ['Enfriamiento','100m','Muy suave','—'],
+      ]}], coachNote:'<strong>Cálculo CSS:</strong> CSS (seg/100m) = (T400 − T200) / 2. Anotar ambos tiempos y compartir para calibrar zonas de nado.', tip:'Hidratarse bien. El CSS es el número más importante de la semana.' } },
+  { dayLabel:'JUE', dayDate:'28 May', type:'bike', icon:'🚴', title:'Test FTP · 20 min', tag:'bike', dur:'~45 min',
+    content:{ kind:'session', stats:[{v:'20 min',l:'Bloque TT'},{v:'All-out',l:'Intensidad'},{v:'FTP',l:'Objetivo'},{v:'×0.95',l:'Factor'}],
+      sections:[{head:'Protocolo Test FTP', cols:['Segmento','Duración','Instrucción'], rows:[
+        ['Calentamiento','15 min','Z1 + 3×1min sprint corto con 2 min recuperación'],
+        ['⏱ Bloque TT','20 min','All-out sostenido. FC y watts promedio son lo que importa.'],
+        ['Enfriamiento','10 min','Pedaleo muy suave Z1'],
+      ]}], coachNote:'<strong>FTP = Watts promedio 20 min × 0.95.</strong> Registrar watts promedio, FC promedio y FC máxima.', tip:'Los 3 sprints del calentamiento son obligatorios — activan el sistema neuromuscular.' } },
+  { dayLabel:'VIE', dayDate:'29 May', type:'run', icon:'🏃', title:'Carrera Z1 Suave', tag:'run', dur:'30 min',
+    content:{ kind:'session', stats:[{v:'30 min',l:'Duración'},{v:'Z1',l:'Zona'},{v:'<120 bpm',l:'FC'},{v:'RPE 2–3',l:'Esfuerzo'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Caminata activación','5 min','<110','Dinámica cadera y tobillos'],
+        ['Trote Z1','20 min','110–120 bpm','Ritmo conversacional. Si FC sube, caminar.'],
+        ['Enfriamiento','5 min','<110','Caminata + estiramientos'],
+      ]}], tip:'Recuperación activa post-tests. FC manda — si no puedes hablar cómodamente, bajar el ritmo.' } },
+  { dayLabel:'SÁB', dayDate:'30 May', type:'bike', icon:'🚴', title:'Rodada Z2 · 65 min', tag:'bike', dur:'65 min',
+    content:{ kind:'session', stats:[{v:'65 min',l:'Duración'},{v:'Z2',l:'Zona'},{v:'62–67%',l:'FTP'},{v:'85–92',l:'Cadencia rpm'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','Zona','Nota'], rows:[
+        ['Calentamiento','10 min','Z1','Cadencia libre'],
+        ['Bloque Z2','45 min','Z2','Primera sesión con FTP real del jueves.'],
+        ['Enfriamiento','10 min','Z1','Bajar FC, estirar pantorrillas'],
+      ]}], tip:'Ajustar el ERG al FTP real del jueves.' } },
+  { dayLabel:'DOM', dayDate:'31 May', type:'swim', icon:'🏊', title:'Nado Técnico Z2', tag:'swim', dur:'40 min',
+    content:{ kind:'session', stats:[{v:'~1,200m',l:'Total'},{v:'Z2',l:'Zona'},{v:'CSS+10"',l:'Ritmo base'},{v:'Alberca',l:'Lugar'}],
+      sections:[{head:'Estructura', cols:['Set','Distancia','Ritmo/Esfuerzo','Descanso'], rows:[
+        ['Calentamiento','200m','Muy suave Z1','—'],
+        ['4×50m técnica','200m','Patada/brazo der/brazo izq/catch-up','15" c/u'],
+        ['Serie principal','6×100m','CSS+10"/100m · Z2 constante','20" c/u'],
+        ['Enfriamiento','200m','Z1, respiración bilateral','—'],
+      ]}], tip:'Con CSS del miércoles ya tenemos el ritmo real. Foco en respiración bilateral.' } },
+];
+
+const VALERIA = [
+  { dayLabel:'LUN', dayDate:'25 May', type:'rest', icon:'🧘', title:'Descanso Activo ✓', tag:'rest', dur:'20 min',
+    content:{kind:'rest', note:'Completado. Recuperación finalizada. Semana 4 arranca sin restricciones.'} },
+  { dayLabel:'MAR', dayDate:'26 May', type:'bike', icon:'🚴', title:'Rodada Z2 · Cadencia ✓', tag:'bike', dur:'48.5 min',
+    content:{ kind:'session', stats:[{v:'48.5 min',l:'Completada'},{v:'127 bpm',l:'FC Promedio'},{v:'96W',l:'Watts prom.'},{v:'70 rpm',l:'Cadencia real'}],
+      sections:[{head:'Resultado Real vs Planeado', cols:['Métrica','Planeado','Ejecutado','Estado'], rows:[
+        ['Duración','55 min','48.5 min','⚠️ 88%'],
+        ['FC Promedio','Z2 · 120–134','127 bpm · Z2','✅'],
+        ['FC Máxima','<134 bpm','145 bpm','⚠️ drift Z3'],
+        ['Potencia','~62% FTP','96W','✅'],
+        ['Cadencia','83+ rpm','70 rpm prom.','🔴 Solo 3.7% >83rpm'],
+        ['Distribución FC','Z2 dominante','59% Z2 · 21% Z3 · 20% Z1','⚠️'],
+      ]},{head:'Evolución por Bloques', cols:['Bloque','FC','Zona','Potencia','Cadencia'], rows:[
+        ['0–10 min','105–114','Z1','70–82W','53–67 rpm · calentamiento'],
+        ['10–25 min','126–131','Z2 ✅','98–101W','70–72 rpm'],
+        ['25–30 min','134','Límite Z2','104W','75 rpm'],
+        ['30–35 min','131','Z2 ✅','98W','71 rpm'],
+        ['35–45 min','135–136','⚠️ Z3 drift','105W','76 rpm'],
+        ['45–49 min','130','Z2','96W','72 rpm · enfriamiento corto'],
+      ]}],
+      coachNote:'<strong>Diagnóstico de entrenadora:</strong> Control de FC aceptable — 59% en Z2 y 0% en Z4. Sin embargo, la cadencia es el indicador crítico de esta fase: solo el 3.7% del tiempo estuvo por encima de 83 rpm. Mejora real respecto a semana 2 (+6 rpm: 64→70), pero la brecha con el objetivo sigue siendo el trabajo central del ciclo. El cardiac drift hacia Z3 en los bloques 35–45 min es esperado para primera semana completa de regreso.',
+      tip:'<strong>Aprendizaje para el sábado:</strong> la cadencia no se negocia. Si la FC sube al intentar girar más rápido, la respuesta es bajar la resistencia — nunca bajar la cadencia.' } },
+  { dayLabel:'MIÉ', dayDate:'27 May', type:'swim', icon:'🏊', title:'Nado Alberca · Z1–Z2 ✓', tag:'swim', dur:'30:45 min',
+    content:{ kind:'session',
+      stats:[{v:'1,050m',l:'Completada'},{v:'128 bpm',l:'FC Promedio'},{v:'2:11/100m',l:'Pace prom.'},{v:'217 kcal',l:'Calorías'}],
+      sections:[{head:'Resultado Real vs Planeado', cols:['Métrica','Planeado','Ejecutado','Estado'], rows:[
+        ['Distancia','~1,050m','1,050m','✅ Exacto'],
+        ['Duración','35–40 min','30:45 min','⚠️ 5 min corta'],
+        ['FC Promedio','Z1–Z2','128 bpm · Z2','✅'],
+        ['FC Máxima','<134 bpm','148 bpm','⚠️ picos en reps 1 y 3'],
+        ['Distribución FC','Z2 dominante','60.5% Z2 · 21.5% Z3 · 0% Z4','⚠️'],
+        ['Estructura','Calent+Drills+5×100m','Seguida completa','✅'],
+      ]},{head:'Serie Principal 5×100m — Dato Clave', cols:['Rep','Pace','FC avg','FC max','Estado'], rows:[
+        ['Rep 1','1:55/100m','139','148','🔴 Z3 — arrancó demasiado fuerte'],
+        ['Rep 2','2:27/100m','133','137','✅ Z2 — recuperando'],
+        ['Rep 3','2:00/100m','138','147','🔴 Z3 — repitió el error'],
+        ['Rep 4','2:28/100m','129','132','✅ Z2 — recuperando'],
+        ['Rep 5','2:04/100m','133','141','✅ Z2 — pace natural encontrado'],
+        ['Promedio','2:11/100m','134','148','Oscilación: 33 seg entre reps'],
+      ]}],
+      coachNote:'<strong>Diagnóstico de pace:</strong> La oscilación de 33 segundos entre la rep más rápida (1:55) y la más lenta (2:27) no es variación normal — es el patrón clásico de atleta sin ritmo de referencia en el agua. Arranca fuerte (burst anaeróbico), se agota, recupera, repite. La Rep 5 a 2:04/100m con FC 133 es la señal más valiosa: cuando llegó con fatiga acumulada y no pudo arrancar rápido, el cuerpo encontró su Z2 natural. <strong>CSS estimado preliminar: ~2:08–2:12/100m.</strong> El test CSS de la próxima semana lo confirmará.',
+      poolNote:true,
+      tip:'<strong>Primera sesión de alberca del ciclo completada.</strong> 1,050m exactos, estructura seguida, cero tiempo en Z4. Próxima sesión de nado: configurar reloj en intervalos con alarma de pace. Objetivo: ninguna rep bajo 2:05/100m — más despacio es más inteligente hasta tener el CSS real.' } },
+  { dayLabel:'JUE', dayDate:'28 May', type:'run', icon:'🏃', title:'Carrera Z2 + Fuerza Opcional', tag:'run', dur:'40 min (+30)',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Carrera'},{v:'Z2',l:'Zona'},{v:'120–132',l:'FC bpm'},{v:'+30 min',l:'Fuerza opt.'}],
+      sections:[{head:'Bloque 1 · Carrera Z2 (obligatorio)', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Activación caminata','5 min','<115','Dinámica de cadera y tobillos'],
+        ['Carrera Z2','28 min','120–132 bpm','FC techo 132 bpm. Ritmo nasal. Sin presión de pace.'],
+        ['Enfriamiento','7 min','<115','Caminata suave. Estiramientos básicos.'],
+      ]},{head:'Bloque 2 · Fuerza Funcional (opcional — solo si energía permite)', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Sentadilla goblet','3×12','Carga moderada. Profundidad completa.'],
+        ['Peso muerto rumano','3×12','Bisagra de cadera. Espalda neutral.'],
+        ['Hip thrust','3×15','Glúteo. Tempo 2-1-2.'],
+        ['Plancha con rotación','2×8 c/u','Core antirotatorio. Calidad sobre cantidad.'],
+        ['Press palof','2×10 c/u','Estabilidad de core. Resistencia baja.'],
+      ]}],
+      coachNote:'<strong>Nueva estructura semanal:</strong> La fuerza se integra como bloque opcional post-carrera — nunca como sesión independiente. Si la carrera dejó fatiga real (FC elevada, piernas pesadas), <strong>omitir la fuerza sin culpa</strong>. El estímulo de carrera ya fue recibido. La fuerza está diseñada para días en que terminas la carrera con energía disponible.',
+      tip:'Criterio de decisión para la fuerza: al terminar la carrera, si sientes que podrías hacer 10 sentadillas limpias → haz el bloque. Si no, estira y vete a casa. Esa honestidad es parte del entrenamiento.' } },
+  { dayLabel:'VIE', dayDate:'29 May', type:'swim', icon:'🏊', title:'Nado Z2 · 2do Nado ✓', tag:'swim', dur:'40 min (+30)',
+    content:{ kind:'session', stats:[{v:'~1,100m',l:'Total'},{v:'Z2',l:'Zona'},{v:'120–132',l:'FC bpm'},{v:'+30 min',l:'Fuerza opt.'}],
+      sections:[{head:'Bloque 1 · Nado Z2 (obligatorio)', cols:['Set','Distancia','Zona','Descanso','Foco'], rows:[
+        ['Calentamiento','200m','Z1 · muy suave','—','Percepción del agua. Sin prisa.'],
+        ['2×50m técnica','100m','Z1 · drill libre','20"','Un drill de la sesión del miércoles que sintió bien.'],
+        ['Serie principal','6×100m','Z2 · RPE 3–4','25"','Pace >2:05/100m — no salir rápido. FC manda.'],
+        ['Enfriamiento','200m','Z1','—','Respiración bilateral. Terminar relajada.'],
+      ]},{head:'Bloque 2 · Fuerza Funcional (opcional — post-nado)', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Zancada inversa','3×10 c/u','Carga ligera-moderada. Rodilla estable.'],
+        ['Hip thrust','3×15','Glúteo. Tempo 2-1-2.'],
+        ['Plancha frontal','3×30s','Core. Sin compensar cadera.'],
+        ['Rotación de cadera (banda)','2×15 c/u','Movilidad específica triatleta.'],
+      ]}],
+      coachNote:'<strong>2do nado de la semana — nueva estructura:</strong> El viernes reemplaza la segunda carrera por el segundo nado. Esto es deliberado: la natación es el disciplina que más tiempo tarda en desarrollarse en triatletas adultos y 2 sesiones por semana es el mínimo para ver progreso técnico. Con el CSS estimado en ~2:10/100m, necesitamos exposición frecuente al agua. La fuerza post-nado (si aplica) es más fácil de ejecutar porque el nado no genera impacto articular.',
+      tip:'Los 6×100m de hoy aplican la lección del miércoles: pace mínimo 2:05/100m. Si alguna rep baja de ese número, la siguiente se hace deliberadamente más lenta. El ritmo consistente construye más que el ritmo rápido-lento.' } },
+  { dayLabel:'SÁB', dayDate:'30 May', type:'bike', icon:'🚴', title:'Rodada Larga ⚠️ (110min · muy intensa)', tag:'bike', dur:'90 min',
+    content:{ kind:'session', stats:[{v:'90 min',l:'Duración ↑'},{v:'Z2 · 120–134',l:'Zona FC'},{v:'85+ rpm',l:'Cadencia'},{v:'Ver fase',l:'Intensidad'}],
+      sections:[{head:'Estructura Base (todas las fases)', cols:['Segmento','Duración','Zona','Cadencia','FC'], rows:[
+        ['Calentamiento','12 min','Z1','Libre','<115'],
+        ['Bloque Z2 · foco cadencia','66 min','Z2','🎯 85–90 rpm · ALARMA 83rpm','120–134'],
+        ['Enfriamiento','12 min','Z1','Libre','<115'],
+      ]}],
+      cycleOptions:{
+        green:{ head:'🟢 Folicular / Menstrual-bien · AÑADIR CALIDAD', body:'Dentro del bloque Z2, insertar <strong>4×4min en Z3</strong> (FC 135–145, RPE 6) con 3 min Z2 entre cada uno. Este es el "20%" de intensidad que faltaba. Mantener cadencia 85+ rpm también en los intervalos.' },
+        blue:{ head:'🌙 Lútea tardía · SOLO AERÓBICO', body:'Omitir los intervalos Z3. Mantener todo el bloque en Z2 puro con foco en cadencia. El volumen (90 min) se mantiene, pero la intensidad baja. Hidratación extra por la temperatura corporal elevada.' }
+      },
+      coachNote:'<strong>Carga aumentada (+10 min) + intensidad según ciclo:</strong> Valeria pidió más volumen y los datos lo respaldan — completa sus sesiones con buena recuperación. La rodada sube de 80 a 90 min. La novedad es el bloque de calidad opcional: en fase folicular se agregan 4×4min Z3 (introduciendo el 20% de alta intensidad del 80/20); en fase lútea tardía se mantiene puramente aeróbico. <strong>Esto es periodización femenina real.</strong>',
+      tip:'Configurar alarma de cadencia en 83 rpm. Si hace los intervalos Z3, hacerlos en la primera mitad del bloque (fresca = mejor calidad). Hidratación en minutos 20, 40 y 60.' } },
+  { dayLabel:'DOM', dayDate:'31 May', type:'run', icon:'🏃', title:'Carrera Larga Z2 · 55 min', tag:'run', dur:'55 min',
+    content:{ kind:'session', stats:[{v:'55 min',l:'Duración'},{v:'Z2',l:'Zona'},{v:'120–134',l:'FC bpm'},{v:'TSS ~45',l:'Carga est.'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Activación caminata','5 min','<115','Dinámica completa'],
+        ['Carrera Z2 larga','43 min','120–134','FC manda. Terreno plano.'],
+        ['Enfriamiento','7 min','<115','Caminata, estiramientos completos'],
+      ]}], tip:'Carrera más larga del ciclo hasta ahora. Si en los últimos 10 min la FC sube sin aumentar ritmo, reducir pace — no parar.' } },
+];
+
+const VALERIA_W5 = [
+  { dayLabel:'LUN', dayDate:'1 Jun', type:'swim', icon:'🌊', title:'Nado Aguas Abiertas ✓ · Día 1', tag:'swim', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'1,298m',l:'Completado'},{v:'128 bpm',l:'FC Promedio'},{v:'3:28/100m',l:'Pace'},{v:'299 kcal',l:'Calorías'}],
+      sections:[{head:'Resultado Real', cols:['Métrica','Valor','Estado'], rows:[
+        ['Distancia','1,298m','—'],
+        ['Duración','45.1 min','—'],
+        ['Pace','3:28/100m','Normal para aguas abiertas'],
+        ['FC Promedio','128 bpm','✅ Z2'],
+        ['FC Máxima','143 bpm','✅ Controlada'],
+        ['Distribución FC','72% Z2 · 18% Z3 · 0% Z4','✅ Aeróbico'],
+      ]}],
+      coachNote:'<strong>Día 1 ciclo — salió intempestivamente, fuera de la regla.</strong> La regla de alberca se mantiene; este nado fue una excepción puntual por la oportunidad. Sesión bien ejecutada (72% Z2, cero Z4), pero Valeria reportó sentirse <strong>un poco débil</strong> — normal en día 1 (hierro más bajo, cambio hormonal). Se le recordó que era descanso; aun así salió la oportunidad y la tomó.',
+      tip:'Por sentirse débil + haber usado el día de descanso: el martes queda MÁS flexible de lo normal. Prioridad esta noche: hierro, comida con buen aporte de carbohidratos y hierro (espinaca, carne roja, legumbres), hidratación y sueño. Mañana el cuerpo manda.' } },
+  { dayLabel:'MAR', dayDate:'2 Jun', type:'rest', icon:'🧘', title:'Descanso ✓ · Día 2 (decisión correcta)', tag:'rest', dur:'—',
+    content:{kind:'rest', note:'Valeria descansó — la decisión correcta. El lunes usó su día libre para nadar y se sintió débil (normal en día 1). Tomar el descanso ayer en vez de forzar la bici fue exactamente lo que pide la fase menstrual: el cuerpo manda. Ahora llega al día 3 más recuperada, lista para retomar el plan. Esto es escuchar al cuerpo, no perder entrenamiento.'} },
+  { dayLabel:'MIÉ', dayDate:'3 Jun', type:'swim', icon:'🏊', title:'Nado Técnico Z2 ✓ · Día 3 (+10%)', tag:'swim', dur:'33.5 min',
+    content:{ kind:'session', stats:[{v:'1,200m',l:'Completado ✓'},{v:'2:47/100m',l:'Pace'},{v:'~131 bpm',l:'FC real est.'},{v:'195 kcal',l:'Calorías'}],
+      sections:[{head:'Resultado Real', cols:['Métrica','Valor','Estado'], rows:[
+        ['Distancia','1,200m','✅ Cumplió el +10%'],
+        ['Duración','33.5 min','—'],
+        ['Pace','2:47/100m','Razonable (técnico con drills)'],
+        ['FC promedio real','~131 bpm (datos limpios)','Z2 — consistente'],
+        ['FC del sensor','máx 230 bpm','🔴 Error óptico en agua — ignorar'],
+      ]}],
+      coachNote:'<strong>🔴 FC no confiable — fallo de sensor óptico en agua:</strong> El sensor de muñeca del Fenix 6 registró picos imposibles (máx 230 bpm, 7% de lecturas sobre el máximo teórico). El agua dispersa la luz LED del sensor. La FC limpia promedió ~131 bpm (Z2 correcto). <strong>La sesión en sí estuvo bien:</strong> 1,200m completados (el +10%), pace 2:47/100m razonable. Para nado, gobernar por pace + RPE — la FC de muñeca no sirve en el agua.',
+      tip:'Recomendación de equipo: para natación usar pace + RPE (estándar en el deporte). Si se quiere FC real en agua, banda pectoral tipo HRM-Swim o Polar H10 en modo memoria. Para hoy: nado bien ejecutado, dato de FC descartado.', poolNote:true } },
+  { dayLabel:'JUE', dayDate:'4 Jun', type:'bike', icon:'🚴', title:'Bici Fuerza · Power Slope ✓ (% FTP)', tag:'bike', dur:'50.8 min',
+    content:{ kind:'session', stats:[{v:'50.8 min ✓',l:'Completado'},{v:'78 rpm',l:'Cadencia real ⚠️'},{v:'120 bpm',l:'FC prom'},{v:'310 kcal',l:'Calorías'}],
+      sections:[{head:'Estructura — Power Slope (% FTP · ERG o Slope)', cols:['Segmento','Duración','% FTP','Watts est.','Cadencia'], rows:[
+        ['Calentamiento','6 min','45→55%','70–85W','90 rpm libre'],
+        ['Activación','6 min','60→65%','92–100W','90 rpm'],
+        ['🔧 Slope 1','3 min','70%','108W','55 rpm'],
+        ['Recuperación','3 min','50%','77W','90 rpm'],
+        ['🔧 Slope 2','3 min','72%','111W','55 rpm'],
+        ['Recuperación','3 min','50%','77W','90 rpm'],
+        ['🔧 Slope 3','3 min','75%','116W','52 rpm'],
+        ['Recuperación','3 min','50%','77W','90 rpm'],
+        ['🔧 Slope 4','3 min','77%','119W','52 rpm'],
+        ['Recuperación','3 min','50%','77W','90 rpm'],
+        ['🔧 Slope 5','3 min','80%','123W','50 rpm'],
+        ['Recuperación','3 min','50%','77W','90 rpm'],
+        ['🔧 Slope 6','3 min','82%','126W','50 rpm'],
+        ['Enfriamiento','8 min','50→45%','77→70W','90 rpm libre'],
+      ]}],
+      coachNote:'<strong>✓ Completado — pero la cadencia quedó alta:</strong> Pegó los watts (máx 126W = objetivo) pero pedaleó a 78 rpm promedio (solo 3% bajo 60 rpm) en vez de los 50–55 rpm prescritos. A 78 rpm fue una sesión de potencia moderada, NO de fuerza — el estímulo de fuerza requiere la baja cadencia. FC controlada (120 prom). Para la próxima (bici fuerza/velocidad S7): usar Slope mode o grindear conscientemente 52–55 rpm.',
+      tip:'En ERG mode: si bajas la cadencia el Tacx sube la resistencia automáticamente para mantener el watt — mantén conscientemente las rpm objetivo. En Slope mode: pon ~5% de pendiente y empuja. Si las rodillas molestan (día 4 ciclo), sube 5 rpm en cada intervalo. NO mecer el cuerpo.' } },
+  { dayLabel:'VIE', dayDate:'5 Jun', type:'run', icon:'🏃', title:'Carrera Z2 ⚠️ (resultó 87% Z4)', tag:'run', dur:'52.7 min',
+    content:{ kind:'session', stats:[{v:'52.7 min',l:'Completada'},{v:'158 bpm',l:'FC prom 🔴'},{v:'172 bpm',l:'FC máx'},{v:'7:31/km',l:'Pace'}],
+      sections:[{head:'Resultado Real vs Prescrito', cols:['Métrica','Prescrito','Real','Estado'], rows:[
+        ['Zona objetivo','Z2 (120–132)','FC prom 158','🔴'],
+        ['Distribución','~80% Z2','87% Z4 · 1% Z2','🔴'],
+        ['FC máxima','<132','172','🔴'],
+        ['Patrón','Z2 estable','Subió a Z4 al min 5, ahí se quedó','🔴'],
+      ]},{head:'Por Bloques de 5 min', cols:['Bloque','FC','Zona'], rows:[
+        ['0–5 min','135','Z3'],
+        ['5–25 min','156–159','🔴 Z4'],
+        ['25–55 min','161–164','🔴 Z4 sostenido'],
+      ]}],
+      coachNote:'<strong>🔴 Tercera sesión fácil ejecutada en Z4 (patrón):</strong> Sáb S4 (66% Z3+Z4), Dom S4 (85%), hoy (87%). El diagnóstico honesto: a Valeria NO le falta intensidad — le sobra, y le falta base aeróbica. El motor que la haría más rápida se construye en Z2, no en Z4. Corrió más rápido (7:31 vs 8:30 previo) y con más pulso, en lo que debía ser recuperación post power slope. <strong>Prioridad: test LTHR del 11 Jun</strong> para saber cuánto es zona mal calibrada vs correr de más. Intervención: alarma de FC en el Garmin + caminar cuando suene.',
+      tip:'Para mejorar en las 3 disciplinas, la clave NO es más intensidad — es disciplina en los días fáciles. El 80/20 es el mecanismo de la mejora, no un freno. Próximos días fáciles: FC manda sobre el orgullo, caminar si la alarma suena.' } },
+  { dayLabel:'SÁB', dayDate:'6 Jun', type:'bike', icon:'🚴', title:'Bici Z2 Larga ✓ · EJECUCIÓN PERFECTA', tag:'bike', dur:'78 min',
+    content:{ kind:'session', stats:[{v:'78 min ✓',l:'Completada'},{v:'109 bpm',l:'FC prom'},{v:'128 bpm',l:'FC máx'},{v:'0%',l:'Z3+Z4'}],
+      sections:[{head:'Resultado Real — Modelo de Sesión Aeróbica', cols:['Métrica','Objetivo','Real','Estado'], rows:[
+        ['Zona','Z2 aeróbico','FC prom 109','✅ Perfecto'],
+        ['Distribución','~80% Z1-Z2','Z1 66% · Z2 34% · Z3-Z4 0%','✅✅'],
+        ['FC máxima','<134','128','✅'],
+        ['Lugar','Indoor (Tacx)','Indoor','✅ Control total'],
+      ]}],
+      coachNote:'<strong>✅ Sesión modelo — así se ve el trabajo aeróbico bien hecho:</strong> 100% en Z1-Z2, cero tiempo en Z3-Z4. Indoor en el Tacx, Valeria controla la intensidad perfectamente. Este es exactamente el "80% fácil" que construye el motor aeróbico. Contraste total con el viernes outdoor (87% Z4). La lección: las sesiones fáciles, hacerlas indoor donde ella clava el control.',
+      tip:'Guardar esta sesión como referencia. Así se siente y se ve un día aeróbico bien ejecutado. Cuando una sesión fácil se sienta "demasiado fácil", probablemente está justo bien.' } },
+  { dayLabel:'DOM', dayDate:'7 Jun', type:'run', icon:'🏃', title:'Carrera Z2 Larga + Strides (Zonas FC) · Día 7 🟢', tag:'run', dur:'60 min',
+    content:{ kind:'session', stats:[{v:'60 min ↑',l:'Duración'},{v:'Z2',l:'Zona FC'},{v:'120–132',l:'FC bpm'},{v:'4–6×10s',l:'Strides'}],
+      sections:[{head:'Estructura — Carrera Larga en Zonas de FC', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','5 min','Z1','<115','Dinámica completa'],
+        ['Carrera Z2','45 min','Z2','120–132 bpm','FC manda. Terreno plano. La sesión más larga de la semana.'],
+        ['4–6×10s strides','5 min','Pico Z4 breve','—','Aceleraciones. 60s trote entre cada una.'],
+        ['Enfriamiento','5 min','Z1','<115','Caminata + estiramientos'],
+      ]}],
+      coachNote:'<strong>Día 7 — folicular, preparando velocidad:</strong> Los strides reintroducen el estímulo neuromuscular antes de la Semana 6 donde llega el trabajo de tempo formal. En fase folicular puede hacer los 6 strides sin problema. Esto cierra la semana de recuperación menstrual y abre la fase de calidad.',
+      tip:'Importante: terreno plano y controlado. El fin de semana pasado las sesiones se fueron a Z4 por el terreno exterior. Hoy, FC techo 132 — disciplina.' } },
+];
+
+const VALERIA_W6 = [
+  { dayLabel:'LUN', dayDate:'8 Jun', type:'rest', icon:'🧘', title:'Descanso Activo · Día 8 🟢', tag:'rest', dur:'20 min',
+    content:{kind:'rest', note:'Día 8 del ciclo — plena fase folicular. Movilidad y preparación. Esta semana es la LLAVE: los tests que movimos de la S5 van aquí, con el cuerpo en su mejor momento hormonal.'} },
+  { dayLabel:'MAR', dayDate:'9 Jun', type:'bike', icon:'🚴', title:'TEST FTP ✓ · FTP ~130W · FC máx 174', tag:'bike', dur:'36 min',
+    content:{ kind:'session', stats:[{v:'~130W',l:'FTP nuevo'},{v:'135W',l:'Mejor 20min'},{v:'174 bpm',l:'FC máx ⭐'},{v:'85 rpm',l:'Cadencia'}],
+      sections:[{head:'Resultado del Test', cols:['Métrica','Valor','Lectura'], rows:[
+        ['FTP de trabajo','~130W','Revisado de 154W estimado — ¡era más bajo!'],
+        ['Mejor 20 min','135W','Pacing irregular lo subestima algo'],
+        ['FC máxima','174 bpm','⭐ Dato clave — zonas estaban muy bajas'],
+        ['Ejecución','Construyó + sprint final','Debió ser parejo y fuerte desde el inicio'],
+      ]}],
+      coachNote:'<strong>✓ Test hecho — recalibración valiosa en AMBAS direcciones:</strong> El FTP real (~130W) resultó MÁS BAJO que el estimado (154W) → los watts que prescribíamos eran muy duros. Y la FC máx de 174 revela que las zonas de FC estaban muy BAJAS (techo Z2 era 134). Juntos explican por qué todo se veía "demasiado intenso". <strong>Ejecución:</strong> el bloque no se pedaleó parejo (subió y bajó, sprint al final) — eso subestima el FTP. Un re-test con ritmo constante lo afinará, pero 130W ya es mucho mejor base que el estimado.',
+      tip:'Para el próximo test: comprometer un ritmo alto y SOSTENIDO desde el minuto 1, no construir. El archivo .zwo con bloques fijos ayuda a pacearlo. El jueves el test LTHR define las zonas de carrera reales.' } },
+  { dayLabel:'MIÉ', dayDate:'10 Jun', type:'swim', icon:'🏊', title:'Nado Técnico ✓ · Día 10 (93% Z1-Z2)', tag:'swim', dur:'35 min',
+    content:{ kind:'session', stats:[{v:'1,325m ✓',l:'Completado'},{v:'129 bpm',l:'FC prom'},{v:'154 bpm',l:'FC máx'},{v:'2:38/100m',l:'Pace'}],
+      sections:[{head:'Bloque 1 · Nado (volumen aumentado)', cols:['Set','Distancia','Zona','Descanso','Foco'], rows:[
+        ['Calentamiento','300m','Z1','—','Percepción'],
+        ['4×50m drills','200m','Z1','15"','Técnica'],
+        ['Serie principal','7×100m','Z2','20"','Pace mín 2:05/100m · +2 reps vs antes'],
+        ['Enfriamiento','200m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · Fuerza (folicular = buena para carga)', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Sentadilla goblet','3×12','En folicular tolera más carga — subir un poco'],
+        ['Peso muerto rumano','3×12','Bisagra limpia'],
+        ['Hip thrust','3×15','Glúteo, tempo 2-1-2'],
+        ['Plancha rotación','3×8 c/u','Core'],
+      ]}],
+      coachNote:'<strong>Recuperación activa entre tests + fuerza folicular:</strong> Día suave entre el FTP (martes) y el LTHR (jueves). La fuerza, si se hace, aprovecha que la fase folicular construye músculo con más eficiencia — se puede subir ligeramente la carga.',
+      tip:'Día puente entre tests. El nado protege las piernas.', poolNote:true } },
+  { dayLabel:'JUE', dayDate:'11 Jun', type:'run', icon:'🏃', title:'Carrera Z2 ✓ · AVANCE: 100% aeróbica OUTDOOR ⭐', tag:'run', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'45 min ✓',l:'Outdoor'},{v:'127 bpm',l:'FC prom'},{v:'137 bpm',l:'FC máx'},{v:'100%',l:'Z1-Z2 ⭐'}],
+      sections:[{head:'Resultado Real — EL AVANCE QUE BUSCÁBAMOS', cols:['Métrica','Viernes pasado','Ayer','Estado'], rows:[
+        ['Lugar','Outdoor','Outdoor','—'],
+        ['FC promedio','158','127','✅✅'],
+        ['Distribución','87% Z4','100% Z1-Z2','⭐'],
+        ['FC máxima','172','137','✅'],
+        ['Pace','7:31/km','10:38/km','Sacrificó pace por zona'],
+      ]}],
+      coachNote:'<strong>⭐ Primera carrera OUTDOOR 100% aeróbica:</strong> Por primera vez Valeria corrió afuera y se mantuvo completamente en Z1-Z2 (FC máx 137, cero Z3+). La clave: corrió a 10:38/km, mucho más lento, sacrificando velocidad para respetar la zona. Eso es la disciplina que faltaba. Confirma las dos cosas: las zonas estaban mal (ahora tiene espacio) Y puede controlar afuera cuando se compromete. Este es un antes y un después.',
+      tip:'Esto valida todo el enfoque. El siguiente paso no es correr más rápido — es mantener esta disciplina mientras sube el volumen. La velocidad llegará sola cuando el motor aeróbico esté construido. Excelente ejecución.' } },
+  { dayLabel:'VIE', dayDate:'12 Jun', type:'swim', icon:'🏊', title:'Nado Recuperación ✓ · Día 12 (88% Z1)', tag:'swim', dur:'33.4 min', today:true,
+    content:{ kind:'session', stats:[{v:'1,175m ✓',l:'Completado'},{v:'120 bpm',l:'FC prom'},{v:'147 bpm',l:'FC máx'},{v:'2:50/100m',l:'Pace'}],
+      sections:[{head:'Resultado Real — Recuperación Modelo', cols:['Métrica','Valor','Estado'], rows:[
+        ['Distancia','1,175m','✅ Objetivo'],
+        ['FC promedio','120 bpm','✅ Z1'],
+        ['FC máxima','147 bpm','✅ Limpio'],
+        ['Distribución','88% Z1 · 11% Z2 · 0% Z4','✅✅'],
+        ['Patrón FC','114–127 estable','✅ Controlado'],
+      ]}],
+      coachNote:'<strong>✅ Recuperación perfecta + 3er día seguido de control aeróbico:</strong> 88% Z1, FC controlada toda la sesión. Esto cierra una racha excelente: Mié (93% Z1-Z2), Jue (100%, el avance outdoor), Vie (99%). Valeria está encadenando control aeróbico — la recalibración de zonas + disciplina funcionando. FC limpia otra vez (máx 147).',
+      tip:'Tres sesiones seguidas en zona perfecta. Esto es exactamente lo que construye el motor para Cozumel. Excelente consistencia.', poolNote:true } },
+  { dayLabel:'SÁB', dayDate:'13 Jun', type:'bike', icon:'🚴', title:'Bici CADENCIA + FUERZA (FTP 130W) 🟢', tag:'bike', dur:'90 min',
+    content:{ kind:'session', stats:[{v:'90 min',l:'Duración'},{v:'Cadencia+Fuerza',l:'Doble foco'},{v:'130W',l:'FTP real'},{v:'Slope',l:'Para fuerza'}],
+      sections:[{head:'1️⃣ Bloque CADENCIA (velocidad de piernas)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','12 min','50→60%','65–78W','spin-ups 90→100 rpm'],
+        ['4×2min alta cadencia','12 min','60–65%','78–85W','🎯 100–105 rpm · 1 min suave entre'],
+      ]},{head:'2️⃣ Bloque FUERZA (Slope mode, baja cadencia)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['5×2min FUERZA','20 min','75–80%','98–104W','🔧 50–55 rpm · 2 min suave entre. SLOPE MODE.'],
+      ]},{head:'3️⃣ Base aeróbica', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Bloque Z2','36 min','62–67%','81–87W','85–90 rpm'],
+        ['Enfriamiento','10 min','50→45%','65–58W','Libre'],
+      ]}],
+      coachNote:'<strong>Cadencia + Fuerza, recalibrado a FTP 130W:</strong> Dos trabajos en una sesión. El bloque de CADENCIA (100–105 rpm) ataca su cadencia natural baja (62–66 rpm) — sube la velocidad de piernas. El bloque de FUERZA (50–55 rpm) construye torque muscular. <strong>Clave: usar SLOPE MODE en el bloque de fuerza</strong> — en ERG el power slope pasado lo pedaleó a 78 rpm; en Slope la resistencia fija la obliga a la cadencia baja real.',
+      tip:'Cadencia: las piernas giran rápido pero suaves, sin rebotar en el sillín. Fuerza: Slope ~5%, sentada, empujar fuerte y lento. Son estímulos opuestos a propósito — velocidad arriba, fuerza abajo.' } },
+  { dayLabel:'DOM', dayDate:'14 Jun', type:'run', icon:'🏃', title:'Carrera Z2 + Tempo · Día 14 ⚠️ Ovulación', tag:'run', dur:'62 min',
+    content:{ kind:'session', stats:[{v:'62 min ↑',l:'Duración'},{v:'3×4min',l:'Tempo'},{v:'⚠️ Ovulación',l:'Cuidado articular'},{v:'146–157',l:'Z3 tempo'}],
+      sections:[{head:'Estructura — Velocidad (zonas recalibradas)', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','5 min','Z1','<130','Dinámica completa, sin movimientos bruscos'],
+        ['Base Z2','20 min','Z2','130–145','Preparar el cuerpo · +5 min volumen'],
+        ['3×4min TEMPO','18 min','Z3','146–157','⭐ Velocidad. 2 min trote entre.'],
+        ['Base Z2','12 min','Z2','130–145','Volver a fácil'],
+        ['Enfriamiento','7 min','Z1','<130','Caminata + estiramientos'],
+      ]}],
+      coachNote:'<strong>Velocidad con zonas recalibradas + cuidado de ovulación:</strong> Con las zonas nuevas (de la FC máx real 174-178), el tempo es Z3 = 146–157 bpm. El tempo eleva el ritmo sostenible — la velocidad que pidió. <strong>Nota de ovulación (día 14):</strong> aeróbicamente fuerte, pero la mayor laxitud ligamentaria pide cuidado en cambios de dirección. El tempo en recto es seguro.',
+      tip:'Día de ovulación: evitar terreno técnico o giros bruscos. Tempo en recto perfecto. Recomiendo caminadora para control de FC. Si hay molestia articular, reducir a 2×4min.' } },
+];
+
+const VALERIA_W7 = [
+  { dayLabel:'LUN', dayDate:'15 Jun', type:'rest', icon:'🧘', title:'Descanso Activo · Día 15', tag:'rest', dur:'20 min',
+    content:{kind:'rest', note:'Día 15 — transición ovulación→lútea temprana. Inicia la fase de construcción: la biblioteca completa de sesiones con zonas reales (de los tests de S6). Movilidad y preparación.'} },
+  { dayLabel:'MAR', dayDate:'16 Jun', type:'bike', icon:'🚴', title:'Bici CADENCIA + FUERZA + VELOCIDAD (130W) ⚡', tag:'bike', dur:'65 min',
+    content:{ kind:'session', stats:[{v:'65 min',l:'Duración'},{v:'3 bloques',l:'Cad/Fza/Vel'},{v:'130W',l:'FTP real'},{v:'DURO',l:'Calidad #1'}],
+      sections:[{head:'1️⃣ CADENCIA (calentamiento + velocidad piernas)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','12 min','45→60%','58–78W','spin-ups progresivos'],
+        ['4×1min cadencia','8 min','60%','78W','🎯 105–110 rpm · 1 min suave entre'],
+      ]},{head:'2️⃣ FUERZA (Slope mode)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['3×3min FUERZA','15 min','78–82%','101–107W','🔧 52–55 rpm · SLOPE · 2 min entre'],
+      ]},{head:'3️⃣ VELOCIDAD (VO2)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['5×1min VELOCIDAD','15 min','100–110%','130–143W','95–100 rpm · 2 min Z1 entre'],
+        ['Enfriamiento','10 min','50→45%','65–58W','Soltar'],
+      ]}],
+      coachNote:'<strong>Calidad #1 — los 3 trabajos de bici en una sesión, a FTP 130W real:</strong> Cadencia (105–110 rpm para velocidad de piernas), Fuerza (52–55 rpm en Slope para torque), Velocidad (130–143W a alta cadencia para VO2). Con el FTP real, los watts por fin son precisos — nota que el bloque de velocidad es 130–143W, no los 154+ que habríamos prescrito con el estimado viejo. Una de las 2 sesiones duras de la semana.',
+      tip:'Fuerza en SLOPE mode (la lección del power slope: en ERG default a 78 rpm). Velocidad: piernas rápidas, no es fuerza. Archivo .zwo disponible recalibrado.' } },
+  { dayLabel:'MIÉ', dayDate:'17 Jun', type:'swim', icon:'🏊', title:'Nado Técnico + 💪 Fuerza (alberca)', tag:'swim', dur:'45 min (+30 gym)',
+    content:{ kind:'session', stats:[{v:'~1,400m',l:'Nado'},{v:'Z1–Z2',l:'Zona'},{v:'+30 min',l:'Fuerza'},{v:'Pace+RPE',l:'Gobernador'}],
+      sections:[{head:'Bloque 1 · Nado Técnico', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
+        ['Calentamiento','300m','Z1','—','Percepción'],
+        ['6×50m drills','300m','Z1','15"','Catch-up, brazo único, patada, escápula'],
+        ['Serie técnica','6×100m','Z2 · 2:05/100m mín','20"','Foco en mecánica, no en velocidad'],
+        ['Enfriamiento','200m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza/Gym (tras el nado)', cols:['Ejercicio','Series×Reps','Foco'], rows:[
+        ['Sentadilla goblet','3×10','Cuádriceps, glúteo'],
+        ['Peso muerto rumano','3×10','Cadena posterior'],
+        ['Zancadas','3×8 c/u','Single-leg, estabilidad'],
+        ['Puente de glúteo 1 pierna','3×12','Glúteo, control'],
+        ['Plancha + lateral','3×30s','Core'],
+      ]}],
+      coachNote:'<strong>Nado técnico — recuperación activa entre las 2 sesiones duras:</strong> Sin impacto, regenera después del bici fuerza/velocidad del martes y antes de las cuestas del jueves. Se gobierna por pace + RPE (la FC de muñeca no sirve en agua).',
+      tip:'Día de habilidad, no de esfuerzo. La calidad del movimiento importa más que la velocidad.', poolNote:true } },
+  { dayLabel:'JUE', dayDate:'18 Jun', type:'run', icon:'🏃', title:'Run CUESTAS · Fuerza (Zonas FC) ⛰️', tag:'run', dur:'50 min',
+    content:{ kind:'session', stats:[{v:'50 min',l:'Duración'},{v:'8×45s',l:'Cuestas'},{v:'158–167',l:'Z4 subida'},{v:'DURO',l:'Calidad #2'}],
+      sections:[{head:'Estructura — Repeticiones en Cuesta (zonas recalibradas)', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Calentamiento','12 min','Z1–Z2','<145','Trote suave + 4 strides de 20s'],
+        ['8×45s CUESTA','~18 min','Z4 subida','158–167','Subida fuerte 45s (pendiente 5–8%). Bajada caminando/trote para recuperar.'],
+        ['Trote suave','10 min','Z2','130–145','Aflojar piernas'],
+        ['Enfriamiento','10 min','Z1','<130','Caminata + estiramientos'],
+      ]}],
+      coachNote:'<strong>Calidad #2 — cuestas para fuerza de carrera:</strong> Las repeticiones en subida construyen fuerza y potencia de zancada SIN el impacto de los sprints en plano (más seguro a los 42). La FC subirá a Z4 en cada subida — eso es esperado y correcto. La recuperación es completa en la bajada. Con las zonas recalibradas (FC máx real), la Z4 de subida es 158–167.',
+      tip:'Buscar una cuesta de 5–8% de pendiente. Subir fuerte pero con buena forma (no derrumbarse). Bajar caminando o trote muy suave — la recuperación completa es lo que permite calidad en cada repetición. La próxima semana de construcción rotamos a SPRINTS.' } },
+  { dayLabel:'VIE', dayDate:'19 Jun', type:'swim', icon:'🏊', title:'Nado RESISTENCIA + 💪 Fuerza (alberca)', tag:'swim', dur:'50 min (+30 gym)',
+    content:{ kind:'session', stats:[{v:'~1,800m ↑',l:'Nado ↑'},{v:'Z2',l:'Zona'},{v:'+30 min',l:'Fuerza'},{v:'Resistencia',l:'Foco'}],
+      sections:[{head:'Bloque 1 · Nado Resistencia', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
+        ['Calentamiento','300m','Z1','—','Suave'],
+        ['Bloque continuo','4×400m','Z2 sostenido','30"','Ritmo constante. +1 bloque. Resistencia aeróbica.'],
+        ['Enfriamiento','100m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza/Gym (tras el nado)', cols:['Ejercicio','Series×Reps','Foco'], rows:[
+        ['Sentadilla búlgara','3×8 c/u','Single-leg, fuerza'],
+        ['Peso muerto 1 pierna','3×8 c/u','Cadena posterior, equilibrio'],
+        ['Step-up con peso','3×10 c/u','Potencia de zancada'],
+        ['Hip thrust','3×12','Glúteo'],
+        ['Pallof press','3×10 c/u','Anti-rotación core'],
+      ]}],
+      coachNote:'<strong>Nado resistencia — el 2do nado, ahora de volumen:</strong> A diferencia del técnico (habilidad), este es continuo y más largo (~1,600m) para construir resistencia aeróbica en el agua. Los bloques de 400m enseñan a sostener ritmo, clave para los 1,900m del 70.3.',
+      tip:'Resistencia = ritmo sostenido, no rápido. Pace constante en los 400m. Gobernar por RPE — debe sentirse "trabajado pero sostenible".', poolNote:true } },
+  { dayLabel:'SÁB', dayDate:'20 Jun', type:'bike', icon:'🚴', title:'Bici RESISTENCIA Larga (% FTP)', tag:'bike', dur:'110 min',
+    content:{ kind:'session', stats:[{v:'110 min ↑',l:'Duración'},{v:'62–67%',l:'FTP'},{v:'Z2',l:'Zona'},{v:'85–90 rpm',l:'Cadencia'}],
+      sections:[{head:'Estructura — Resistencia + Drills de Cadencia (130W)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','15 min','50→60%','65–78W','spin-ups'],
+        ['Bloque Z2 + drills','80 min','62–67%','81–87W','85–90 rpm base, con 6×1min a 100+ rpm cada 12 min'],
+        ['Enfriamiento','15 min','55→45%','72–58W','Soltar'],
+      ]}],
+      coachNote:'<strong>Bici resistencia larga + drills de cadencia (FTP 130W):</strong> La sesión de volumen (110 min). Base Z2 con drills de cadencia alta (100+ rpm) cada 12 min — así trabaja la cadencia incluso dentro del largo, sin quitarle el carácter aeróbico. Es el motor de la semana. Watts Z2 ahora precisos (81–87W).',
+      tip:'Llevar electrolitos, hidratación c/20 min. Opción brick: si te sientes bien, agregar 15 min de trote Z2 al bajar de la bici (transición T2) — avísame y lo agrego formalmente.' } },
+  { dayLabel:'DOM', dayDate:'21 Jun', type:'run', icon:'🏃', title:'Run LARGA Resistencia (Zonas FC)', tag:'run', dur:'75 min',
+    content:{ kind:'session', stats:[{v:'75 min ↑',l:'Duración'},{v:'130–145',l:'Z2 nuevo'},{v:'<130',l:'Z1'},{v:'Resistencia',l:'Foco'}],
+      sections:[{head:'Estructura — Carrera Larga (+volumen, zonas recalibradas)', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','8 min','Z1','<130','Dinámica completa'],
+        ['Carrera Z2 larga','59 min','Z2','130–145','La más larga. +7 min. Caminadora ideal para control.'],
+        ['4×10s strides','5 min','Pico breve','—','Cierre neuromuscular'],
+        ['Enfriamiento','3 min','Z1','<130','Caminata + estiramientos'],
+      ]}],
+      coachNote:'<strong>Run larga — resistencia, el 80% fácil:</strong> Después de las cuestas del jueves, el domingo es puramente aeróbico y largo. Con las zonas recalibradas, el techo de Z2 es ahora 145 (antes 132, muy bajo). Construye la resistencia para los 21 km del 70.3.',
+      tip:'FC estricta en Z2 — esta es de las que en S4 se fue a Z4 por el terreno. Terreno plano, FC manda. Es resistencia, no velocidad.' } },
+];
+
+const VALERIA_W8 = [
+  { dayLabel:'LUN', dayDate:'22 Jun', type:'rest', icon:'🧘', title:'Descanso · Día 22', tag:'rest', dur:'—',
+    content:{kind:'rest', note:'Semana de DESCARGA (deload). Coincide la fase lútea tardía (cuerpo pide menos) con la necesidad de recuperación tras 3 semanas de carga. Volumen reducido ~35%, sin sesiones duras. Esto NO es perder forma — es donde el cuerpo absorbe el trabajo y se vuelve más fuerte. Lunes descanso fijo.'} },
+  { dayLabel:'MAR', dayDate:'23 Jun', type:'bike', icon:'🚴', title:'Bici Z2 Suave (deload) · % FTP', tag:'bike', dur:'50 min',
+    content:{ kind:'session', stats:[{v:'50 min',l:'Reducido'},{v:'62–65%',l:'FTP'},{v:'81–85W',l:'Watts'},{v:'Sin calidad',l:'Deload'}],
+      sections:[{head:'Estructura — Aeróbico Suave', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','10 min','50→60%','65–78W','Libre'],
+        ['Bloque Z2','32 min','62–65%','81–85W','85–90 rpm cómodo'],
+        ['Enfriamiento','8 min','50%','65W','Soltar'],
+      ]}],
+      coachNote:'<strong>Semana de descarga — sin intervalos:</strong> Esta semana NO hay bici de calidad. Pura base aeróbica suave para recuperar. En lútea tardía + post-bloque de carga, forzar sería contraproducente. El cuerpo se adapta en el descanso, no en el esfuerzo.',
+      tip:'Debe sentirse fácil, casi aburrido. Si quieres meter intensidad, es señal de que necesitas el deload aún más. Confía en el proceso.' } },
+  { dayLabel:'MIÉ', dayDate:'24 Jun', type:'swim', icon:'🏊', title:'Nado Suave + 💪 Fuerza ligera', tag:'swim', dur:'35 min (+20 gym)',
+    content:{ kind:'session', stats:[{v:'~1,100m',l:'Reducido'},{v:'Z1–Z2',l:'Zona'},{v:'+20 min',l:'Fuerza ligera'},{v:'Técnico',l:'Foco'}],
+      sections:[{head:'Bloque 1 · Nado Suave', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
+        ['Calentamiento','200m','Z1','—','Muy suave'],
+        ['Drills','4×50m','Z1','15"','Técnica relajada'],
+        ['Continuo','5×100m','Z2 bajo','25"','Sin presión'],
+        ['Enfriamiento','200m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza ligera (deload)', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Sentadilla goblet','2×10','Carga ligera'],
+        ['Peso muerto rumano','2×10','Movimiento, no carga'],
+        ['Plancha','2×30s','Mantener patrón'],
+      ]}],
+      coachNote:'<strong>Deload también en fuerza:</strong> Mantener el patrón de movimiento con carga ligera, sin buscar progreso. La fuerza también necesita semanas de descarga. El objetivo es recuperar, no construir.',
+      tip:'Nado y fuerza muy suaves. La semana de descarga prepara el cuerpo para el siguiente bloque más fuerte.', poolNote:true } },
+  { dayLabel:'JUE', dayDate:'25 Jun', type:'run', icon:'🏃', title:'Run Z2 Fácil (deload) · Zonas FC', tag:'run', dur:'35 min',
+    content:{ kind:'session', stats:[{v:'35 min',l:'Reducido'},{v:'Z2',l:'Zona'},{v:'130–145',l:'FC bpm'},{v:'Sin cuestas',l:'Deload'}],
+      sections:[{head:'Estructura — Carrera Fácil', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','5 min','Z1','<130','Caminata dinámica'],
+        ['Carrera Z2','25 min','Z2','130–145','Fácil. SIN cuestas ni sprints esta semana.'],
+        ['Enfriamiento','5 min','Z1','<130','Caminata'],
+      ]}],
+      coachNote:'<strong>Deload — sin calidad de carrera:</strong> Esta semana no hay cuestas ni sprints. Solo carrera aeróbica fácil para mantener el patrón sin acumular fatiga. Indoor o terreno plano, FC en 130–145.',
+      tip:'Recuerda el avance de la semana pasada: corrió 100% aeróbica afuera. Esta semana es para consolidar esa frescura, no para empujar.' } },
+  { dayLabel:'VIE', dayDate:'26 Jun', type:'swim', icon:'🏊', title:'Nado Suave + 💪 Fuerza ligera', tag:'swim', dur:'30 min (+20 gym)',
+    content:{ kind:'session', stats:[{v:'~1,000m',l:'Reducido'},{v:'Z1',l:'Zona'},{v:'+20 min',l:'Fuerza ligera'},{v:'Regenerativo',l:'Foco'}],
+      sections:[{head:'Bloque 1 · Nado Regenerativo', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
+        ['Calentamiento','200m','Z1','—','Suave'],
+        ['Continuo','6×100m','Z1','25"','Muy relajado'],
+        ['Enfriamiento','200m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza ligera', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Zancadas','2×8 c/u','Ligero'],
+        ['Hip thrust','2×12','Activación glúteo'],
+        ['Pallof press','2×10 c/u','Core'],
+      ]}],
+      coachNote:'<strong>Última sesión de fuerza ligera de la descarga:</strong> Movimiento suave. El cuerpo se está recargando para el bloque de reconstrucción que empieza la próxima semana.',
+      tip:'Día regenerativo. Hidratación, sueño, nutrición — la recuperación es el entrenamiento esta semana.', poolNote:true } },
+  { dayLabel:'SÁB', dayDate:'27 Jun', type:'bike', icon:'🚴', title:'Bici Z2 Media (deload) · % FTP', tag:'bike', dur:'70 min',
+    content:{ kind:'session', stats:[{v:'70 min',l:'Reducido'},{v:'62–67%',l:'FTP'},{v:'81–87W',l:'Watts'},{v:'Z2',l:'Zona'}],
+      sections:[{head:'Estructura — Resistencia Suave', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','12 min','50→60%','65–78W','Libre'],
+        ['Bloque Z2','48 min','62–67%','81–87W','85–90 rpm'],
+        ['Enfriamiento','10 min','50%','65W','Soltar'],
+      ]}],
+      coachNote:'<strong>Bici media de descarga:</strong> Reducida de los 110 min de la semana pasada a 70. Mantiene el motor aeróbico sin la carga del largo. Buen día para practicar nutrición e hidratación sin estrés.',
+      tip:'Indoor ideal. Cadencia cómoda. Disfrutar el ritmo fácil — la próxima semana retomamos la construcción.' } },
+  { dayLabel:'DOM', dayDate:'28 Jun', type:'run', icon:'🏃', title:'Run Z2 Medio (deload) · Zonas FC', tag:'run', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'45 min',l:'Reducido'},{v:'Z2',l:'Zona'},{v:'130–145',l:'FC bpm'},{v:'Aeróbico',l:'Foco'}],
+      sections:[{head:'Estructura — Carrera Media', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','5 min','Z1','<130','Dinámica'],
+        ['Carrera Z2','35 min','Z2','130–145','Fácil sostenido. Caminadora ideal para control.'],
+        ['Enfriamiento','5 min','Z1','<130','Caminata'],
+      ]}],
+      coachNote:'<strong>Cierre de la semana de descarga:</strong> Reducida de 75 a 45 min. Cierra el primer bloque de construcción. La próxima semana (menstrual) arranca el segundo bloque, fresca y recuperada.',
+      tip:'Si te sientes con ganas de más, perfecto — significa que el deload funcionó. Guarda esa energía para la próxima semana.' } },
+];
+
+const VALERIA_W9 = [
+  { dayLabel:'LUN', dayDate:'29 Jun', type:'rest', icon:'🧘', title:'Descanso · Día 1 Ciclo 🩸', tag:'rest', dur:'—',
+    content:{kind:'rest', note:'Día 1 del nuevo ciclo (¡recuerda confirmarme la fecha real del periodo para recalibrar!). Inicia el 2do bloque de construcción, fresca tras el deload. Fase menstrual: aeróbica y flexible. Prioridad hierro e hidratación. Lunes descanso fijo.'} },
+  { dayLabel:'MAR', dayDate:'30 Jun', type:'bike', icon:'🚴', title:'Bici Z2 + Cadencia · % FTP', tag:'bike', dur:'60 min',
+    content:{ kind:'session', stats:[{v:'60 min',l:'Duración'},{v:'62–67%',l:'FTP'},{v:'81–87W',l:'Watts'},{v:'Cadencia',l:'Drills'}],
+      sections:[{head:'Estructura — Aeróbico + Cadencia', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','12 min','50→60%','65–78W','spin-ups'],
+        ['4×2min cadencia','12 min','62%','81W','🎯 100–105 rpm · 1 min entre'],
+        ['Bloque Z2','26 min','64–67%','83–87W','85–90 rpm'],
+        ['Enfriamiento','10 min','50%','65W','Soltar'],
+      ]}],
+      coachNote:'<strong>Reinicio suave + cadencia:</strong> Fase menstrual = sin fuerza dura todavía, pero los drills de cadencia (100–105 rpm) son aeróbicos y no cargan. Reanuda el trabajo de subir su cadencia natural baja sin estrés. Flexible: si hay síntomas, reducir a Z2 puro.',
+      tip:'Día 2 del ciclo. Si el cuerpo lo pide, los drills de cadencia son opcionales — el Z2 base es lo importante.' } },
+  { dayLabel:'MIÉ', dayDate:'1 Jul', type:'swim', icon:'🏊', title:'Nado Técnico + 💪 Fuerza', tag:'swim', dur:'45 min (+30 gym)',
+    content:{ kind:'session', stats:[{v:'~1,300m',l:'Nado'},{v:'Z2',l:'Zona'},{v:'+30 min',l:'Fuerza'},{v:'Técnico',l:'Foco'}],
+      sections:[{head:'Bloque 1 · Nado Técnico', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
+        ['Calentamiento','300m','Z1','—','Percepción'],
+        ['6×50m drills','300m','Z1','15"','Técnica'],
+        ['Serie','5×100m','Z2 · 2:05/100m','20"','Mecánica'],
+        ['Enfriamiento','200m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza (retomamos progresión)', cols:['Ejercicio','Series×Reps','Foco'], rows:[
+        ['Sentadilla goblet','3×10','Cuádriceps, glúteo'],
+        ['Peso muerto rumano','3×10','Cadena posterior'],
+        ['Zancadas','3×8 c/u','Single-leg'],
+        ['Puente glúteo 1 pierna','3×12','Control'],
+        ['Plancha lateral','3×30s c/u','Core'],
+      ]}],
+      coachNote:'<strong>Retomamos fuerza tras el deload:</strong> Volvemos a la progresión normal de fuerza. En fase menstrual el nado es la disciplina amiga (sin impacto). El gym mantiene la estructura del cuerpo.',
+      tip:'Día 3, normalmente el cuerpo ya se siente mejor. Fuerza con técnica limpia.', poolNote:true } },
+  { dayLabel:'JUE', dayDate:'2 Jul', type:'run', icon:'🏃', title:'Run Z2 (flexible) · Zonas FC', tag:'run', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'45 min',l:'Duración'},{v:'Z2',l:'Zona'},{v:'130–145',l:'FC bpm'},{v:'Flexible',l:'Ciclo'}],
+      sections:[{head:'Estructura — Carrera Aeróbica', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','5 min','Z1','<130','Dinámica'],
+        ['Carrera Z2','35 min','Z2','130–145','FC manda. Con las zonas nuevas, ¡tiene espacio!'],
+        ['Enfriamiento','5 min','Z1','<130','Caminata'],
+      ]}],
+      coachNote:'<strong>Carrera aeróbica — sin cuestas todavía (fase menstrual):</strong> En esta fase mantenemos la carrera fácil. Las cuestas/sprints regresan en fase folicular. Aplica el aprendizaje: con la alarma en 145, mantener la zona como hizo el 11 de junio.',
+      tip:'Recuerda: el avance fue correr 100% aeróbica afuera. Repetir esa disciplina. Si menstrual con síntomas, reducir a 30 min.' } },
+  { dayLabel:'VIE', dayDate:'3 Jul', type:'swim', icon:'🏊', title:'Nado Resistencia + 💪 Fuerza', tag:'swim', dur:'50 min (+30 gym)',
+    content:{ kind:'session', stats:[{v:'~1,500m',l:'Nado'},{v:'Z2',l:'Zona'},{v:'+30 min',l:'Fuerza'},{v:'Resistencia',l:'Foco'}],
+      sections:[{head:'Bloque 1 · Nado Resistencia', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
+        ['Calentamiento','300m','Z1','—','Suave'],
+        ['Continuo','3×400m','Z2','30"','Ritmo sostenido'],
+        ['Enfriamiento','100m','Z1','—','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza', cols:['Ejercicio','Series×Reps','Foco'], rows:[
+        ['Sentadilla búlgara','3×8 c/u','Single-leg fuerza'],
+        ['Peso muerto 1 pierna','3×8 c/u','Equilibrio posterior'],
+        ['Step-up con peso','3×10 c/u','Potencia zancada'],
+        ['Hip thrust','3×12','Glúteo'],
+        ['Pallof press','3×10 c/u','Anti-rotación'],
+      ]}],
+      coachNote:'<strong>Nado resistencia construyendo hacia 1.9km:</strong> Los bloques de 400m enseñan a sostener ritmo — clave para el nado de Cozumel. La fuerza continúa la progresión.',
+      tip:'Resistencia = ritmo constante, no rápido. Gobernar por pace + RPE.', poolNote:true } },
+  { dayLabel:'SÁB', dayDate:'4 Jul', type:'bike', icon:'🚴', title:'Bici Larga Z2 · % FTP', tag:'bike', dur:'95 min',
+    content:{ kind:'session', stats:[{v:'95 min',l:'Reconstruyendo'},{v:'62–67%',l:'FTP'},{v:'81–87W',l:'Watts'},{v:'Z2',l:'Zona'}],
+      sections:[{head:'Estructura — Bici Larga + Cadencia', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','15 min','50→60%','65–78W','spin-ups'],
+        ['Bloque Z2 + drills','68 min','62–67%','81–87W','85–90 rpm + 5×1min a 100+ cada 12 min'],
+        ['Enfriamiento','12 min','50%','65W','Soltar'],
+      ]}],
+      coachNote:'<strong>Retomamos el largo — camino a las 3h de Cozumel:</strong> Tras el deload (que bajó a 70 min), reconstruimos a 95 min. La progresión hacia los ~3h de Cozumel es gradual. Drills de cadencia dentro del largo.',
+      tip:'Practicar nutrición: un gel o plátano a la hora. Hidratación c/20 min. Indoor o ruta plana segura.' } },
+  { dayLabel:'DOM', dayDate:'5 Jul', type:'run', icon:'🏃', title:'Run Largo Z2 · Zonas FC', tag:'run', dur:'65 min',
+    content:{ kind:'session', stats:[{v:'65 min',l:'Reconstruyendo'},{v:'Z2',l:'Zona'},{v:'130–145',l:'FC bpm'},{v:'Resistencia',l:'Foco'}],
+      sections:[{head:'Estructura — Carrera Larga', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
+        ['Activación','8 min','Z1','<130','Dinámica completa'],
+        ['Carrera Z2 larga','52 min','Z2','130–145','La más larga. Camino a los 21km de Cozumel.'],
+        ['Enfriamiento','5 min','Z1','<130','Caminata + estiramientos'],
+      ]}],
+      coachNote:'<strong>Run largo reconstruyendo:</strong> Camino a los 21km de Cozumel. Con las zonas recalibradas y la disciplina del avance reciente, este largo debería salir 100% aeróbico. Caminadora ideal para control.',
+      tip:'FC estricta 130–145. Es resistencia, no velocidad. Practica también aquí la hidratación de carreras largas.' } },
+];
+
+const CHARLY = [
+  { dayLabel:'LUN', dayDate:'25 May', type:'str', icon:'💪', title:'Fuerza B', tag:'str', dur:'45 min',
+    content:{ kind:'strength', stats:[{v:'45 min',l:'Duración'},{v:'Fuerza B',l:'Bloque'},{v:'4×8',l:'Series'},{v:'Alta',l:'Carga'}],
+      sections:[{head:'Circuito Fuerza B', cols:['Ejercicio','Series×Reps','Carga','Nota'], rows:[
+        ['Sentadilla trasera','4×8','75–80% 1RM','Profundidad completa. Control excéntrico 3s.'],
+        ['Peso muerto convencional','4×6','80–85% 1RM','Setup perfecto cada rep.'],
+        ['Step-up weighted','3×10 c/u','Moderada-alta','Alternado. Rodilla estable.'],
+        ['Remo con barra','4×8','Moderada','Espalda neutral, codos 45°.'],
+        ['Curl femoral','3×12','Moderada','Control excéntrico.'],
+      ]}], tip:'Carlos: máxima prioridad en el setup del peso muerto antes de agregar carga.' } },
+  { dayLabel:'MAR', dayDate:'26 May', type:'bike', icon:'🚴', title:'Rodada Z2 · 60 min', tag:'bike', dur:'60 min',
+    content:{ kind:'session', stats:[{v:'60 min',l:'Duración'},{v:'Z2',l:'Zona'},{v:'103–112W',l:'Watts'},{v:'144–160',l:'FC bpm'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','Zona','Watts','FC','Nota'], rows:[
+        ['Calentamiento','10 min','Z1','<92W','<140','Piernas activando'],
+        ['Bloque Z2','40 min','Z2','103–112W','144–160 bpm','ERG ON. Cadencia 88–95 rpm.'],
+        ['Enfriamiento','10 min','Z1','<92W','<140','Recuperación activa'],
+      ]}], tip:'FTP referencia 167W (pendiente test). Si FC supera 160 bpm en Z2, bajar a 95–100W.' } },
+  { dayLabel:'MIÉ', dayDate:'27 May', type:'swim', icon:'🏊', title:'Nado Técnico · 2,000m', tag:'swim', dur:'~50 min', today:true,
+    content:{ kind:'session', stats:[{v:'2,000m',l:'Total'},{v:'Z2',l:'Zona'},{v:'~1:30/100m',l:'CSS ref.'},{v:'Alberca',l:'Lugar'}],
+      sections:[{head:'Estructura', cols:['Set','Distancia','Ritmo','Descanso','Nota'], rows:[
+        ['Calentamiento','400m','Z1 suave','—','100m de kicking con tabla incluido'],
+        ['4×50m drills','200m','Técnica: catch-up, single arm','15"','Foco entrada mano al frente'],
+        ['8×100m','800m','CSS ref. ~1:30/100m','20"','Ritmo constante. Guardar energía — el sábado hay Z3.'],
+        ['4×25m técnica final','100m','Z1 · drill libre','15"','Reforzar el patrón técnico trabajado en calentamiento'],
+        ['Enfriamiento','500m','Z1','—','Respiración bilateral. El fartlek se eliminó — la intensidad del miércoles va al sábado.'],
+      ]}], tip:'CSS estimado ~1:30/100m. Anotar cómo se sintieron los 8×100m — en la próxima semana se hace el test CSS formal.' } },
+  { dayLabel:'JUE', dayDate:'28 May', type:'str', icon:'💪', title:'Fuerza A', tag:'str', dur:'45 min',
+    content:{ kind:'strength', stats:[{v:'45 min',l:'Duración'},{v:'Fuerza A',l:'Bloque'},{v:'4×8',l:'Series'},{v:'Alta',l:'Carga'}],
+      sections:[{head:'Circuito Fuerza A', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Press militar','4×8','Control estricto. Sin arqueo lumbar.'],
+        ['Dominadas','4×6–8','Asistidas si necesario. Rango completo.'],
+        ['Dips tricep','3×10','Profundidad controlada.'],
+        ['Face pull','3×15','Retracción escapular.'],
+        ['Core: rueda abdominal','3×8','Extensión máxima. Sin compensar cadera.'],
+      ]}], tip:'Complementa el trabajo de pierna de Fuerza B.' } },
+  { dayLabel:'VIE', dayDate:'29 May', type:'run', icon:'🏃', title:'Carrera Z1 Base · 55 min', tag:'run', dur:'55 min',
+    content:{ kind:'session', stats:[{v:'55 min',l:'Duración'},{v:'Z1 estricto',l:'Zona'},{v:'<144 bpm',l:'FC techo'},{v:'Nasal',l:'Respiración'}],
+      sections:[{head:'Estructura 80/20', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Activación','5 min','<135','Caminata + dinámica'],
+        ['Carrera Z1 puro','43 min','130–143 bpm','<strong>Z1, no Z2.</strong> Respiración exclusivamente nasal. Si debes abrir la boca, bajar el paso.'],
+        ['Enfriamiento','7 min','<130','Caminata y estiramientos completos'],
+      ]}],
+      coachNote:'<strong>Ajuste 80/20:</strong> El viernes es el día previo al bloque de mayor intensidad de la semana (sábado: Z3 intervals). La carrera de hoy bajó de Z2 a Z1 para maximizar la recuperación y garantizar calidad en los intervalos de mañana. El volumen base semanal de Charly estaba en 55% bajo — este ajuste, junto con la eliminación del fartlek del miércoles, eleva ese número al 68%. La respiración nasal es el indicador de Z1 real.',
+      tip:'En Z1 el paso puede sentirse ridículamente lento. Eso es correcto. A 19 años el ego quiere correr rápido — pero los intervalos Z3 del sábado valen el doble si llegas fresco.' } },
+  { dayLabel:'SÁB', dayDate:'30 May', type:'bike', icon:'🚴', title:'Rodada Larga + Z3', tag:'bike', dur:'100 min',
+    content:{ kind:'session', stats:[{v:'100 min',l:'Duración'},{v:'Z2+Z3',l:'Zonas'},{v:'3×10min',l:'Intervalos Z3'},{v:'~88 TSS',l:'Carga'}],
+      sections:[{head:'Estructura 80/20 — Z3 Primero, Base Después', cols:['Segmento','Duración','Zona','Watts','Nota'], rows:[
+        ['Calentamiento','20 min','Z1','<92W','Progresivo. Los últimos 3 min a 90% del umbral para activar.'],
+        ['3×10min Z3 intervals','30 min','Z3','125–142W','⭐ AQUÍ va la calidad. 5 min Z1 entre series. Cadencia 78–83 rpm.'],
+        ['Recuperación activa','15 min','Z1','<85W','FC <140. Hidratación. Piernas sueltas.'],
+        ['Bloque Z2 base','25 min','Z2','103–112W','Cadencia 88–95 rpm. Completar el volumen aeróbico.'],
+        ['Enfriamiento','10 min','Z1','<75W','Bajar FC. Estirar cuádriceps y pantorrillas.'],
+      ]}],
+      coachNote:'<strong>Ajuste 80/20 crítico:</strong> Los intervalos Z3 se movieron al inicio (después del calentamiento) en lugar del final. La razón es fisiológica: la calidad de los intervalos deteriora un 12–18% cuando se hacen con 30 min de fatiga base previa. En polarized training, el trabajo duro siempre va primero. El bloque Z2 de 25 min después de los intervalos construye base con pre-fatiga — un estímulo diferente y complementario.',
+      tip:'El calentamiento de 20 min (vs 15 min original) prepara mejor el sistema cardiovascular para los intervalos. Los últimos 3 min del calentamiento al 90% del umbral activan las fibras tipo IIa que se usarán en Z3.' } },
+  { dayLabel:'DOM', dayDate:'31 May', type:'run', icon:'🏃', title:'Carrera Z2 Larga + Strides', tag:'run', dur:'70 min',
+    content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'Z2 + strides',l:'Tipo'},{v:'144–160',l:'FC Z2'},{v:'6×10s',l:'Strides'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Activación','8 min','<140','Dinámica completa'],
+        ['Carrera Z2','47 min','144–160 bpm','Ritmo constante. Terreno plano. Hidratación c/20 min.'],
+        ['6×10s strides','6 min','Pico Z4+ breve','Aceleraciones post-carrera. 50s trote suave entre cada una.'],
+        ['Enfriamiento','9 min','<135','Caminata, estiramientos completos'],
+      ]}],
+      coachNote:'<strong>80/20 — estímulo neuromuscular post carrera larga:</strong> Los 6 strides al final de 55 min de Z2 entrenan al cuerpo a reclutar fibras rápidas con glucógeno parcialmente depletado — un adaptación específica para el triatlón donde el run viene después del bike. A 19 años, los strides post-fatiga son especialmente valiosos para desarrollar la economía de carrera.',
+      tip:'Los strides deben sentirse ligeros y explosivos. Si las piernas están muy cargadas del sábado, reducir a 4 strides. La calidad importa más que el número.' } },
+];
+
+const SANTIAGO = [
+  { dayLabel:'LUN', dayDate:'25 May', type:'str', icon:'💪', title:'Fuerza + Movilidad', tag:'str', dur:'45 min',
+    content:{ kind:'strength', stats:[{v:'45 min',l:'Duración'},{v:'Funcional',l:'Tipo'},{v:'3×12',l:'Series'},{v:'Primera',l:'Semana'}],
+      sections:[{head:'Sesión', cols:['Ejercicio','Series×Reps','Nota'], rows:[
+        ['Sentadilla copa','3×12','Carga moderada. Profundidad y control.'],
+        ['Peso muerto rumano','3×12','Aprender el patrón antes de cargar.'],
+        ['Zancada frontal','3×10 c/u','Sin carga. Rodilla estable.'],
+        ['Hip thrust','3×15','Glúteo. Tempo 2-1-2.'],
+        ['Movilidad cadera','10 min','90/90, paloma, rotación interna'],
+        ['Estiramientos tobillo','5 min','Protocolo triatleta'],
+      ]}], tip:'Primera semana estructurada. Aprende el movimiento antes de agregar carga.' } },
+  { dayLabel:'MAR', dayDate:'26 May', type:'bike', icon:'🚴', title:'Rodada Z2 · 55 min', tag:'bike', dur:'55 min',
+    content:{ kind:'session', stats:[{v:'55 min',l:'Duración'},{v:'Z2',l:'Zona'},{v:'140–155',l:'FC bpm est.'},{v:'ERG ON',l:'Tacx'}],
+      sections:[{head:'Estructura', cols:['Segmento','Duración','FC est.','Nota'], rows:[
+        ['Calentamiento','10 min','<135','Piernas sueltas, cadencia libre'],
+        ['Bloque Z2','38 min','140–155','Cadencia 85–92. Aprender a pedalear redondo.'],
+        ['Enfriamiento','7 min','<130','Soltar piernas'],
+      ]}], tip:'FC Z2 estimada. El test FTP del jueves dará los números reales.' } },
+  { dayLabel:'MIÉ', dayDate:'27 May', type:'swim', icon:'🏊', title:'Test CSS · 1,200m', tag:'swim', dur:'~45 min', today:true,
+    content:{ kind:'session', stats:[{v:'1,200m',l:'Total'},{v:'400m+200m',l:'Protocolo'},{v:'CSS',l:'Objetivo'},{v:'Alberca',l:'Lugar'}],
+      sections:[{head:'Protocolo Test CSS', cols:['Set','Distancia','Instrucción','Descanso'], rows:[
+        ['Calentamiento','300m','Nado muy suave — aclimatación','—'],
+        ['200m base','200m','Ritmo técnico. Marcar tiempo.','2 min'],
+        ['⏱ 400m TT','400m','All-out controlado. MARCAR TIEMPO EXACTO.','10 min'],
+        ['⏱ 200m TT','200m','All-out. MARCAR TIEMPO EXACTO.','—'],
+        ['Enfriamiento','100m','Suave','—'],
+      ]}], coachNote:'<strong>CSS = (T400 − T200) / 2.</strong> A 20 años con base atlética, probablemente CSS en rango 1:30–1:45/100m.',
+      tip:'Santiago nada con Jorge hoy. Cada uno a su propio ritmo — no es competencia.' } },
+  { dayLabel:'JUE', dayDate:'28 May', type:'bike', icon:'🚴', title:'Test FTP · 20 min', tag:'bike', dur:'~45 min',
+    content:{ kind:'session', stats:[{v:'20 min',l:'Bloque TT'},{v:'All-out',l:'Intensidad'},{v:'FTP',l:'Objetivo'},{v:'×0.95',l:'Factor'}],
+      sections:[{head:'Protocolo', cols:['Segmento','Duración','Instrucción'], rows:[
+        ['Calentamiento','15 min','Z1 + 3×1min sprint corto con 2 min recuperación'],
+        ['⏱ Bloque TT','20 min','All-out sostenido. Comenzar conservador los primeros 5 min.'],
+        ['Enfriamiento','10 min','Z1 muy suave'],
+      ]}], coachNote:'<strong>FTP = Watts promedio 20 min × 0.95.</strong> A 20 años con antecedentes deportivos el FTP podría estar en 200–240W.',
+      tip:'Riesgo de salir demasiado fuerte — comenzar en lo que sientes "sostenible" y aumentar solo si a los 10 min todavía queda mucho.' } },
+  { dayLabel:'VIE', dayDate:'29 May', type:'run', icon:'🏃', title:'Recuperación Z1 · Test LTHR → S5', tag:'run', dur:'35 min',
+    content:{ kind:'session', stats:[{v:'35 min',l:'Duración'},{v:'Z1 puro',l:'Zona'},{v:'<145 bpm',l:'FC techo'},{v:'S5',l:'LTHR movido'}],
+      sections:[{head:'Sesión Ajustada por Principio 80/20', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Caminata activación','7 min','<130','Dinámica suave. Sin presión.'],
+        ['Trote Z1 puro','21 min','130–143 bpm','Ritmo conversacional. Nasal. Sin objetivos de pace.'],
+        ['Estiramientos dinámicos','7 min','<125','Cadera, pantorrillas, isquiotibiales. Preparar para el sábado.'],
+      ]}],
+      coachNote:'<strong>⛔ Decisión de entrenador — ajuste estructural 80/20:</strong> El Test LTHR se mueve a la Semana 5. La razón es contundente: 3 sesiones de alta intensidad consecutivas (CSS miércoles + FTP jueves + LTHR viernes) representan el 38% de la semana en zona alta — casi el doble del límite del principio 80/20. A esto se suma que Santiago está en su primera semana de triatlón estructurado. Un atleta joven puede absorber el estrés físico, pero los tests con acumulación de fatiga no generan datos precisos: el LTHR obtenido bajo fatiga puede ser 8–12 bpm más bajo del real, calibrando mal todas las zonas de carrera del ciclo completo. El test LTHR en Semana 5, con Santiago fresco, dará el dato correcto.',
+      tip:'Este viernes es de inversión a futuro. Un buen LTHR en S5 vale más que un test comprometido hoy. El cuerpo necesita este Z1 para consolidar las adaptaciones de CSS y FTP.' } },
+  { dayLabel:'SÁB', dayDate:'30 May', type:'bike', icon:'🚴', title:'Rodada Z1 Recuperación · 50 min', tag:'bike', dur:'50 min',
+    content:{ kind:'session', stats:[{v:'50 min',l:'Duración'},{v:'Z1 puro',l:'Zona'},{v:'<58% FTP',l:'Potencia techo'},{v:'Nasal',l:'Respiración'}],
+      sections:[{head:'Estructura 80/20 — Recuperación Post-Tests', cols:['Segmento','Duración','Zona','%FTP','Nota'], rows:[
+        ['Calentamiento','8 min','Z1','<50%','Cadencia libre. Sin presión.'],
+        ['Bloque Z1 puro','34 min','Z1','50–57%','FC <145 bpm. Cadencia 85–90 rpm. Respiración nasal.'],
+        ['Enfriamiento','8 min','Z1','<45%','Bajar FC <130 antes de parar.'],
+      ]}],
+      coachNote:'<strong>Ajuste 80/20 por carga acumulada de tests:</strong> Con 2 sesiones de alta intensidad en los últimos 2 días, la rodada del sábado baja de Z2 75 min a Z1 50 min. Esto no es pérdida de entrenamiento — es inversión en adaptación. El estímulo de los tests (CSS + FTP) se consolida durante la recuperación, no durante más estrés. La primera rodada Z2 larga con zonas calibradas se programa para la Semana 5, cuando el sistema está fresco y el LTHR esté también confirmado.',
+      tip:'Jornada de familia en Tacx — todos entrenan juntos. El que va en Z1 no va "más lento" — va con más inteligencia. Esta sesión es perfecta para enfocarse en técnica de pedaleo y cadencia sin presión de zonas.' } },
+  { dayLabel:'DOM', dayDate:'31 May', type:'run', icon:'🏃', title:'Primer Brick · Z1 Run', tag:'run', dur:'30 min',
+    content:{ kind:'session', stats:[{v:'30 min',l:'Duración'},{v:'Z1 post-bici',l:'Tipo'},{v:'<148 bpm',l:'FC techo'},{v:'Brick #1',l:'Experiencia'}],
+      sections:[{head:'Estructura Brick (Aprendizaje)', cols:['Segmento','Duración','FC','Nota'], rows:[
+        ['Transición T2','2 min','—','Cambio de calzado. Observar sensación de piernas.'],
+        ['Rodaje de activación','8 min','<140','Z1. Las piernas de plomo son normales — se pasan solas.'],
+        ['Trote Z1 sostenido','15 min','130–145 bpm','FC manda. Sin objetivo de pace. Sentir la transición.'],
+        ['Enfriamiento','5 min','<130','Caminata + estiramientos de cuádriceps y cadera'],
+      ]}],
+      coachNote:'<strong>Primer brick de Santiago — enfoque de aprendizaje:</strong> Sin referencia de LTHR todavía, la sesión opera por percepción y FC. La FC techo de 148 bpm es conservadora para garantizar que esto sea una sesión Z1. El objetivo principal no es la condición física — es aprender qué se siente al correr post-bicicleta. Esa sensación mejora dramáticamente semana a semana y es una adaptación específica del triatlón que solo se adquiere haciendo bricks.',
+      tip:'Primer brick histórico para Santiago. Sin importar qué tan extraño se sientan las piernas — anotar la sensación. En 4 semanas comparará y verá la diferencia. Eso es el triatlón.' } },
+];
+
+// ── RENDER ──────────────────────────────────────
+
+const TYPE_CLS = {swim:'tb-swim', bike:'tb-bike', run:'tb-run', str:'tb-str', rest:'tb-rest'};
+const TAG_CLS  = {swim:'tag-swim', bike:'tag-bike', run:'tag-run', str:'tag-str', rest:'tag-rest'};
+
+function buildGrid(id, data, key) {
+  const g = document.getElementById(id);
+  g.innerHTML = '';
+  data.forEach((d,i) => {
+    const isToday = d.dayDate === TODAY_DATE;
+    const div = document.createElement('div');
+    div.className = 'day-card' + (isToday ? ' today-card' : '');
+    div.innerHTML = `${isToday?'<div class="today-pip"></div>':''}
+      <div class="day-label">${d.dayLabel}</div>
+      <div class="day-date">${d.dayDate}</div>
+      <span class="day-icon">${d.icon}</span>
+      <div class="day-name">${d.title}</div>
+      <div class="day-dur">${d.dur}</div>
+      <div class="type-bar ${TYPE_CLS[d.type]||''}"></div>`;
+    div.onclick = () => showDetail(key, i);
+    g.appendChild(div);
+  });
+}
+
+function showDetail(key, idx) {
+  const arr = getData(key);
+  const d = arr[idx];
+  const el = document.getElementById('detail-' + key);
+  document.getElementById('grid-' + key).querySelectorAll('.day-card')
+    .forEach((c,i) => c.classList.toggle('selected', i===idx));
+  const c = d.content;
+  let h = `<div class="sd-header">
+    <div class="sd-icon">${d.icon}</div>
+    <div>
+      <div class="sd-title">${d.title}</div>
+      <div class="sd-meta">${d.dayLabel} · ${d.dayDate} · ${d.dur}</div>
+    </div>
+    <div class="sd-tags">
+      <span class="tag ${TAG_CLS[d.type]||''}">${d.type.toUpperCase()}</span>
+      ${d.today?'<span class="tag tag-today">HOY</span>':''}
+    </div>
+  </div>`;
+  if(c.kind === 'rest') {
+    h += `<div class="rest-card"><div class="big-icon">🧘</div><p>${c.note}</p></div>`;
+  } else {
+    if(c.stats) { h += '<div class="stats-row">'; c.stats.forEach(s => { h += `<div class="stat-box"><span class="stat-val">${s.v}</span><span class="stat-lbl">${s.l}</span></div>`; }); h += '</div>'; }
+    if(c.sections) c.sections.forEach(sec => {
+      h += `<div class="section-head">${sec.head}</div><table><thead><tr>`;
+      sec.cols.forEach(col => h += `<th>${col}</th>`);
+      h += '</tr></thead><tbody>';
+      sec.rows.forEach(row => { h += '<tr>'; row.forEach(cell => h += `<td>${cell}</td>`); h += '</tr>'; });
+      h += '</tbody></table>';
+    });
+    if(c.poolNote) h += `<div class="info-box"><strong>🏊 Sesión en Alberca (regla permanente)</strong><br>Todas las sesiones de nado de Valeria son en alberca. Solo aguas abiertas cuando se especifique como fecha especial o competencia.</div>`;
+    if(c.cycleOptions) {
+      h += `<div class="intensity-options">
+        <div class="int-opt green">
+          <div class="int-opt-head">${c.cycleOptions.green.head}</div>
+          <div class="int-opt-body">${c.cycleOptions.green.body}</div>
+        </div>
+        <div class="int-opt blue">
+          <div class="int-opt-head">${c.cycleOptions.blue.head}</div>
+          <div class="int-opt-body">${c.cycleOptions.blue.body}</div>
+        </div>
+      </div>`;
+    }
+    if(c.coachNote) h += `<div class="coach-note">🎯 ${c.coachNote}</div>`;
+    if(c.tip) h += `<div class="trainer-tip"><strong>Nota del entrenador</strong>${c.tip}</div>`;
+  }
+  el.innerHTML = h;
+}
+
+function switchAth(key) {
+  document.querySelectorAll('.ath-tab').forEach(t => t.classList.toggle('active', t.dataset.ath===key));
+  document.querySelectorAll('.athlete-panel').forEach(p => p.classList.toggle('active', p.id==='panel-'+key));
+  const arr = getData(key);
+  if(!arr) return;
+  // Rebuild grid for this athlete's current week, then open today (or last session)
+  buildGrid('grid-'+key, arr, key);
+  const ti = arr.findIndex(d => d.dayDate===TODAY_DATE || d.today);
+  showDetail(key, ti >= 0 ? ti : arr.length-1);
+  if(key==='valeria') setTimeout(function(){ renderCycleStatus(); }, 50);
+}
+
+// Week-aware data resolution
+const WEEK_DATA = {
+  jorge:    { 4: JORGE },
+  valeria:  { 4: VALERIA, 5: VALERIA_W5, 6: VALERIA_W6, 7: VALERIA_W7, 8: VALERIA_W8, 9: VALERIA_W9 },
+  charly:   { 4: CHARLY },
+  santiago: { 4: SANTIAGO },
+};
+let CURRENT_WEEK = { jorge:4, valeria:6, charly:4, santiago:4 };
+
+function getData(ath) {
+  const wk = CURRENT_WEEK[ath] || 4;
+  return (WEEK_DATA[ath] && WEEK_DATA[ath][wk]) ? WEEK_DATA[ath][wk] : null;
+}
+
+buildGrid('grid-jorge', JORGE, 'jorge');
+buildGrid('grid-valeria', VALERIA_W6, 'valeria');
+buildGrid('grid-charly', CHARLY, 'charly');
+buildGrid('grid-santiago', SANTIAGO, 'santiago');
+
+const ti = JORGE.findIndex(d => d.dayDate===TODAY_DATE);
+showDetail('jorge', ti >= 0 ? ti : JORGE.length-1);
+
+// Auto-calculate and render Valeria's current cycle phase from today's date
+setTimeout(function(){ renderCycleStatus(); }, 100);
+
+function selectWeek(n) {
+  document.querySelectorAll('.week-item').forEach(el => el.classList.remove('active'));
+  const items = document.querySelectorAll('.week-item');
+  if(items[n-1]) items[n-1].classList.add('active');
+
+  const activeAth = document.querySelector('.ath-tab.active').dataset.ath;
+  CURRENT_WEEK[activeAth] = n;
+  const data = getData(activeAth);
+
+  if(!data) {
+    const det = document.getElementById('detail-' + activeAth);
+    if(det) det.innerHTML = `<div class="rest-card">
+      <div class="big-icon">📋</div>
+      <p><strong>Semana ${n}</strong> — El plan detallado se cargará conforme se acerque la fecha.<br><br>
+      ${activeAth==='valeria' ? 'La Semana 5 de Valeria ya está disponible — selecciónala.' : 'El entrenador actualizará esta semana próximamente.'}</p>
+    </div>`;
+    const g = document.getElementById('grid-' + activeAth);
+    if(g) g.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--text3);font-size:13px;">Sin sesiones cargadas para Semana ${n}</div>`;
+    CURRENT_WEEK[activeAth] = 4; // reset for safety
+    return;
+  }
+
+  // Rebuild grid for this week and open first today/first session
+  buildGrid('grid-' + activeAth, data, activeAth);
+  const todayIdx = data.findIndex(d => d.dayDate===TODAY_DATE || d.today);
+  showDetail(activeAth, todayIdx >= 0 ? todayIdx : 0);
+}
+
+
+
+
+
+
+// ══════════════════════════════════════════════
+//  CYCLE AUTO-TRACKER (Valeria)
+// ══════════════════════════════════════════════
+const CYCLE_CONFIG = {
+  anchorDate: '2026-06-01',  // Día 1 confirmado (primer sangrado)
+  cycleLength: 28,           // Punto de partida — se recalibra con datos reales
+};
+
+function getCycleInfo(dateObj) {
+  const anchor = new Date(CYCLE_CONFIG.anchorDate + 'T00:00:00');
+  const target = dateObj || new Date();
+  const t0 = new Date(target.getFullYear(), target.getMonth(), target.getDate());
+  const daysDiff = Math.floor((t0 - anchor) / 86400000);
+  let cycleDay = ((daysDiff % CYCLE_CONFIG.cycleLength) + CYCLE_CONFIG.cycleLength) % CYCLE_CONFIG.cycleLength + 1;
+
+  let phase, phaseIdx, nextPhase, daysToNext;
+  if (cycleDay <= 5) { phase='Menstrual'; phaseIdx=0; nextPhase='Folicular'; daysToNext=6-cycleDay; }
+  else if (cycleDay <= 13) { phase='Folicular'; phaseIdx=1; nextPhase='Ovulación'; daysToNext=14-cycleDay; }
+  else if (cycleDay <= 15) { phase='Ovulación'; phaseIdx=2; nextPhase='Lútea'; daysToNext=16-cycleDay; }
+  else { phase='Lútea'; phaseIdx=3; nextPhase='Próximo periodo'; daysToNext=CYCLE_CONFIG.cycleLength-cycleDay+1; }
+
+  return { cycleDay, phase, phaseIdx, nextPhase, daysToNext };
+}
+
+function addDays(d, n) { const r = new Date(d); r.setDate(r.getDate()+n); return r; }
+function fmtDate(d) {
+  const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  return d.getDate() + ' ' + meses[d.getMonth()];
+}
+
+function renderCycleStatus() {
+  const el = document.getElementById('cycle-status');
+  if(!el) return;
+  const today = new Date();
+  const info = getCycleInfo(today);
+  const anchor = new Date(CYCLE_CONFIG.anchorDate + 'T00:00:00');
+
+  // Forecast key dates
+  const daysSinceAnchor = Math.floor((new Date(today.getFullYear(),today.getMonth(),today.getDate()) - anchor)/86400000);
+  const cyclesPassed = Math.floor(daysSinceAnchor / CYCLE_CONFIG.cycleLength);
+  const currentCycleStart = addDays(anchor, cyclesPassed * CYCLE_CONFIG.cycleLength);
+  const nextPeriod = addDays(currentCycleStart, CYCLE_CONFIG.cycleLength);
+  const follicularStart = addDays(currentCycleStart, 5);
+  const ovulation = addDays(currentCycleStart, 13);
+
+  const phaseEmoji = ['🩸','🟢','⚠️','🌙'][info.phaseIdx];
+
+  el.innerHTML = `
+    <div class="cs-today">
+      <span class="cs-day">${info.cycleDay}</span>
+      <span class="cs-day-lbl">Día del ciclo</span>
+    </div>
+    <div>
+      <div class="cs-phase">${phaseEmoji} Fase ${info.phase}</div>
+      <div class="cs-next">${info.daysToNext > 0 ? info.daysToNext + ' día(s) → ' + info.nextPhase : 'Transición hoy → ' + info.nextPhase}</div>
+    </div>
+    <div class="cs-forecast">
+      <div class="cs-fc-item"><span class="cs-fc-date">${fmtDate(follicularStart)}</span><span class="cs-fc-lbl">🟢 Folicular</span></div>
+      <div class="cs-fc-item"><span class="cs-fc-date">${fmtDate(ovulation)}</span><span class="cs-fc-lbl">⚠️ Ovulación</span></div>
+      <div class="cs-fc-item"><span class="cs-fc-date">${fmtDate(nextPeriod)}</span><span class="cs-fc-lbl">🩸 Próx. periodo</span></div>
+    </div>
+    <div class="cs-config">Ancla: ${fmtDate(anchor)} (Día 1) · Ciclo: ${CYCLE_CONFIG.cycleLength} días (se recalibra con datos reales) · Cálculo basado en la fecha de hoy del dispositivo</div>
+  `;
+
+  // Auto-highlight current phase in the selector
+  selectCyclePhase(info.phaseIdx);
+}
+
+// ══════════════════════════════════════════════
+//  CYCLE PHASE PERIODIZATION (Valeria)
+// ══════════════════════════════════════════════
+const CYCLE_GUIDANCE = [
+  { // Menstrual
+    title:'🩸 Fase Menstrual (días 1–5) · Intensidad flexible',
+    text:'Hormonas en su punto más bajo. <strong>Escuchar el cuerpo es la regla.</strong> Si hay cólicos o fatiga marcada: mantener solo trabajo aeróbico Z1–Z2 y reducir volumen 10–15%. Si te sientes bien: entrenar normal — muchas mujeres rinden bien en esta fase. Prioridad en hierro (la pérdida menstrual lo agota) y sueño. Hidratación extra.'
+  },
+  { // Folicular
+    title:'🟢 Fase Folicular (días 6–13) · LUZ VERDE',
+    text:'Estrógeno en ascenso — la mejor fase para entrenar duro. <strong>Aquí van las sesiones de calidad:</strong> los intervalos de bici/carrera, la fuerza con más carga, y cualquier test. El cuerpo recupera más rápido, tolera mejor los carbohidratos y construye fuerza con eficiencia. Si vamos a subir la carga semanal, esta es la fase donde se siente fácil.'
+  },
+  { // Ovulación
+    title:'⚠️ Ovulación (día ~14) · Precaución articular',
+    text:'Estrógeno en pico. Aeróbicamente Valeria estará fuerte, pero hay <strong>mayor laxitud ligamentaria</strong> que eleva ligeramente el riesgo en movimientos explosivos o de carga máxima. Mantener los intervalos aeróbicos, pero cuidar la técnica en fuerza pesada y evitar cambios de dirección bruscos. Buen día para volumen Z2.'
+  },
+  { // Lútea
+    title:'🌙 Fase Lútea (días 15–28) · Modular intensidad',
+    text:'Progesterona en ascenso. <strong>Temprana (15–21):</strong> aún buen rendimiento, mantener el plan. <strong>Tardía (22–28):</strong> la temperatura corporal sube ~0.3–0.5°C, el RPE percibido es mayor y aparece la fatiga del SPM. Reemplazar las sesiones de calidad por volumen aeróbico Z2, priorizar técnica, hidratar más y aceptar que el mismo esfuerzo "cuesta más". No es debilidad — es fisiología.'
+  }
+];
+
+function selectCyclePhase(n) {
+  for(let i=0; i<4; i++) {
+    const el = document.getElementById('cphase-'+i);
+    if(el) el.classList.toggle('active', i===n);
+  }
+  const g = document.getElementById('cycle-guidance');
+  if(g) {
+    g.innerHTML = '<strong>'+CYCLE_GUIDANCE[n].title+'</strong><br>'+CYCLE_GUIDANCE[n].text;
+    g.classList.add('show');
+  }
+}
+
+// ══════════════════════════════════════════════
+//  METRICS ENGINE
+// ══════════════════════════════════════════════
+
+// ── Athlete profiles ──────────────────────────
+const PROFILES = {
+  jorge: {
+    name:'Jorge', age:46, goal:'T100 Vancouver + 70.3 Cozumel',
+    zones:{ fcZ2:'120–135 bpm', ftp:'Pendiente test', css:'Pendiente test', lthr:'Pendiente test' },
+    sessions:[]
+  },
+  valeria: {
+    name:'Valeria', age:41, goal:'T100 Vancouver + 70.3 Cozumel',
+    zones:{ fcZ2:'130–145 bpm', ftp:'~130W (test 9 Jun)', css:'~2:10/100m est.', lthr:'FC máx ~180 (41 años)' },
+    sessions:[
+      {
+        id:'val-bike-mar26',
+        date:'Mar 26 May', type:'bike', icon:'🚴',
+        title:'Rodada Z2 · Cadencia',
+        summary:{ dur:'48.5 min', dist:'—', cal:'333', fcAvg:'127', fcMax:'145', extra:'96W · 70rpm' },
+        charts:[
+          { id:'fczone-bike', kind:'hbar', title:'Distribución Zonas FC',
+            sub:'Objetivo: >80% en Z2',
+            bars:[
+              { label:'Z1 <120bpm', val:19.6, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:59.0, color:'#10b981', target:80 },
+              { label:'Z3 135–148bpm', val:21.4, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:0, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'cad-blocks', kind:'vbar', title:'Cadencia por Bloque de 5 min',
+            sub:'Objetivo: 83+ rpm (línea roja)',
+            target:83,
+            targetLabel:'Objetivo 83rpm',
+            xLabels:['0–5','5–10','10–15','15–20','20–25','25–30','30–35','35–40','40–45','45–49'],
+            vals:[53,67,72,72,70,75,71,76,76,72],
+            color:'#0284c7',
+            unit:'rpm'
+          },
+          { id:'pow-blocks', kind:'vbar', title:'Potencia por Bloque de 5 min',
+            sub:'Objetivo: ~96W (62% FTP)',
+            target:96,
+            targetLabel:'Objetivo 96W',
+            xLabels:['0–5','5–10','10–15','15–20','20–25','25–30','30–35','35–40','40–45','45–49'],
+            vals:[70,82,101,100,98,104,98,105,105,96],
+            color:'#d97706',
+            unit:'W'
+          },
+        ],
+        note:'🔴 Cadencia crítica: solo 3.7% del tiempo sobre 83 rpm. Promedio 70 rpm (+6 vs S2). La potencia y FC estuvieron correctas. El sábado la cadencia es el único objetivo.',
+        status:'completed'
+      },
+      {
+        id:'val-swim-mie27',
+        date:'Mié 27 May', type:'swim', icon:'🏊',
+        title:'Nado Alberca Z1–Z2',
+        summary:{ dur:'30:45 min', dist:'1,050m', cal:'217', fcAvg:'128', fcMax:'148', extra:'2:11/100m prom.' },
+        charts:[
+          { id:'swim-pace', kind:'vbar', title:'Pace por Repetición (5×100m)',
+            sub:'Objetivo: ninguna rep bajo 2:05/100m (125s)',
+            target:125,
+            targetLabel:'Objetivo mín 2:05',
+            targetAbove:true,
+            xLabels:['Rep 1','Rep 2','Rep 3','Rep 4','Rep 5'],
+            vals:[115,147,120,148,124],
+            colors:['#ef4444','#10b981','#ef4444','#10b981','#10b981'],
+            unit:'s/100m',
+            yMin:100, yMax:160,
+            customLabels:['1:55','2:27','2:00','2:28','2:04']
+          },
+          { id:'swim-fc', kind:'vbar', title:'FC Promedio por Repetición',
+            sub:'Zona objetivo Z2: 120–134 bpm',
+            target:134,
+            targetLabel:'Techo Z2 (134)',
+            targetAbove:true,
+            target2:120,
+            target2Label:'Piso Z2 (120)',
+            xLabels:['Rep 1','Rep 2','Rep 3','Rep 4','Rep 5'],
+            vals:[139,133,138,129,133],
+            colors:['#ef4444','#10b981','#ef4444','#10b981','#10b981'],
+            unit:'bpm',
+            yMin:110, yMax:155,
+            customLabels:['139','133','138','129','133']
+          },
+        ],
+        note:'🎯 CSS estimado preliminar: ~2:08–2:12/100m. La oscilación de pace (33s de rango) revela ausencia de ritmo de referencia. Próxima sesión: configurar alarma de pace mínimo 2:05/100m.',
+        status:'completed'
+      },
+      {
+        id:'val-run-vie29',
+        date:'Vie 29 May', type:'run', icon:'🏃',
+        title:'Carrera Z2 (corrida el viernes)',
+        summary:{ dur:'35.7 min', dist:'4.17 km', cal:'217', fcAvg:'122', fcMax:'135', extra:'8:33/km' },
+        charts:[
+          { id:'vierun-fc', kind:'hbar', title:'Distribución Zonas FC',
+            sub:'Ejecución ejemplar — objetivo >70% Z2',
+            bars:[
+              { label:'Z1 <120bpm', val:27.1, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:72.4, color:'#10b981', target:70 },
+              { label:'Z3 135–148bpm', val:0.5, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:0, color:'#ef4444', target:null },
+            ]
+          },
+        ],
+        note:'✅ Sesión modelo. 72% en Z2, cero tiempo en Z4. Demuestra que Valeria controla la intensidad perfectamente cuando las condiciones lo permiten. Este es el estándar para las sesiones fáciles.',
+        status:'completed'
+      },
+      {
+        id:'val-swim-vie29',
+        date:'Vie 29 May', type:'swim', icon:'🏊',
+        title:'Nado Z2 · 2do Nado',
+        summary:{ dur:'32.5 min', dist:'1,100m', cal:'195', fcAvg:'119', fcMax:'138', extra:'Z1–Z2' },
+        charts:[
+          { id:'vieswim-fc', kind:'hbar', title:'Distribución Zonas FC',
+            sub:'Mejoró vs miércoles (era 21.5% Z3)',
+            bars:[
+              { label:'Z1 <120bpm', val:48.9, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:43.3, color:'#10b981', target:null },
+              { label:'Z3 135–148bpm', val:7.9, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:0, color:'#ef4444', target:null },
+            ]
+          },
+        ],
+        note:'✅ Segundo nado de la semana, bien controlado. El Z3 bajó de 21.5% (miércoles) a 7.9% — mejor manejo del pace. La nueva estructura de 2 nados semanales ya muestra beneficio técnico.',
+        status:'completed'
+      },
+      {
+        id:'val-bike-sab30',
+        date:'Sáb 30 May', type:'bike', icon:'🚴',
+        title:'Rodada Larga (exterior)',
+        summary:{ dur:'110 min', dist:'22.86 km', cal:'647', fcAvg:'142', fcMax:'169', extra:'⚠️ 66% Z3+Z4' },
+        charts:[
+          { id:'sabbike-fc', kind:'hbar', title:'Distribución Zonas FC',
+            sub:'🔴 Plan era Z2 — resultó muy intensa',
+            bars:[
+              { label:'Z1 <120bpm', val:4.5, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:29.3, color:'#10b981', target:80 },
+              { label:'Z3 135–148bpm', val:30.7, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:35.5, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'sabbike-blocks', kind:'vbar', title:'FC por Bloque de 10 min',
+            sub:'Techo Z2 = 134 (línea roja). Escaló a Z4 del min 10–70.',
+            target:134, targetLabel:'Techo Z2',
+            xLabels:['0–10','10–20','20–30','30–40','40–50','50–60','60–70','70–80','80–90','90+'],
+            vals:[124,152,149,141,151,148,158,131,128,146],
+            color:'#d97706', unit:'bpm', yMin:110, yMax:170,
+          },
+        ],
+        note:'🔴 Al aire libre, el terreno empujó la FC a Z4 sostenido del min 10 al 70. Duró 110 min (vs 90 plan). Posibles causas: terreno/colinas, búsqueda de más intensidad, o zonas mal calibradas (FC máx 169 sugiere que el techo Z2 real podría ser >134). Requiere test de FTP para confirmar.',
+        status:'completed'
+      },
+      {
+        id:'val-run-dom31',
+        date:'Dom 31 May', type:'run', icon:'🏃',
+        title:'Carrera Larga (exterior)',
+        summary:{ dur:'63.3 min', dist:'7.49 km', cal:'511', fcAvg:'147', fcMax:'168', extra:'⚠️ 85% Z3+Z4' },
+        charts:[
+          { id:'domrun-fc', kind:'hbar', title:'Distribución Zonas FC',
+            sub:'🔴 Plan era Z2 — la más intensa de la semana',
+            bars:[
+              { label:'Z1 <120bpm', val:1.4, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:13.1, color:'#10b981', target:80 },
+              { label:'Z3 135–148bpm', val:32.0, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:53.5, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'domrun-cmp', kind:'vbar', title:'Mismo Pace, Distinta FC (fatiga)',
+            sub:'Vie y Dom: ~8:30/km. La FC del Dom revela fatiga del sábado.',
+            xLabels:['Vie FC','Dom FC'],
+            vals:[122,147],
+            colors:['#10b981','#ef4444'],
+            unit:'bpm', yMin:100, yMax:160,
+            customLabels:['122','147'],
+          },
+        ],
+        note:'🔴 53% en Z4 para una carrera "Z2 larga". Mismo ritmo que el viernes (8:30/km) pero +25 bpm de FC = fatiga acumulada del sábado brutal. La carga del fin de semana se ejecutó invertida al 80/20. DECISIÓN: programar test LTHR + FTP en Semana 5 para calibrar zonas reales antes de continuar.',
+        status:'completed'
+      },
+      {
+        id:'val-ows-lun1',
+        date:'Lun 1 Jun', type:'swim', icon:'🌊',
+        title:'Nado Aguas Abiertas (Día 1 ciclo)',
+        summary:{ dur:'45.1 min', dist:'1,298m', cal:'299', fcAvg:'128', fcMax:'143', extra:'3:28/100m' },
+        charts:[
+          { id:'ows-fc', kind:'hbar', title:'Distribución Zonas FC',
+            sub:'Aeróbico bien controlado — 0% Z4',
+            bars:[
+              { label:'Z1 <120bpm', val:10, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:72, color:'#10b981', target:null },
+              { label:'Z3 135–148bpm', val:18, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:0, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'ows-pace', kind:'vbar', title:'Pace: Aguas Abiertas vs Alberca',
+            sub:'Diferencia normal por sighting / sin paredes',
+            xLabels:['Alberca','Aguas abiertas'],
+            vals:[131,208],
+            colors:['#0284c7','#0ea5e9'],
+            unit:'s/100m', yMin:100, yMax:230,
+            customLabels:['2:11','3:28'],
+          },
+        ],
+        note:'🌊 Nado aguas abiertas intempestivo en día de descanso (día 1 ciclo). Fuera de regla — la regla de alberca se mantiene, fue excepción puntual. Bien ejecutado: 72% Z2, 0% Z4. Valeria reportó sentirse un poco débil (normal en día 1). Buen dato base de aguas abiertas para T100/70.3. Ajuste: el martes se redujo y flexibilizó por no haber tomado el descanso.',
+        status:'completed'
+      },
+      {
+        id:'val-swim-mie3',
+        date:'Mié 3 Jun', type:'swim', icon:'🏊',
+        title:'Nado Técnico Z2 (+10% volumen)',
+        summary:{ dur:'33.5 min', dist:'1,200m', cal:'195', fcAvg:'~131*', fcMax:'230🔴', extra:'2:47/100m' },
+        charts:[
+          { id:'mie3-hr-quality', kind:'vbar', title:'Calidad de Datos FC (sensor en agua)',
+            sub:'🔴 7% de lecturas imposibles — sensor óptico falló',
+            xLabels:['<80 art.','80–165 ok','>178 imp.'],
+            vals:[8,85,7],
+            colors:['#ef4444','#10b981','#ef4444'],
+            unit:'%', yMin:0, yMax:100,
+            customLabels:['8%','85%','7%'],
+          },
+          { id:'mie3-pace', kind:'vbar', title:'Pace por Contexto',
+            sub:'2:47/100m — entre alberca y aguas abiertas',
+            xLabels:['Alberca prev','Hoy técnico','Aguas ab.'],
+            vals:[131,167,208],
+            colors:['#0284c7','#0ea5e9','#7dd3fc'],
+            unit:'s/100m', yMin:100, yMax:230,
+            customLabels:['2:11','2:47','3:28'],
+          },
+        ],
+        note:'✅ Sesión bien ejecutada: 1,200m completados (el +10% que subimos). Pace 2:47/100m razonable para técnico con drills. 🔴 FC descartada — el sensor óptico de muñeca falló en agua (máx 230 imposible). FC real ~131 bpm (Z2). Para nado: gobernar por pace + RPE, no FC de muñeca. (*FC promedio de datos limpios.)',
+        status:'completed'
+      },
+      {
+        id:'val-bike-jue4',
+        date:'Jue 4 Jun', type:'bike', icon:'🚴',
+        title:'Bici Fuerza Power Slope',
+        summary:{ dur:'50.8 min', dist:'20.1 km', cal:'310', fcAvg:'120', fcMax:'140', extra:'78 rpm ⚠️' },
+        charts:[
+          { id:'jue4-cad', kind:'vbar', title:'Cadencia: Objetivo vs Real',
+            sub:'🔴 La fuerza requiere baja cadencia (50-55) — quedó en 78',
+            xLabels:['Objetivo','Real'],
+            vals:[53,78],
+            colors:['#10b981','#ef4444'],
+            unit:'rpm', yMin:0, yMax:100,
+            customLabels:['53','78'],
+          },
+        ],
+        note:'⚠️ Power slope completado pero la cadencia quedó muy alta (78 vs 50-55 objetivo). Pegó los watts (máx 126W) pero a esa cadencia fue potencia moderada, no fuerza. FC controlada (120 prom). Lección: el estímulo de fuerza viene de la baja cadencia — usar Slope mode o grindear conscientemente. Se aplicará en el bici fuerza/velocidad de S7.',
+        status:'completed'
+      },
+      {
+        id:'val-run-vie5',
+        date:'Vie 5 Jun', type:'run', icon:'🏃',
+        title:'Carrera Z2 (resultó 87% Z4)',
+        summary:{ dur:'52.7 min', dist:'7.0 km', cal:'483', fcAvg:'158🔴', fcMax:'172', extra:'7:31/km' },
+        charts:[
+          { id:'vie5-zones', kind:'hbar', title:'Distribución FC — Plan era Z2',
+            sub:'🔴 87% en Z4 · solo 1% en Z2 objetivo',
+            bars:[
+              { label:'Z1 <120bpm', val:2, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:1, color:'#10b981', target:80 },
+              { label:'Z3 135–148bpm', val:10, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:87, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'pattern', kind:'vbar', title:'Patrón: 3 Sesiones Fáciles en Z4',
+            sub:'% del tiempo en Z3+Z4 cuando el plan era Z2',
+            target:20, targetLabel:'Máx 80/20',
+            xLabels:['Sáb S4','Dom S4','Vie S5'],
+            vals:[66,85,97],
+            colors:['#f59e0b','#ef4444','#ef4444'],
+            unit:'%', yMin:0, yMax:100,
+            customLabels:['66%','85%','97%'],
+          },
+        ],
+        note:'🔴 Patrón recurrente: tercera sesión "fácil" ejecutada en Z4. El diagnóstico honesto — a Valeria no le falta intensidad, le falta base aeróbica. Para mejorar en las 3 disciplinas necesita correr MÁS DESPACIO en días fáciles. Prioridad: test LTHR 11 Jun (saber si zonas mal calibradas o exceso de esfuerzo) + alarma de FC con regla de caminar cuando suene.',
+        status:'completed'
+      },
+      {
+        id:'val-bike-sab6',
+        date:'Sáb 6 Jun', type:'bike', icon:'🚴',
+        title:'Bici Z2 Larga — EJECUCIÓN MODELO ✅',
+        summary:{ dur:'78 min', dist:'31.9 km', cal:'518', fcAvg:'109', fcMax:'128', extra:'0% Z3+Z4' },
+        charts:[
+          { id:'sab6-zones', kind:'hbar', title:'Distribución FC — Así se hace ✅',
+            sub:'100% aeróbico · indoor (Tacx)',
+            bars:[
+              { label:'Z1 <120bpm', val:66, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:34, color:'#10b981', target:null },
+              { label:'Z3 135–148bpm', val:0, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:0, color:'#ef4444', target:null },
+            ]
+          },
+        ],
+        note:'✅ Sesión modelo. 100% Z1-Z2, cero Z3-Z4. Indoor en Tacx = control perfecto. Este es el "80% fácil" que construye el motor aeróbico. Guardar como referencia de cómo se ve un día aeróbico bien hecho.',
+        status:'completed'
+      },
+      {
+        id:'val-run-dom7',
+        date:'Dom 7 Jun', type:'run', icon:'🏃',
+        title:'Carrera Larga — BIEN CONTROLADA ✅',
+        summary:{ dur:'61 min', dist:'6.3 km', cal:'350', fcAvg:'122', fcMax:'155', extra:'89% Z1+Z2' },
+        charts:[
+          { id:'dom7-zones', kind:'hbar', title:'Distribución FC — Controlada ✅',
+            sub:'89% aeróbico · indoor (caminadora)',
+            bars:[
+              { label:'Z1 <120bpm', val:28, color:'#818cf8', target:null },
+              { label:'Z2 120–134bpm', val:61, color:'#10b981', target:null },
+              { label:'Z3 135–148bpm', val:9, color:'#f59e0b', target:null },
+              { label:'Z4 >148bpm', val:2, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'indoor-outdoor', kind:'vbar', title:'La Clave: Indoor vs Outdoor (% Z4)',
+            sub:'Indoor controla perfecto, outdoor se va a Z4',
+            xLabels:['Vie OUT','Sáb IN','Dom IN'],
+            vals:[87,0,2],
+            colors:['#ef4444','#10b981','#10b981'],
+            unit:'% Z4', yMin:0, yMax:100,
+            customLabels:['87%','0%','2%'],
+          },
+        ],
+        note:'✅ 89% en Z1-Z2, indoor en caminadora. El descubrimiento del fin de semana: Valeria controla la intensidad PERFECTO indoor (Tacx/caminadora) y se va a Z4 outdoor. Solución: días fáciles indoor mientras desarrolla el sentido del ritmo; calidad (cuestas/sprints) outdoor.',
+        status:'completed'
+      },
+      {
+        id:'val-ftptest-mar9',
+        date:'Mar 9 Jun', type:'bike', icon:'🚴',
+        title:'TEST FTP — Recalibración Clave',
+        summary:{ dur:'36 min', dist:'16.0 km', cal:'287', fcAvg:'145', fcMax:'174', extra:'FTP ~130W' },
+        charts:[
+          { id:'ftp-revision', kind:'vbar', title:'FTP: Estimado vs Real',
+            sub:'El estimado estaba ALTO — watts eran muy duros',
+            xLabels:['Estimado','Real (test)'],
+            vals:[154,130],
+            colors:['#f59e0b','#0284c7'],
+            unit:'W', yMin:0, yMax:170,
+            customLabels:['154W','130W'],
+          },
+          { id:'ftp-power-profile', kind:'vbar', title:'Potencia por bloque — pacing irregular',
+            sub:'Debió ser parejo; construyó y sprinteó al final',
+            xLabels:['16-20','21-25','26-30','31-35'],
+            vals:[122,137,124,157],
+            colors:['#0284c7','#0284c7','#f59e0b','#ef4444'],
+            unit:'W', yMin:0, yMax:180,
+            customLabels:['122','137','124','157'],
+          },
+        ],
+        note:'⭐ Test clave. FTP real ~130W (era 154W estimado — los watts prescritos eran muy duros). FC máx 174 revela que las zonas de FC estaban muy bajas (techo Z2 era 134). Ejecución: pacing irregular (construyó + sprint final) subestima algo el FTP. 130W es base de trabajo; un re-test parejo lo afinará. El LTHR del jueves define zonas de carrera.',
+        status:'completed'
+      },
+      {
+        id:'val-swim-mie10',
+        date:'Mié 10 Jun', type:'swim', icon:'🏊',
+        title:'Nado Técnico — Validó la Recalibración',
+        summary:{ dur:'35 min', dist:'1,325m', cal:'269', fcAvg:'129', fcMax:'154', extra:'2:38/100m' },
+        charts:[
+          { id:'mie10-zones', kind:'hbar', title:'Distribución FC — Zonas Nuevas',
+            sub:'93% Z1-Z2 · aeróbico perfecto',
+            bars:[
+              { label:'Z1 <130bpm', val:36, color:'#818cf8', target:null },
+              { label:'Z2 130–145bpm', val:57, color:'#10b981', target:null },
+              { label:'Z3 146–157bpm', val:6, color:'#f59e0b', target:null },
+              { label:'Z4 158–167bpm', val:0, color:'#ef4444', target:null },
+            ]
+          },
+          { id:'mie10-calib', kind:'vbar', title:'Misma Sesión, Zonas Viejas vs Nuevas (% Z1-Z2)',
+            sub:'La recalibración revela la realidad aeróbica',
+            xLabels:['Zonas viejas','Zonas nuevas'],
+            vals:[49,93],
+            colors:['#f59e0b','#10b981'],
+            unit:'%', yMin:0, yMax:100,
+            customLabels:['~49%','93%'],
+          },
+        ],
+        note:'✅ Validación clave: la misma sesión perfecta se ve "sobre zona" con números viejos y 93% aeróbica con los reales. Confirma que el problema era calibración. FC limpia esta vez (máx 154, sin artefacto). Para nado igual gobierna pace + RPE.',
+        status:'completed'
+      },
+      {
+        id:'val-run-jue11',
+        date:'Jue 11 Jun', type:'run', icon:'🏃',
+        title:'Carrera OUTDOOR — EL AVANCE ⭐',
+        summary:{ dur:'45 min', dist:'4.2 km', cal:'264', fcAvg:'127', fcMax:'137', extra:'100% Z1-Z2' },
+        charts:[
+          { id:'jue11-breakthrough', kind:'vbar', title:'Run Outdoor: Antes vs Ahora (% Z4)',
+            sub:'De 87% Z4 a 0% — control aeróbico afuera',
+            xLabels:['Vie 5 (out)','Jue 11 (out)'],
+            vals:[87,0],
+            colors:['#ef4444','#10b981'],
+            unit:'% Z4', yMin:0, yMax:100,
+            customLabels:['87%','0%'],
+          },
+        ],
+        note:'⭐ Primera carrera outdoor 100% aeróbica. Corrió a 10:38/km, sacrificando pace por zona. Confirma que las zonas estaban mal Y que puede controlar afuera. Un antes y un después.',
+        status:'completed'
+      },
+      {
+        id:'val-swim-vie12',
+        date:'Vie 12 Jun', type:'swim', icon:'🏊',
+        title:'Nado Recuperación — 3er día en zona',
+        summary:{ dur:'33.4 min', dist:'1,175m', cal:'208', fcAvg:'120', fcMax:'147', extra:'88% Z1' },
+        charts:[
+          { id:'streak', kind:'vbar', title:'Racha: 3 días seguidos aeróbicos (% Z1-Z2)',
+            sub:'Consistencia que construye el motor de Cozumel',
+            xLabels:['Mié 10','Jue 11','Vie 12'],
+            vals:[93,100,99],
+            colors:['#10b981','#10b981','#10b981'],
+            unit:'%', yMin:0, yMax:100,
+            customLabels:['93%','100%','99%'],
+          },
+        ],
+        note:'✅ Recuperación perfecta (88% Z1) y tercer día seguido de control aeróbico. La recalibración + disciplina están encadenando consistencia. FC limpia (máx 147). Esto es exactamente lo que construye base para 70.3.',
+        status:'completed'
+      },
+    ]
+  },
+  charly: {
+    name:'Carlos', age:19, goal:'70.3 Cozumel',
+    zones:{ fcZ2:'144–160 bpm', ftp:'167W (ref. pendiente test)', css:'~1:30/100m est.', lthr:'~169 bpm ref.' },
+    sessions:[]
+  },
+  santiago: {
+    name:'Santiago', age:20, goal:'T100 Vancouver',
+    zones:{ fcZ2:'140–155 bpm est.', ftp:'Pendiente (JUE 28)', css:'Pendiente (MIÉ 27)', lthr:'Semana 5' },
+    sessions:[]
+  }
+};
+
+// ── View toggle ───────────────────────────────
+function setView(ath, view) {
+  const planBtn = document.getElementById('vt-plan-'+ath);
+  const metBtn  = document.getElementById('vt-metrics-'+ath);
+  const planDiv = document.getElementById('planview-'+ath);
+  const metDiv  = document.getElementById('metrics-'+ath);
+
+  if(view === 'plan') {
+    planBtn.classList.add('active'); metBtn.classList.remove('active');
+    planDiv.style.display = ''; metDiv.classList.remove('active');
+  } else {
+    metBtn.classList.add('active'); planBtn.classList.remove('active');
+    planDiv.style.display = 'none'; metDiv.classList.add('active');
+    renderMetrics(ath);
+  }
+}
+
+// ── Metrics renderer ──────────────────────────
+function renderMetrics(ath) {
+  const p = PROFILES[ath];
+  const el = document.getElementById('metrics-'+ath);
+
+  let html = buildProfile(p);
+
+  if(!p.sessions || p.sessions.length === 0) {
+    html += `<div class="metrics-empty">
+      <div class="big">📈</div>
+      <p>Las métricas se cargarán conforme se completen sesiones y se suban los archivos de actividad.<br><br>
+      El seguimiento de ${p.name} comenzará con la primera sesión registrada.</p>
+    </div>`;
+  } else {
+    p.sessions.forEach(s => { html += buildSessionCard(s); });
+  }
+
+  el.innerHTML = html;
+}
+
+function buildProfile(p) {
+  return `<div class="profile-card">
+    <div>
+      <div class="profile-name">${p.name}</div>
+      <div class="profile-goal">${p.goal}</div>
+      <div class="profile-stats">
+        <div class="p-stat"><span class="ps-val">${p.age}</span><span class="ps-lbl">Años</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.fcZ2}</span><span class="ps-lbl">FC Z2</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.ftp}</span><span class="ps-lbl">FTP</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.css}</span><span class="ps-lbl">CSS</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.lthr}</span><span class="ps-lbl">LTHR</span></div>
+        <div class="p-stat"><span class="ps-val">${(PROFILES[Object.keys(PROFILES).find(k=>PROFILES[k]===p)] && PROFILES[Object.keys(PROFILES).find(k=>PROFILES[k]===p)].sessions || []).length}</span><span class="ps-lbl">Sesiones</span></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function buildSessionCard(s) {
+  const typeColor = {bike:'#d97706',swim:'#0284c7',run:'#059669',str:'#db2777'}[s.type]||'#666';
+  let html = `<div class="metric-card full" style="border-left:4px solid ${typeColor};margin-bottom:14px;">
+    <div class="mc-header">
+      <span class="mc-icon">${s.icon}</span>
+      <div>
+        <div class="mc-title">${s.title}</div>
+        <div class="mc-sub">${s.date}</div>
+      </div>
+      <span class="mc-badge badge-done" style="margin-left:auto;">Completada</span>
+    </div>
+    <div class="m-stats">
+      <div class="m-stat"><span class="ms-val">${s.summary.dur}</span><span class="ms-lbl">Duración</span></div>
+      ${s.summary.dist !== '—' ? `<div class="m-stat"><span class="ms-val">${s.summary.dist}</span><span class="ms-lbl">Distancia</span></div>` : ''}
+      <div class="m-stat"><span class="ms-val">${s.summary.fcAvg}</span><span class="ms-lbl">FC Prom.</span></div>
+      <div class="m-stat"><span class="ms-val">${s.summary.fcMax}</span><span class="ms-lbl">FC Máx.</span></div>
+      <div class="m-stat"><span class="ms-val">${s.summary.cal}</span><span class="ms-lbl">kcal</span></div>
+      <div class="m-stat"><span class="ms-val" style="font-size:12px;">${s.summary.extra}</span><span class="ms-lbl">Adicional</span></div>
+    </div>
+    <div class="metrics-grid">`;
+
+  s.charts.forEach(ch => {
+    html += `<div class="metric-card" style="padding:14px 16px;">
+      <div class="chart-label">${ch.title}</div>
+      <div style="font-size:10px;color:var(--text3);margin-bottom:8px;">${ch.sub}</div>
+      ${ch.kind==='hbar' ? buildHBar(ch) : buildVBar(ch)}
+    </div>`;
+  });
+
+  html += `</div>`;
+
+  if(s.note) {
+    html += `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:12px 14px;font-size:12px;color:var(--text2);line-height:1.7;">${s.note}</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+// ── Horizontal bar chart (FC zones) ──────────────────────
+function buildHBar(ch) {
+  let html = '';
+  ch.bars.forEach(b => {
+    const w = Math.max(b.val, 0.5);
+    const isTarget = b.target !== null && b.val >= b.target;
+    html += `<div style="margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+        <span style="font-size:11px;color:var(--text2);">${b.label}</span>
+        <span style="font-size:11px;font-weight:700;color:${b.color};">${b.val}%${b.target?` <span style="color:${isTarget?'var(--green)':'var(--red)'};">${isTarget?'✅':'⚠️'}</span>`:''}</span>
+      </div>
+      <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;">
+        <div style="height:100%;width:${w}%;background:${b.color};border-radius:4px;transition:width .4s;"></div>
+      </div>
+    </div>`;
+  });
+  return html;
+}
+
+// ── Vertical bar chart (cadence, power, swim pace, FC) ────────────────
+function buildVBar(ch) {
+  const W = 340, H = 140, PAD_L = 36, PAD_B = 28, PAD_T = 10, PAD_R = 8;
+  const chartW = W - PAD_L - PAD_R;
+  const chartH = H - PAD_T - PAD_B;
+  const vals = ch.vals;
+  const n = vals.length;
+
+  const yMin = ch.yMin !== undefined ? ch.yMin : 0;
+  const yMax = ch.yMax !== undefined ? ch.yMax : Math.ceil(Math.max(...vals) * 1.12);
+  const yRange = yMax - yMin;
+
+  const barW = (chartW / n) * 0.6;
+  const gap   = (chartW / n) * 0.4;
+
+  function yPx(v) { return PAD_T + chartH - ((v - yMin) / yRange) * chartH; }
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:${W}px;">`;
+
+  // Grid lines
+  const gridVals = 4;
+  for(let i = 0; i <= gridVals; i++) {
+    const v = yMin + (yRange / gridVals) * i;
+    const y = yPx(v);
+    svg += `<line x1="${PAD_L}" y1="${y}" x2="${W-PAD_R}" y2="${y}" stroke="#e2e8f0" stroke-width="1"/>`;
+    svg += `<text x="${PAD_L-4}" y="${y+3}" text-anchor="end" fill="#94a3b8" font-size="8" font-family="Space Mono,monospace">${Math.round(v)}</text>`;
+  }
+
+  // Target line
+  if(ch.target !== undefined) {
+    const ty = yPx(ch.target);
+    svg += `<line x1="${PAD_L}" y1="${ty}" x2="${W-PAD_R}" y2="${ty}" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>`;
+    svg += `<text x="${W-PAD_R+2}" y="${ty+3}" fill="#ef4444" font-size="8" font-family="Space Mono,monospace">${ch.target}</text>`;
+  }
+
+  // Target2 line
+  if(ch.target2 !== undefined) {
+    const ty2 = yPx(ch.target2);
+    svg += `<line x1="${PAD_L}" y1="${ty2}" x2="${W-PAD_R}" y2="${ty2}" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,3"/>`;
+    svg += `<text x="${W-PAD_R+2}" y="${ty2+3}" fill="#10b981" font-size="8" font-family="Space Mono,monospace">${ch.target2}</text>`;
+  }
+
+  // Bars
+  vals.forEach((v, i) => {
+    const x = PAD_L + (i / n) * chartW + gap/2;
+    const barH = ((v - yMin) / yRange) * chartH;
+    const y = PAD_T + chartH - barH;
+    const color = ch.colors ? ch.colors[i] : ch.color || '#0284c7';
+    const label = ch.customLabels ? ch.customLabels[i] : v;
+
+    svg += `<rect x="${x}" y="${y}" width="${barW}" height="${barH}" fill="${color}" rx="2" opacity="0.85"/>`;
+    svg += `<text x="${x + barW/2}" y="${y - 3}" text-anchor="middle" fill="${color}" font-size="8.5" font-weight="700" font-family="Barlow Condensed,sans-serif">${label}</text>`;
+    svg += `<text x="${x + barW/2}" y="${H - 6}" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Space Mono,monospace">${ch.xLabels[i]}</text>`;
+  });
+
+  // Axes
+  svg += `<line x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${H-PAD_B}" stroke="#cbd5e1" stroke-width="1.5"/>`;
+  svg += `<line x1="${PAD_L}" y1="${H-PAD_B}" x2="${W-PAD_R}" y2="${H-PAD_B}" stroke="#cbd5e1" stroke-width="1.5"/>`;
+
+  svg += `</svg>`;
+  return `<div class="chart-wrap">${svg}</div>`;
+}
+
+// ── Cadence trend (cross-session) for Valeria ───────────────────────
+// Will auto-build from sessions once more data is loaded
+
+
+
+// ══════════════════════════════════════════════
+//  PWA — Instalación y offline
+// ══════════════════════════════════════════════
+(function(){
+  let deferredPrompt = null;
+  // Floating install button
+  function makeInstallBtn(){
+    if(document.getElementById('pwa-install-btn')) return;
+    const b = document.createElement('button');
+    b.id = 'pwa-install-btn';
+    b.textContent = '📲 Instalar app';
+    b.style.cssText = 'position:fixed;bottom:18px;right:18px;z-index:9999;background:#1a2030;color:#f0c842;border:1px solid #f0c842;border-radius:24px;padding:11px 18px;font-family:sans-serif;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;';
+    b.onclick = async function(){
+      if(deferredPrompt){
+        deferredPrompt.prompt();
+        await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        b.remove();
+      }
+    };
+    document.body.appendChild(b);
+  }
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    deferredPrompt = e;
+    makeInstallBtn();
+  });
+  window.addEventListener('appinstalled', function(){
+    const b = document.getElementById('pwa-install-btn');
+    if(b) b.remove();
+  });
+  // iOS hint (no beforeinstallprompt on Safari)
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+  if(isIOS && !isStandalone){
+    window.addEventListener('load', function(){
+      setTimeout(function(){
+        if(document.getElementById('pwa-ios-hint')) return;
+        const h = document.createElement('div');
+        h.id = 'pwa-ios-hint';
+        h.innerHTML = 'Para instalar: toca <strong>Compartir</strong> ⬆️ y luego <strong>"Agregar a inicio"</strong> &nbsp;<span style="opacity:.6;cursor:pointer;" onclick="this.parentNode.remove()">✕</span>';
+        h.style.cssText = 'position:fixed;bottom:18px;left:18px;right:18px;z-index:9999;background:#1a2030;color:#fff;border-radius:12px;padding:12px 16px;font-family:sans-serif;font-size:13px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.25);';
+        document.body.appendChild(h);
+        setTimeout(function(){ if(h.parentNode) h.remove(); }, 12000);
+      }, 1500);
+    });
+  }
+  // Service worker (offline) — registra si el entorno lo permite
+  if('serviceWorker' in navigator){
+    try {
+      const swCode = 'self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>self.clients.claim());self.addEventListener("fetch",e=>{e.respondWith(caches.open("604tri").then(c=>c.match(e.request).then(r=>r||fetch(e.request).then(resp=>{c.put(e.request,resp.clone());return resp;}).catch(()=>r))))});';
+      const blob = new Blob([swCode], {type:'application/javascript'});
+      navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(function(){});
+    } catch(e){}
+  }
+})();
+
+</script>
+</div><!-- /app-body -->
+</body>
+</html>
