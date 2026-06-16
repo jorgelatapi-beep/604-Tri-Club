@@ -842,7 +842,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 <header class="site-header">
   <div class="logo">604 Tri Club <span>Training Platform</span></div>
   <div style="display:flex;align-items:center;gap:12px;">
-    <div class="today-badge">Hoy: Lun 15 Jun</div>
+    <div class="today-badge">Hoy: Mar 16 Jun</div>
     <div class="header-date">Semana 7 ⚡ · Junio 2026</div>
   </div>
 </header>
@@ -1005,7 +1005,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 </div>
 
 <script>
-const TODAY_DATE = '15 Jun';
+const TODAY_DATE = '16 Jun';
 
 const JORGE = [
   { dayLabel:'LUN', dayDate:'25 May', type:'rest', icon:'🧘', title:'Descanso Activo ✓', tag:'rest', dur:'20 min',
@@ -1299,19 +1299,18 @@ const VALERIA_W6 = [
 ];
 
 const VALERIA_W7 = [
-  { dayLabel:'LUN', dayDate:'15 Jun', type:'rest', icon:'🧘', title:'Descanso · Inicio SEMANA ESPECIAL ⚡', tag:'rest', dur:'—', today:true,
+  { dayLabel:'LUN', dayDate:'15 Jun', type:'rest', icon:'🧘', title:'Descanso · Inicio SEMANA ESPECIAL ⚡', tag:'rest', dur:'—',
     content:{kind:'rest', note:'⚡ SEMANA ESPECIAL (solo esta semana): microciclo de choque enfocado en FUERZA + CADENCIA en bici y VELOCIDAD en carrera. Solo 1 nado (aguas abiertas, martes); el resto es bici y carrera. Tras las piernas cansadas del domingo, hoy descanso + mañana nado dan 2 días suaves de piernas antes de la intensidad. La próxima semana volvemos a base/recuperación. Lunes descanso fijo.'} },
-  { dayLabel:'MAR', dayDate:'16 Jun', type:'swim', icon:'🌊', title:'Nado AGUAS ABIERTAS (único nado) · Cozumel-specific', tag:'swim', dur:'40 min',
-    content:{ kind:'session', stats:[{v:'~1,300m',l:'Open water'},{v:'RPE 4-5',l:'Aeróbico'},{v:'Sighting',l:'Foco'},{v:'Recuperación',l:'Piernas'}],
-      sections:[{head:'Estructura — Aguas Abiertas (gobernar por RPE)', cols:['Set','Tiempo/Dist','Esfuerzo','Foco'], rows:[
-        ['Calentamiento','5 min','RPE 3','Aclimatación al agua, respiración'],
-        ['Técnica sighting','6×100m','RPE 4','Levantar vista cada 6-8 brazadas, nadar recto'],
-        ['Continuo','15 min','RPE 4-5','Nado sostenido, respiración bilateral, sin paredes'],
-        ['Práctica de salida','3×50m','RPE 5','Arranques tipo rolling start'],
-        ['Enfriamiento','5 min','RPE 3','Suave'],
+  { dayLabel:'MAR', dayDate:'16 Jun', type:'swim', icon:'🌊', title:'Aguas Abiertas ✓ · 1,688m (¡cerca de Cozumel!)', tag:'swim', dur:'57.1 min', today:true,
+    content:{ kind:'session', stats:[{v:'1,688m ✓',l:'Open water'},{v:'3:23/100m',l:'Pace'},{v:'57 min',l:'Continuo'},{v:'~1.9km',l:'Meta Cozumel'}],
+      sections:[{head:'Resultado Real — Específico Cozumel', cols:['Segmento','Distancia','Pace','Nota'], rows:[
+        ['Parcial 1','500m','3:13/100m','Salida sólida'],
+        ['Parcial 2','500m','3:11/100m','Ritmo parejo ✅'],
+        ['Parcial 3','500m','3:31/100m','Empieza fade'],
+        ['Parcial 4','188m','3:57/100m','Fatiga final'],
       ]}],
-      coachNote:'<strong>🌊 Excepción a la regla de alberca — específico para Cozumel:</strong> El 70.3 tiene natación en mar abierto con corriente. Practicar sighting (orientación sin paredes/líneas), nadar recto y arranques es oro para Cozumel. Además, el nado da recuperación activa a las piernas cansadas antes del bloque de bici/carrera. Gobernar por RPE — sin pace confiable ni FC válida en agua.',
-      tip:'Si es en lago/mar, ir con compañía y boya de seguridad. Foco en técnica de sighting, no en velocidad. Disfrutar el agua abierta.', poolNote:false } },
+      coachNote:'<strong>🌊 Gran sesión de aguas abiertas (único nado de la semana especial):</strong> 1,688m continuos — más de lo prescrito y ya cerca de los 1.9km de Cozumel. El pace 3:23/100m es más lento que alberca (2:50) y es NORMAL: sin paredes, sighting frena, corriente añade resistencia. No está más lenta — practicó las condiciones reales de la carrera. A trabajar: el pacing (empezó pareja 3:11-3:13 y se cayó a 3:57 al final) — en próximas salir más conservadora para terminar pareja. FC (137) con reserva: óptico en agua no es confiable, gobernar por RPE.',
+      tip:'Confianza enorme: 1.69km en mar abierto. Próximas OWS: salir conservadora, terminar pareja. Siempre con compañía y boya de seguridad.', poolNote:false } },
   { dayLabel:'MIÉ', dayDate:'17 Jun', type:'bike', icon:'🚴', title:'Bici FUERZA ⚡ · Slope · Baja cadencia', tag:'bike', dur:'60 min',
     content:{ kind:'session', stats:[{v:'60 min',l:'Duración'},{v:'75–85%',l:'FTP'},{v:'98–110W',l:'Watts'},{v:'50–55 rpm',l:'🎯 Fuerza'}],
       sections:[{head:'Estructura — Fuerza en Bici (Tacx SLOPE mode)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
@@ -2294,6 +2293,24 @@ const PROFILES = {
           },
         ],
         note:'✅ Recuperación perfecta (88% Z1) y tercer día seguido de control aeróbico. La recalibración + disciplina están encadenando consistencia. FC limpia (máx 147). Esto es exactamente lo que construye base para 70.3.',
+        status:'completed'
+      },
+      {
+        id:'val-swim-ows16',
+        date:'Mar 16 Jun', type:'swim', icon:'🌊',
+        title:'Aguas Abiertas — específico Cozumel',
+        summary:{ dur:'57.1 min', dist:'1,688m', cal:'444', fcAvg:'137*', fcMax:'152*', extra:'3:23/100m' },
+        charts:[
+          { id:'ows-pacing', kind:'vbar', title:'Pacing por parcial de 500m (seg/100m)',
+            sub:'Empezó pareja, fade hacia el final — trabajar ritmo uniforme',
+            xLabels:['P1','P2','P3','P4'],
+            vals:[193,191,211,237],
+            colors:['#0284c7','#0284c7','#f59e0b','#ef4444'],
+            unit:'s/100m', yMin:180, yMax:245,
+            customLabels:['3:13','3:11','3:31','3:57'],
+          },
+        ],
+        note:'🌊 1,688m continuos en aguas abiertas — cerca de los 1.9km de Cozumel. Pace más lento que alberca es normal (sin paredes, sighting, corriente). A trabajar: pacing más uniforme (salir conservadora). *FC con reserva: óptico no confiable en agua.',
         status:'completed'
       },
     ]
