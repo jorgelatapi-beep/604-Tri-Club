@@ -842,7 +842,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 <header class="site-header">
   <div class="logo">604 Tri Club <span>Training Platform</span></div>
   <div style="display:flex;align-items:center;gap:12px;">
-    <div class="today-badge">Hoy: Mar 16 Jun</div>
+    <div class="today-badge" id="today-badge">Hoy: …</div>
     <div class="header-date">Semana 7 ⚡ · Junio 2026</div>
   </div>
 </header>
@@ -1005,7 +1005,20 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 </div>
 
 <script>
-const TODAY_DATE = '16 Jun';
+const _MESES_ABBR = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const _DIAS_ABBR = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+const _HOY = new Date();
+const TODAY_DATE = _HOY.getDate() + ' ' + _MESES_ABBR[_HOY.getMonth()];  // auto: ej. '17 Jun'
+
+// Mostrar la fecha real en el encabezado (auto-actualiza cada día)
+(function(){
+  function setBadge(){
+    const b = document.getElementById('today-badge');
+    if(b) b.textContent = 'Hoy: ' + _DIAS_ABBR[_HOY.getDay()] + ' ' + _HOY.getDate() + ' ' + _MESES_ABBR[_HOY.getMonth()];
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setBadge);
+  else setBadge();
+})();
 
 const JORGE = [
   { dayLabel:'LUN', dayDate:'25 May', type:'rest', icon:'🧘', title:'Descanso Activo ✓', tag:'rest', dur:'20 min',
@@ -1301,7 +1314,7 @@ const VALERIA_W6 = [
 const VALERIA_W7 = [
   { dayLabel:'LUN', dayDate:'15 Jun', type:'rest', icon:'🧘', title:'Descanso · Inicio SEMANA ESPECIAL ⚡', tag:'rest', dur:'—',
     content:{kind:'rest', note:'⚡ SEMANA ESPECIAL (solo esta semana): microciclo de choque enfocado en FUERZA + CADENCIA en bici y VELOCIDAD en carrera. Solo 1 nado (aguas abiertas, martes); el resto es bici y carrera. Tras las piernas cansadas del domingo, hoy descanso + mañana nado dan 2 días suaves de piernas antes de la intensidad. La próxima semana volvemos a base/recuperación. Lunes descanso fijo.'} },
-  { dayLabel:'MAR', dayDate:'16 Jun', type:'swim', icon:'🌊', title:'Aguas Abiertas ✓ · 1,688m (¡cerca de Cozumel!)', tag:'swim', dur:'57.1 min', today:true,
+  { dayLabel:'MAR', dayDate:'16 Jun', type:'swim', icon:'🌊', title:'Aguas Abiertas ✓ · 1,688m (¡cerca de Cozumel!)', tag:'swim', dur:'57.1 min',
     content:{ kind:'session', stats:[{v:'1,688m ✓',l:'Open water'},{v:'3:23/100m',l:'Pace'},{v:'57 min',l:'Continuo'},{v:'~1.9km',l:'Meta Cozumel'}],
       sections:[{head:'Resultado Real — Específico Cozumel', cols:['Segmento','Distancia','Pace','Nota'], rows:[
         ['Parcial 1','500m','3:13/100m','Salida sólida'],
