@@ -903,7 +903,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
   <div class="week-item" onclick="selectWeek(8)">
     <span class="wi-label">Semana 8</span>
     <span class="wi-range">22–28 Jun</span>
-    <span class="wi-phase">📉 Deload · lútea tardía</span>
+    <span class="wi-phase">🏃 Run Base 1 · inicia programa</span>
     <span class="wi-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;">Valeria ✓</span>
   </div>
 
@@ -1324,16 +1324,19 @@ const VALERIA_W7 = [
       ]}],
       coachNote:'<strong>🌊 Gran sesión de aguas abiertas (único nado de la semana especial):</strong> 1,688m continuos — más de lo prescrito y ya cerca de los 1.9km de Cozumel. El pace 3:23/100m es más lento que alberca (2:50) y es NORMAL: sin paredes, sighting frena, corriente añade resistencia. No está más lenta — practicó las condiciones reales de la carrera. A trabajar: el pacing (empezó pareja 3:11-3:13 y se cayó a 3:57 al final) — en próximas salir más conservadora para terminar pareja. FC (137) con reserva: óptico en agua no es confiable, gobernar por RPE.',
       tip:'Confianza enorme: 1.69km en mar abierto. Próximas OWS: salir conservadora, terminar pareja. Siempre con compañía y boya de seguridad.', poolNote:false } },
-  { dayLabel:'MIÉ', dayDate:'17 Jun', type:'bike', icon:'🚴', title:'Bici FUERZA ⚡ · Slope · Baja cadencia', tag:'bike', dur:'52 min',
-    content:{ kind:'session', stats:[{v:'52 min',l:'Duración'},{v:'75–85%',l:'FTP'},{v:'98–110W',l:'Watts'},{v:'50–55 rpm',l:'🎯 Fuerza'}],
-      sections:[{head:'Estructura — Fuerza en Bici (Tacx SLOPE mode) · Total 52 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
-        ['Calentamiento','12 min','55→65%','72–85W','85–90 rpm'],
-        ['Serie FUERZA: 5×(3min fuerte + 3min suave)','30 min','75–85% / 55%','98–110W / 72W','🎯 50–55 rpm SLOPE / 90 rpm suave'],
-        ['Enfriamiento','10 min','50%','65W','Soltar piernas'],
+  { dayLabel:'MIÉ', dayDate:'17 Jun', type:'rest', icon:'😴', title:'No entrenó · No pudo entrenar', tag:'rest', dur:'—',
+    content:{kind:'rest', note:'Valeria no pudo entrenar el miércoles. La bici de fuerza que tocaba este día la realizó el jueves. La semana se recorre un día — reacomodada para mantener los objetivos (velocidad en carrera + cadencia en bici).'} },
+  { dayLabel:'JUE', dayDate:'18 Jun', type:'bike', icon:'🚴', title:'Bici FUERZA ✓ · (la del miércoles, hecha hoy)', tag:'bike', dur:'48.3 min', today:true,
+    content:{ kind:'session', stats:[{v:'48.3 min ✓',l:'Indoor'},{v:'93W',l:'72% FTP'},{v:'125 bpm',l:'FC prom'},{v:'74 rpm',l:'Cadencia'}],
+      sections:[{head:'Resultado Real — Bici Aeróbica Moderada', cols:['Métrica','Valor','Lectura'], rows:[
+        ['Duración','48.3 min','Cerca de los 52 planeados'],
+        ['Potencia','93W prom (72% FTP) · máx 147W','Moderado aeróbico'],
+        ['FC','125 prom · máx 150','Z2 subiendo a Z3-Z4'],
+        ['Cadencia','74 rpm prom · 23% bajo 60rpm','Baja cadencia fue al final, a baja potencia'],
       ]}],
-      coachNote:'<strong>⚡ Estímulo de fuerza — USAR SLOPE mode:</strong> En ERG la Tacx default a ~78 rpm y diluye el estímulo. En SLOPE ella controla la cadencia: baja a 50–55 rpm con la pierna empujando fuerte. Esto recluta fibra y construye fuerza específica de pedaleo. Quality session #1 de la semana.',
-      tip:'Si siente las rodillas, subir un poco la cadencia. La fuerza viene del torque a baja cadencia, no de matarse. Núcleo activado, espalda neutra.' } },
-  { dayLabel:'JUE', dayDate:'18 Jun', type:'run', icon:'🏃', title:'Carrera VELOCIDAD ⚡ · Intervalos', tag:'run', dur:'44 min',
+      coachNote:'<strong>Hecha el jueves (el miércoles no pudo entrenar):</strong> Buena rodada aeróbica moderada, ~48 min al 72% FTP con FC subiendo hasta ~140. PERO el estímulo de FUERZA no se logró: la cadencia baja (51-52 rpm) apareció solo al final y a baja potencia (67W) — eso es pedaleo lento suave, no fuerza. La fuerza real necesita baja cadencia (50-55 rpm) con TORQUE ALTO (98-110W en Slope mode). Para la próxima de fuerza: Slope mode, empujar fuerte a cadencia baja.',
+      tip:'Como rodada aeróbica estuvo bien. Si querías el estímulo de fuerza, la clave es Slope + empujar duro a 50-55 rpm. Lo retomamos en el próximo bloque.' } },
+  { dayLabel:'VIE', dayDate:'19 Jun', type:'run', icon:'🏃', title:'Carrera VELOCIDAD ⚡ · Intervalos', tag:'run', dur:'44 min',
     content:{ kind:'session', stats:[{v:'44 min',l:'Duración'},{v:'8×(1+2)',l:'Intervalos'},{v:'RPE 8-9',l:'Trabajo'},{v:'Velocidad',l:'Foco'}],
       sections:[{head:'Estructura — Velocidad (zonas TP: trabajo Z5, recup Z1)', cols:['Segmento','Duración','Zona FC / Esfuerzo','Nota'], rows:[
         ['Calentamiento','12 min','Z1-Z2 <134','Trote suave + 4 zancadas progresivas'],
@@ -1343,7 +1346,7 @@ const VALERIA_W7 = [
       _calc:'12 + 24 + 8 = 44 min',
       coachNote:'<strong>⚡ Estímulo de velocidad — excepción a zonas de FC:</strong> En intervalos cortos la FC va por detrás del esfuerzo, así que estos se gobiernan por ESFUERZO/pace (RPE 8-9), no por zona. Ha estado muy aeróbica (¡bien!); esta sesión introduce velocidad y reclutamiento neuromuscular intencional. Recuperar BIEN entre repeticiones (FC baje) para que cada intervalo sea de calidad. Quality session #2.',
       tip:'No empezar demasiado fuerte. Las primeras deben sentirse controladas-rápidas; las últimas costarán. Forma antes que pace: zancada limpia, brazos relajados.' } },
-  { dayLabel:'VIE', dayDate:'19 Jun', type:'bike', icon:'🚴', title:'Bici CADENCIA ⚡ · Velocidad de piernas', tag:'bike', dur:'50 min',
+  { dayLabel:'SÁB', dayDate:'20 Jun', type:'bike', icon:'🚴', title:'Bici CADENCIA ⚡ · Velocidad de piernas', tag:'bike', dur:'50 min',
     content:{ kind:'session', stats:[{v:'50 min',l:'Duración'},{v:'60–68%',l:'FTP'},{v:'78–88W',l:'Watts'},{v:'100–110 rpm',l:'🎯 Cadencia'}],
       sections:[{head:'Estructura — Cadencia (más neuromuscular que fatiga)', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
         ['Calentamiento','12 min','55→62%','72–81W','spin-ups 90→100'],
@@ -1354,7 +1357,7 @@ const VALERIA_W7 = [
       _calc:'12 + 16 + 12 + 10 = 50 min',
       coachNote:'<strong>⚡ Sube su cadencia natural baja (62-66 rpm):</strong> Día más ligero de piernas (alta cadencia = baja fuerza por pedalada, más sistema nervioso). Trabaja la economía y la velocidad de piernas sin fatigar como el día de fuerza. Mantener cadera quieta, sin rebotar en el sillín. Carga aeróbica suave.',
       tip:'Si rebota a 110 rpm, bajar a 100-105 controlado. La meta es pedaleo redondo y rápido, no caótico. Día puente entre las sesiones duras.' } },
-  { dayLabel:'SÁB', dayDate:'20 Jun', type:'run', icon:'🏃', title:'Carrera VELOCIDAD ⚡ · Cuestas + Tempo', tag:'run', dur:'45 min',
+  { dayLabel:'DOM', dayDate:'21 Jun', type:'run', icon:'🏃', title:'Carrera VELOCIDAD ⚡ · Cuestas + Tempo', tag:'run', dur:'45 min',
     content:{ kind:'session', stats:[{v:'45 min',l:'Duración'},{v:'6×20s cuesta',l:'Potencia'},{v:'12min tempo',l:'Z3'},{v:'Velocidad',l:'Foco'}],
       sections:[{head:'Estructura — Potencia/Velocidad (zonas TP)', cols:['Segmento','Duración','Zona FC / Esfuerzo','Nota'], rows:[
         ['Calentamiento','12 min','Z1-Z2 <134','Trote + movilidad + 3 zancadas'],
@@ -1365,84 +1368,82 @@ const VALERIA_W7 = [
       _calc:'12 + 12 + 12 + 9 = 45 min',
       coachNote:'<strong>⚡ Segundo estímulo de velocidad (distinto al jueves):</strong> Los sprints en cuesta construyen potencia y reclutamiento sin el impacto de sprints en plano (más seguro para articulaciones). El bloque tempo añade resistencia a velocidad. Quality session #3. Esta es la última sesión dura de la semana especial.',
       tip:'En los sprints de cuesta: explosivo pero con forma, recuperación COMPLETA entre cada uno. El tempo es "cómodo-duro", sostenible. Después de hoy, el domingo afloja.' } },
-  { dayLabel:'DOM', dayDate:'21 Jun', type:'bike', icon:'🚴', title:'Bici Resistencia + Cadencia · Aflojar piernas', tag:'bike', dur:'75 min',
-    content:{ kind:'session', stats:[{v:'75 min',l:'Aeróbico'},{v:'62–67%',l:'FTP'},{v:'81–87W',l:'Watts'},{v:'Z2',l:'Flush'}],
-      sections:[{head:'Estructura — Resistencia para limpiar la semana', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
-        ['Calentamiento','15 min','50→60%','65–78W','spin-ups'],
-        ['Bloque Z2 + drills','50 min','62–67%','81–87W','85–90 rpm + 4×1min a 100+ cada 12 min'],
-        ['Enfriamiento','10 min','50%','65W','Soltar'],
-      ]}],
-      coachNote:'<strong>Cierre suave — flush de la semana especial:</strong> Tras 3 sesiones duras (fuerza, velocidad x2), este día es puramente aeróbico para limpiar las piernas y favorecer recuperación. Cadencia ligera dentro del Z2. NADA de intensidad hoy. Cierra el microciclo de choque.',
-      tip:'Indoor ideal, ritmo cómodo. Si las piernas piden parar antes, está bien — esta semana fue exigente. La próxima volvemos a base con recuperación.' } },
 ];
 
 const VALERIA_W8 = [
-  { dayLabel:'LUN', dayDate:'22 Jun', type:'rest', icon:'🧘', title:'Descanso · Día 22', tag:'rest', dur:'—',
-    content:{kind:'rest', note:'Semana de DESCARGA (deload). Coincide la fase lútea tardía (cuerpo pide menos) con la necesidad de recuperación tras 3 semanas de carga. Volumen reducido ~35%, sin sesiones duras. Esto NO es perder forma — es donde el cuerpo absorbe el trabajo y se vuelve más fuerte. Lunes descanso fijo.'} },
-  { dayLabel:'MAR', dayDate:'23 Jun', type:'bike', icon:'🚴', title:'Bici Z2 Suave (deload) · % FTP', tag:'bike', dur:'50 min',
-    content:{ kind:'session', stats:[{v:'50 min',l:'Reducido'},{v:'62–65%',l:'FTP'},{v:'81–85W',l:'Watts'},{v:'Sin calidad',l:'Deload'}],
-      sections:[{head:'Estructura — Aeróbico Suave', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
-        ['Calentamiento','10 min','50→60%','65–78W','Libre'],
-        ['Bloque Z2','32 min','62–65%','81–85W','85–90 rpm cómodo'],
-        ['Enfriamiento','8 min','50%','65W','Soltar'],
+  { dayLabel:'LUN', dayDate:'22 Jun', type:'rest', icon:'🧘', title:'Descanso · Inicia Programa de Run', tag:'rest', dur:'—',
+    content:{kind:'rest', note:'Arranca el programa de carrera hacia Cozumel: 3 runs/semana, tiradas progresivas desde base 5 km (foco en ENDURANCE aeróbica, no en distancia bruta). La bici baja a 2 sesiones, pero ambas con propósito: una de FUERZA+cadencia, otra de resistencia+cadencia — seguimos desarrollando la bici, no solo manteniéndola. Lunes descanso fijo.'} },
+  { dayLabel:'MAR', dayDate:'23 Jun', type:'run', icon:'🏃', title:'Run #1 Fácil · Z2 Aeróbico (run-walk)', tag:'run', dur:'30 min',
+    content:{ kind:'session', stats:[{v:'30 min',l:'Duración'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'5:1',l:'Run-walk'},{v:'Aeróbico',l:'Foco'}],
+      sections:[{head:'Estructura — Carrera Fácil con Run-Walk · Total 30 min', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
+        ['Activación caminata','5 min','Z1 <122','Caminar dinámico, soltar'],
+        ['Run-walk 5:1','22 min','Z2 122–134','Correr 5 min / caminar 1 min · ~3-4 ciclos'],
+        ['Enfriamiento caminata','3 min','Z1 <122','Bajar pulso + estiramientos'],
       ]}],
-      coachNote:'<strong>Semana de descarga — sin intervalos:</strong> Esta semana NO hay bici de calidad. Pura base aeróbica suave para recuperar. En lútea tardía + post-bloque de carga, forzar sería contraproducente. El cuerpo se adapta en el descanso, no en el esfuerzo.',
-      tip:'Debe sentirse fácil, casi aburrido. Si quieres meter intensidad, es señal de que necesitas el deload aún más. Confía en el proceso.' } },
-  { dayLabel:'MIÉ', dayDate:'24 Jun', type:'swim', icon:'🏊', title:'Nado Suave + 💪 Fuerza ligera', tag:'swim', dur:'35 min (+20 gym)',
-    content:{ kind:'session', stats:[{v:'~1,100m',l:'Reducido'},{v:'Z1–Z2',l:'Zona'},{v:'+20 min',l:'Fuerza ligera'},{v:'Técnico',l:'Foco'}],
-      sections:[{head:'Bloque 1 · Nado Suave', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
-        ['Calentamiento','200m','Z1','—','Muy suave'],
-        ['Drills','4×50m','Z1','15"','Técnica relajada'],
-        ['Continuo','5×100m','Z2 bajo','25"','Sin presión'],
-        ['Enfriamiento','200m','Z1','—','Bilateral'],
-      ]},{head:'Bloque 2 · 💪 Fuerza ligera (deload)', cols:['Ejercicio','Series×Reps','Nota'], rows:[
-        ['Sentadilla goblet','2×10','Carga ligera'],
-        ['Peso muerto rumano','2×10','Movimiento, no carga'],
-        ['Plancha','2×30s','Mantener patrón'],
+      _calc:'5 + 22 + 3 = 30 min',
+      coachNote:'<strong>Primera del programa — fácil de verdad:</strong> El objetivo es CONSISTENCIA, no velocidad. Correr en Z2 (122–134), y en cuanto la FC pase de 134, caminar el minuto. El run-walk no es trampa — es la forma inteligente de construir distancia sin lesionarse a los 41. Su carrera aeróbica cómoda ya está en ~127, justo en zona.',
+      tip:'Si se siente fácil, PERFECTO — así debe ser. La base se construye despacio. Pace libre, FC manda.' } },
+  { dayLabel:'MIÉ', dayDate:'24 Jun', type:'bike', icon:'🚴', title:'Bici FUERZA + Cadencia ⚡ · Slope', tag:'bike', dur:'50 min',
+    content:{ kind:'session', stats:[{v:'50 min',l:'Duración'},{v:'78–90%',l:'FTP fuerza'},{v:'50–55 / 100+',l:'rpm'},{v:'Slope',l:'Para fuerza'}],
+      sections:[{head:'Estructura — Fuerza + Cadencia · Total 50 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+        ['Calentamiento','12 min','55→65%','72–85W','spin-ups 90→100'],
+        ['FUERZA: 5×(2min fuerte + 1min suave)','15 min','78–90% / 55%','101–117W / 72W','🎯 50–55 rpm SLOPE / 90 rpm'],
+        ['CADENCIA: 6×(1min alta + 1min suave)','12 min','60–65% / 58%','78–85W / 75W','🎯 100–110 rpm / 85 rpm'],
+        ['Enfriamiento','11 min','50%','65W','Soltar'],
       ]}],
-      coachNote:'<strong>Deload también en fuerza:</strong> Mantener el patrón de movimiento con carga ligera, sin buscar progreso. La fuerza también necesita semanas de descarga. El objetivo es recuperar, no construir.',
-      tip:'Nado y fuerza muy suaves. La semana de descarga prepara el cuerpo para el siguiente bloque más fuerte.', poolNote:true } },
-  { dayLabel:'JUE', dayDate:'25 Jun', type:'run', icon:'🏃', title:'Run Z2 Fácil (deload) · Zonas FC', tag:'run', dur:'35 min',
-    content:{ kind:'session', stats:[{v:'35 min',l:'Reducido'},{v:'Z2',l:'Zona'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'Sin cuestas',l:'Deload'}],
-      sections:[{head:'Estructura — Carrera Fácil', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
-        ['Activación','5 min','Z1 Recovery','<121','Caminata dinámica'],
-        ['Carrera Z2','25 min','Z2 Aeróbico','122–134','Fácil. SIN cuestas ni sprints esta semana.'],
-        ['Enfriamiento','5 min','Z1 Recovery','<121','Caminata'],
+      _calc:'12 + 15 + 12 + 11 = 50 min',
+      coachNote:'<strong>⚡ La bici que SÍ desarrolla — fuerza + cadencia en una:</strong> Dos estímulos clave. FUERZA en Slope mode a 50-55 rpm empujando fuerte (101-117W) — recluta fibra, construye potencia de pedaleo (en ERG la Tacx default a 78 rpm y diluye esto, por eso SLOPE). CADENCIA a 100-110 rpm para subir su cadencia natural baja (62-66). Como la bici está mejorando, seguimos alimentándola. A media semana, lejos de la tirada larga del domingo.',
+      tip:'En fuerza: torque alto, baja cadencia, núcleo firme. En cadencia: pedaleo redondo sin rebotar. Es la sesión que hace crecer la bici.' } },
+  { dayLabel:'JUE', dayDate:'25 Jun', type:'run', icon:'🏃', title:'Run #2 Fácil · Z2 Aeróbico (run-walk)', tag:'run', dur:'35 min',
+    content:{ kind:'session', stats:[{v:'35 min',l:'Duración'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'5:1',l:'Run-walk'},{v:'Aeróbico',l:'Foco'}],
+      sections:[{head:'Estructura — Carrera Fácil con Run-Walk · Total 35 min', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
+        ['Activación caminata','5 min','Z1 <122','Caminar dinámico'],
+        ['Run-walk 5:1','27 min','Z2 122–134','Correr 5 min / caminar 1 min'],
+        ['Enfriamiento caminata','3 min','Z1 <122','Estiramientos'],
       ]}],
-      coachNote:'<strong>Deload — sin calidad de carrera:</strong> Esta semana no hay cuestas ni sprints. Solo carrera aeróbica fácil para mantener el patrón sin acumular fatiga. Indoor o terreno plano, Z2 122–134 bpm.',
-      tip:'Recuerda el avance de la semana pasada: corrió 100% aeróbica afuera. Esta semana es para consolidar esa frescura, no para empujar.' } },
-  { dayLabel:'VIE', dayDate:'26 Jun', type:'swim', icon:'🏊', title:'Nado Suave + 💪 Fuerza ligera', tag:'swim', dur:'30 min (+20 gym)',
-    content:{ kind:'session', stats:[{v:'~1,000m',l:'Reducido'},{v:'Z1',l:'Zona'},{v:'+20 min',l:'Fuerza ligera'},{v:'Regenerativo',l:'Foco'}],
-      sections:[{head:'Bloque 1 · Nado Regenerativo', cols:['Set','Distancia','Esfuerzo','Descanso','Foco'], rows:[
-        ['Calentamiento','200m','Z1','—','Suave'],
-        ['Continuo','6×100m','Z1','25"','Muy relajado'],
-        ['Enfriamiento','200m','Z1','—','Bilateral'],
-      ]},{head:'Bloque 2 · 💪 Fuerza ligera', cols:['Ejercicio','Series×Reps','Nota'], rows:[
-        ['Zancadas','2×8 c/u','Ligero'],
-        ['Hip thrust','2×12','Activación glúteo'],
-        ['Pallof press','2×10 c/u','Core'],
+      _calc:'5 + 27 + 3 = 35 min',
+      coachNote:'<strong>Segunda carrera — base aeróbica:</strong> En fase base las dos cortas son fáciles (sin calidad todavía). La calidad —tempo, intervalos— entra en construcción, cuando ya haya cimiento. Hoy: sumar minutos cómodos en Z2 sobre piernas que vienen de la bici de ayer.',
+      tip:'Misma consigna: FC 122–134, caminar si sube. Consistencia es la meta de esta fase.' } },
+  { dayLabel:'VIE', dayDate:'26 Jun', type:'swim', icon:'🏊', title:'Nado Técnico + 💪 Fuerza (mantenimiento)', tag:'swim', dur:'40 min (+30 gym)',
+    content:{ kind:'session', stats:[{v:'~1,200m',l:'Nado'},{v:'Z1–Z2',l:'Zona'},{v:'+30 min',l:'Fuerza'},{v:'Técnico',l:'Foco'}],
+      sections:[{head:'Bloque 1 · Nado Técnico', cols:['Set','Distancia','Esfuerzo','Foco'], rows:[
+        ['Calentamiento','300m','Z1','Suave'],
+        ['Drills','6×50m','Z1','Técnica · catch-up, patada'],
+        ['Continuo','5×100m','Z2','Mecánica, no velocidad'],
+        ['Enfriamiento','100m','Z1','Bilateral'],
+      ]},{head:'Bloque 2 · 💪 Fuerza (antilesiones para el run)', cols:['Ejercicio','Series×Reps','Foco'], rows:[
+        ['Sentadilla goblet','3×10','Cuádriceps, glúteo'],
+        ['Peso muerto rumano','3×10','Cadena posterior'],
+        ['Zancadas','3×8 c/u','Single-leg, estabilidad rodilla'],
+        ['Puente glúteo 1 pierna','3×12','Glúteo, control'],
+        ['Plancha lateral','3×30s c/u','Core'],
       ]}],
-      coachNote:'<strong>Última sesión de fuerza ligera de la descarga:</strong> Movimiento suave. El cuerpo se está recargando para el bloque de reconstrucción que empieza la próxima semana.',
-      tip:'Día regenerativo. Hidratación, sueño, nutrición — la recuperación es el entrenamiento esta semana.', poolNote:true } },
-  { dayLabel:'SÁB', dayDate:'27 Jun', type:'bike', icon:'🚴', title:'Bici Z2 Media (deload) · % FTP', tag:'bike', dur:'70 min',
-    content:{ kind:'session', stats:[{v:'70 min',l:'Reducido'},{v:'62–67%',l:'FTP'},{v:'81–87W',l:'Watts'},{v:'Z2',l:'Zona'}],
-      sections:[{head:'Estructura — Resistencia Suave', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+      coachNote:'<strong>Nado mantenimiento + fuerza de gimnasio:</strong> Día sin impacto que separa la bici de fuerza (miércoles) de la bici larga (sábado) y la tirada larga (domingo). La fuerza de gym protege rodillas/cadera al subir el run. Nado a 1×/semana esta fase; vuelve a 2× con aguas abiertas cerca de Cozumel.',
+      tip:'Día de piernas relativamente frescas. Fuerza con técnica limpia.', poolNote:true } },
+  { dayLabel:'SÁB', dayDate:'27 Jun', type:'bike', icon:'🚴', title:'Bici Resistencia + Cadencia · % FTP', tag:'bike', dur:'70 min',
+    content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'62–67%',l:'FTP'},{v:'85–90 + 100',l:'rpm'},{v:'Z2',l:'Resistencia'}],
+      sections:[{head:'Estructura — Resistencia + Cadencia · Total 70 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
         ['Calentamiento','12 min','50→60%','65–78W','Libre'],
-        ['Bloque Z2','48 min','62–67%','81–87W','85–90 rpm'],
+        ['Bloque Z2 + 6×1min cadencia','48 min','62–67%','81–87W','85–90 rpm + 100+ cada 7 min'],
         ['Enfriamiento','10 min','50%','65W','Soltar'],
       ]}],
-      coachNote:'<strong>Bici media de descarga:</strong> Reducida de los 110 min de la semana pasada a 70. Mantiene el motor aeróbico sin la carga del largo. Buen día para practicar nutrición e hidratación sin estrés.',
-      tip:'Indoor ideal. Cadencia cómoda. Disfrutar el ritmo fácil — la próxima semana retomamos la construcción.' } },
-  { dayLabel:'DOM', dayDate:'28 Jun', type:'run', icon:'🏃', title:'Run Z2 Medio (deload) · Zonas FC', tag:'run', dur:'45 min',
-    content:{ kind:'session', stats:[{v:'45 min',l:'Reducido'},{v:'Z2',l:'Zona'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'Aeróbico',l:'Foco'}],
-      sections:[{head:'Estructura — Carrera Media', cols:['Segmento','Duración','Zona FC','bpm','Nota'], rows:[
-        ['Activación','5 min','Z1 Recovery','<121','Dinámica'],
-        ['Carrera Z2','35 min','Z2 Aeróbico','122–134','Fácil sostenido. Caminadora ideal para control.'],
-        ['Enfriamiento','5 min','Z1 Recovery','<121','Caminata'],
+      _calc:'12 + 48 + 10 = 70 min',
+      coachNote:'<strong>Resistencia con cadencia embebida:</strong> Mantiene la base aeróbica de bici (su fortaleza) y sigue trabajando la cadencia alta dentro del largo. Moderada para no fatigar la tirada larga de mañana. Buen día para practicar nutrición/hidratación.',
+      tip:'Z2 cómodo, con los toques de cadencia a 100+. Mañana es la sesión reina: la primera larga.' } },
+  { dayLabel:'DOM', dayDate:'28 Jun', type:'run', icon:'🏃', title:'Run #3 LARGA · 5 km · Z2 endurance (run-walk)', tag:'run', dur:'5 km (~55 min)',
+    content:{ kind:'session', stats:[{v:'5 km',l:'Base endurance'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'5:1',l:'Run-walk'},{v:'~55 min',l:'Aprox'}],
+      sections:[{head:'Estructura — Tirada Larga Base (por distancia, Z2)', cols:['Segmento','Distancia/Tiempo','Zona FC','Nota'], rows:[
+        ['Activación caminata','5 min','Z1 <122','Soltar, dinámico'],
+        ['Run-walk 5:1 hasta 5 km','~46 min','Z2 122–134','Correr 5 / caminar 1 TODA la distancia'],
+        ['Enfriamiento caminata','5 min','Z1 <122','Bajar pulso + estiramientos'],
       ]}],
-      coachNote:'<strong>Cierre de la semana de descarga:</strong> Reducida de 75 a 45 min. Cierra el primer bloque de construcción. La próxima semana (menstrual) arranca el segundo bloque, fresca y recuperada.',
-      tip:'Si te sientes con ganas de más, perfecto — significa que el deload funcionó. Guarda esa energía para la próxima semana.' } },
+      coachNote:'<strong>🟦 La sesión reina — base de endurance:</strong> Bajamos a 5 km a propósito: construir la resistencia BIEN, en Z2 y cómoda, vale más que arrastrar más distancia en mal estado. El objetivo de hoy NO es el número de km, es terminar SOBRANDO — controlada, aeróbica, sin vaciarse. De ahí progresamos con cimiento real. Hidratar a la mitad.',
+      tip:'La meta: terminar los 5 km y sentir que podías más. Si la FC sube de 134, alargar la caminata. Endurance se construye en Z2, cómoda y consistente — no sufriendo.' } },
 ];
+
+
+
+
 
 const VALERIA_W9 = [
   { dayLabel:'LUN', dayDate:'29 Jun', type:'rest', icon:'🧘', title:'Descanso · Día 1 Ciclo 🩸', tag:'rest', dur:'—',
