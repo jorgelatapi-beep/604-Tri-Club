@@ -888,7 +888,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
     <span class="wi-range">1–7 Jun</span>
     <span class="wi-phase">✅ Completada · finde modelo</span>
   </div>
-  <div class="week-item current active" onclick="selectWeek(6)">
+  <div class="week-item" onclick="selectWeek(6)">
     <span class="wi-label">Semana 6</span>
     <span class="wi-range">8–14 Jun</span>
     <span class="wi-phase">🟢 Folicular · Tests</span>
@@ -1357,7 +1357,7 @@ const VALERIA_W7 = [
       _calc:'12 + 16 + 12 + 10 = 50 min',
       coachNote:'<strong>⚡ Sube su cadencia natural baja (62-66 rpm):</strong> Día más ligero de piernas (alta cadencia = baja fuerza por pedalada, más sistema nervioso). Trabaja la economía y la velocidad de piernas sin fatigar como el día de fuerza. Mantener cadera quieta, sin rebotar en el sillín. Carga aeróbica suave.',
       tip:'Si rebota a 110 rpm, bajar a 100-105 controlado. La meta es pedaleo redondo y rápido, no caótico. Día puente entre las sesiones duras.' } },
-  { dayLabel:'DOM', dayDate:'21 Jun', type:'run', icon:'🏃', title:'Hills ✓ · 4×20s cuesta (+119m) · cierra semana especial', tag:'run', dur:'38 min', today:true,
+  { dayLabel:'DOM', dayDate:'21 Jun', type:'run', icon:'🏃', title:'Hills ✓ · 4×20s cuesta (+119m) · cierra semana especial', tag:'run', dur:'38 min',
     content:{ kind:'session', stats:[{v:'3.27 km ✓',l:'Outdoor'},{v:'+119m',l:'Elevación ⛰️'},{v:'4×20s',l:'Cuestas'},{v:'130 bpm',l:'FC prom'}],
       sections:[{head:'Resultado Real — Hills en terreno con pendiente', cols:['Métrica','Valor','Lectura'], rows:[
         ['Reps de cuesta','4×20s (laps 3,5,7,9)','Cargadas 4 en vez de 6'],
@@ -1725,9 +1725,14 @@ function showDetail(key, idx) {
 function switchAth(key) {
   document.querySelectorAll('.ath-tab').forEach(t => t.classList.toggle('active', t.dataset.ath===key));
   document.querySelectorAll('.athlete-panel').forEach(p => p.classList.toggle('active', p.id==='panel-'+key));
+  // Auto-resolve this athlete's current week from today's date (no manual setting)
+  const cw = computeCurrentWeek(key); if(cw) CURRENT_WEEK[key] = cw;
+  const wk = CURRENT_WEEK[key] || 4;
+  const items = document.querySelectorAll('.week-item');
+  items.forEach(el => el.classList.remove('active','current'));
+  if(items[wk-1]) items[wk-1].classList.add('active','current');
   const arr = getData(key);
   if(!arr) return;
-  // Rebuild grid for this athlete's current week, then open today (or last session)
   buildGrid('grid-'+key, arr, key);
   const ti = arr.findIndex(d => d.dayDate===TODAY_DATE || d.today);
   showDetail(key, ti >= 0 ? ti : arr.length-1);
@@ -1741,6 +1746,32 @@ const WEEK_DATA = {
   charly:   { 4: CHARLY },
   santiago: { 4: SANTIAGO },
 };
+// --- Auto week detection (date-driven; no manual advancing needed) ---
+function _parseDayDate(str){
+  if(!str) return null;
+  const p = String(str).trim().split(/\s+/);
+  if(p.length<2) return null;
+  const day = parseInt(p[0],10);
+  const mon = _MESES_ABBR.indexOf(p[1]);
+  if(isNaN(day) || mon<0) return null;
+  return new Date(_HOY.getFullYear(), mon, day);
+}
+function computeCurrentWeek(ath){
+  const weeks = WEEK_DATA[ath]; if(!weeks) return null;
+  const today = new Date(_HOY.getFullYear(), _HOY.getMonth(), _HOY.getDate());
+  const nums = Object.keys(weeks).map(Number).sort((a,b)=>a-b);
+  let started=null, startedAt=null;
+  for(const n of nums){
+    const arr = weeks[n]; if(!arr||!arr.length) continue;
+    const ds = arr.map(d=>_parseDayDate(d.dayDate)).filter(Boolean).map(d=>d.getTime());
+    if(!ds.length) continue;
+    const start = new Date(Math.min.apply(null, ds));
+    const end   = new Date(Math.max.apply(null, ds));
+    if(today>=start && today<=end) return n;            // today is inside this week
+    if(start<=today && (startedAt===null || start.getTime()>startedAt)){ startedAt=start.getTime(); started=n; }
+  }
+  return started!==null ? started : nums[nums.length-1];  // fallback: latest started, else last
+}
 let CURRENT_WEEK = { jorge:4, valeria:7, charly:4, santiago:4 };
 
 function getData(ath) {
@@ -1753,8 +1784,8 @@ buildGrid('grid-valeria', VALERIA_W6, 'valeria');
 buildGrid('grid-charly', CHARLY, 'charly');
 buildGrid('grid-santiago', SANTIAGO, 'santiago');
 
+['jorge','valeria','charly','santiago'].forEach(function(a){ var w=computeCurrentWeek(a); if(w) CURRENT_WEEK[a]=w; });
 switchAth('valeria');
-selectWeek(7);
 
 // Auto-calculate and render Valeria's current cycle phase from today's date
 setTimeout(function(){ renderCycleStatus(); }, 100);
@@ -2569,7 +2600,7 @@ function buildVBar(ch) {
   // Service worker (offline) — registra si el entorno lo permite
   if('serviceWorker' in navigator){
     try {
-      const swCode = 'self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>self.clients.claim());self.addEventListener("fetch",e=>{e.respondWith(caches.open("604tri").then(c=>c.match(e.request).then(r=>r||fetch(e.request).then(resp=>{c.put(e.request,resp.clone());return resp;}).catch(()=>r))))});';
+      const swCode = 'self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!=="604tri-v2").map(k=>caches.delete(k)))));self.clients.claim();});self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(resp=>{const cp=resp.clone();caches.open("604tri-v2").then(c=>c.put(e.request,cp));return resp;}).catch(()=>caches.match(e.request)))});';
       const blob = new Blob([swCode], {type:'application/javascript'});
       navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(function(){});
     } catch(e){}
