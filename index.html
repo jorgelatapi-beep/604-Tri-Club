@@ -1372,16 +1372,17 @@ const VALERIA_W7 = [
 const VALERIA_W8 = [
   { dayLabel:'LUN', dayDate:'22 Jun', type:'rest', icon:'🧘', title:'Descanso · Inicia Programa de Run', tag:'rest', dur:'—',
     content:{kind:'rest', note:'Arranca el programa de carrera hacia Cozumel: 3 runs/semana, tiradas progresivas desde base 5 km (foco en ENDURANCE aeróbica, no en distancia bruta). La bici baja a 2 sesiones, pero ambas con propósito: una de FUERZA+cadencia, otra de resistencia+cadencia — seguimos desarrollando la bici, no solo manteniéndola. Lunes descanso fijo.'} },
-  { dayLabel:'MAR', dayDate:'23 Jun', type:'run', icon:'🏃', title:'Run #1 Fácil · Z2 Aeróbico (run-walk)', tag:'run', dur:'45 min',
-    content:{ kind:'session', stats:[{v:'45 min',l:'Duración'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'5:1',l:'Run-walk'},{v:'Aeróbico',l:'Foco'}],
-      sections:[{head:'Estructura — Carrera Fácil con Run-Walk · Total 45 min', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
-        ['Activación caminata','5 min','Z1 <122','Caminar dinámico, soltar'],
-        ['Run-walk 5:1','37 min','Z2 122–134','Correr 5 min / caminar 1 min · ~6 ciclos'],
-        ['Enfriamiento caminata','3 min','Z1 <122','Bajar pulso + estiramientos'],
+  { dayLabel:'MAR', dayDate:'23 Jun', type:'run', icon:'🏃', title:'Run #1 Fácil ✓ · 4.3km en plano · Z2 controlado', tag:'run', dur:'43 min',
+    content:{ kind:'session', stats:[{v:'4.29 km ✓',l:'43 min'},{v:'+0m plano',l:'Terreno ✓'},{v:'129 bpm',l:'FC prom'},{v:'71%',l:'Aeróbico'}],
+      sections:[{head:'Resultado Real — Primera del Programa', cols:['Métrica','Valor','Lectura'], rows:[
+        ['Terreno','+0m (plano)','✅ Siguió la indicación de endurance en plano'],
+        ['FC promedio','129 (máx 142)','Muy controlada y estable'],
+        ['Distribución','Z2 55% · Z3 27% · aeróbico 71%','FC se sentó en el techo de Z2'],
+        ['Pace','10:02/km','Ligeramente más rápida que antes (~10:38)'],
+        ['Estabilidad','130-134 casi todo','Excelente control aeróbico'],
       ]}],
-      _calc:'5 + 37 + 3 = 45 min',
-      coachNote:'<strong>Primera del programa — fácil de verdad:</strong> El objetivo es CONSISTENCIA, no velocidad. Correr en Z2 (122–134), y en cuanto la FC pase de 134, caminar el minuto. El run-walk no es trampa — es la forma inteligente de construir distancia sin lesionarse a los 41. Su carrera aeróbica cómoda ya está en ~127, justo en zona.',
-      tip:'Para endurance limpio, mejor CAMINADORA o terreno plano — ahí controla Z2 perfecto. Si solo hay cuestas, caminar las subidas. Pace libre, FC manda.' } },
+      coachNote:'<strong>✅ Buena ejecución — primera del programa cumplida:</strong> Hizo la carrera, en plano como acordamos, con FC muy estable (clavada en 130-134). Sólido arranque del bloque de endurance. Matiz fino: la FC se asentó en el TECHO de Z2 (27% asomó a Z3). No es problema, sigue siendo aeróbico — pero para construir endurance con más margen, asentarse en la MITAD de Z2 (~125-130).',
+      tip:'Para centrar la FC en mitad de Z2: meter bien las pausas caminando del run-walk (bajan la FC) o aflojar un pelín el ritmo. Correr continuo en plano la deja arriba; las caminatas la centran. La meta es terminar SOBRANDO.' } },
   { dayLabel:'MIÉ', dayDate:'24 Jun', type:'bike', icon:'🚴', title:'Bici FUERZA + Cadencia ⚡ · Slope', tag:'bike', dur:'50 min',
     content:{ kind:'session', stats:[{v:'50 min',l:'Duración'},{v:'78–90%',l:'FTP fuerza'},{v:'50–55 / 100+',l:'rpm'},{v:'Slope',l:'Para fuerza'}],
       sections:[{head:'Estructura — Fuerza + Cadencia · Total 50 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
