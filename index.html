@@ -848,10 +848,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 </header>
 
 <nav class="athlete-nav">
-  <div class="ath-tab" data-ath="jorge" onclick="switchAth('jorge')">Jorge<span class="ath-sub">T100 + 70.3 Cozumel</span></div>
-  <div class="ath-tab active" data-ath="valeria" onclick="switchAth('valeria')">Valeria<span class="ath-sub">T100 + 70.3 Cozumel</span></div>
-  <div class="ath-tab" data-ath="charly" onclick="switchAth('charly')">Carlos<span class="ath-sub">70.3 Cozumel</span></div>
-  <div class="ath-tab" data-ath="santiago" onclick="switchAth('santiago')">Santiago<span class="ath-sub">T100 Vancouver</span></div>
+  <div class="ath-tab active" data-ath="valeria" onclick="switchAth('valeria')">Valeria<span class="ath-sub">IRONMAN 70.3 Cozumel · 20 Sep 2026</span></div>
 </nav>
 
 <div class="app-body">
@@ -950,20 +947,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 
 <!-- ── MAIN CONTENT ── -->
 <div class="main">
-  <div class="athlete-panel active" id="panel-jorge">
-    
-  <div class="view-toggle">
-    <button class="vt-btn active" id="vt-plan-jorge" onclick="setView('jorge','plan')">Plan Semanal</button>
-    <button class="vt-btn" id="vt-metrics-jorge" onclick="setView('jorge','metrics')">Métricas</button>
-  </div>
-  <div class="plan-view" id="planview-jorge">
-  <div class="week-header"><div class="week-title">Semana 4</div><div class="week-range">25–31 Mayo</div><div class="phase-tag phase-base">Base Aeróbica</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">80/20 · Semana Test</div><div class="tss-total">TSS est. <strong>~290</strong></div></div>
-    <div class="week-grid" id="grid-jorge"></div>
-    <div class="session-detail" id="detail-jorge"></div>
-  </div><!-- /planview-jorge -->
-  <div class="metrics-panel" id="metrics-jorge"></div>
-  </div>
-  <div class="athlete-panel" id="panel-valeria">
+  <div class="athlete-panel active" id="panel-valeria">
     
   <div class="view-toggle">
     <button class="vt-btn active" id="vt-plan-valeria" onclick="setView('valeria','plan')">Plan Semanal</button>
@@ -975,32 +959,6 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
     <div class="session-detail" id="detail-valeria"></div>
   </div><!-- /planview-valeria -->
   <div class="metrics-panel" id="metrics-valeria"></div>
-  </div>
-  <div class="athlete-panel" id="panel-charly">
-    
-  <div class="view-toggle">
-    <button class="vt-btn active" id="vt-plan-charly" onclick="setView('charly','plan')">Plan Semanal</button>
-    <button class="vt-btn" id="vt-metrics-charly" onclick="setView('charly','metrics')">Métricas</button>
-  </div>
-  <div class="plan-view" id="planview-charly">
-  <div class="week-header"><div class="week-title">Semana 4</div><div class="week-range">25–31 Mayo</div><div class="phase-tag phase-base">Base Aeróbica</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;">80/20 · Ajustado ✅</div><div class="tss-total">TSS est. <strong>~295</strong></div></div>
-    <div class="week-grid" id="grid-charly"></div>
-    <div class="session-detail" id="detail-charly"></div>
-  </div><!-- /planview-charly -->
-  <div class="metrics-panel" id="metrics-charly"></div>
-  </div>
-  <div class="athlete-panel" id="panel-santiago">
-    
-  <div class="view-toggle">
-    <button class="vt-btn active" id="vt-plan-santiago" onclick="setView('santiago','plan')">Plan Semanal</button>
-    <button class="vt-btn" id="vt-metrics-santiago" onclick="setView('santiago','metrics')">Métricas</button>
-  </div>
-  <div class="plan-view" id="planview-santiago">
-  <div class="week-header"><div class="week-title">Semana 4</div><div class="week-range">25–31 Mayo</div><div class="phase-tag phase-base">Tests + Base</div><div style="margin-left:8px;font-family:'Space Mono',monospace;font-size:10px;padding:3px 8px;border-radius:3px;background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;">80/20 · LTHR→S5 ✅</div><div class="tss-total">TSS est. <strong>~195</strong></div></div>
-    <div class="week-grid" id="grid-santiago"></div>
-    <div class="session-detail" id="detail-santiago"></div>
-  </div><!-- /planview-santiago -->
-  <div class="metrics-panel" id="metrics-santiago"></div>
   </div>
 </div>
 
@@ -1383,17 +1341,17 @@ const VALERIA_W8 = [
       ]}],
       coachNote:'<strong>✅ Buena ejecución — primera del programa cumplida:</strong> Hizo la carrera, en plano como acordamos, con FC muy estable (clavada en 130-134). Sólido arranque del bloque de endurance. Matiz fino: la FC se asentó en el TECHO de Z2 (27% asomó a Z3). No es problema, sigue siendo aeróbico — pero para construir endurance con más margen, asentarse en la MITAD de Z2 (~125-130).',
       tip:'Para centrar la FC en mitad de Z2: meter bien las pausas caminando del run-walk (bajan la FC) o aflojar un pelín el ritmo. Correr continuo en plano la deja arriba; las caminatas la centran. La meta es terminar SOBRANDO.' } },
-  { dayLabel:'MIÉ', dayDate:'24 Jun', type:'bike', icon:'🚴', title:'Bici FUERZA + Cadencia ⚡ · Slope', tag:'bike', dur:'50 min',
-    content:{ kind:'session', stats:[{v:'50 min',l:'Duración'},{v:'78–90%',l:'FTP fuerza'},{v:'50–55 / 100+',l:'rpm'},{v:'Slope',l:'Para fuerza'}],
-      sections:[{head:'Estructura — Fuerza + Cadencia · Total 50 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
-        ['Calentamiento','12 min','55→65%','72–85W','spin-ups 90→100'],
-        ['FUERZA: 5×(2min fuerte + 1min suave)','15 min','78–90% / 55%','101–117W / 72W','🎯 50–55 rpm SLOPE / 90 rpm'],
-        ['CADENCIA: 6×(1min alta + 1min suave)','12 min','60–65% / 58%','78–85W / 75W','🎯 100–110 rpm / 85 rpm'],
-        ['Enfriamiento','11 min','50%','65W','Soltar'],
+  { dayLabel:'MIÉ', dayDate:'24 Jun', type:'bike', icon:'🚴', title:'Bici Fuerza+Cadencia ⚠️ · buena potencia, faltó protocolo', tag:'bike', dur:'46 min',
+    content:{ kind:'session', stats:[{v:'19.1 km',l:'46 min indoor'},{v:'99W (76%)',l:'subió a 123W'},{v:'79 rpm',l:'⚠️ firma ERG'},{v:'129 bpm',l:'FC prom'}],
+      sections:[{head:'Resultado Real — análisis del protocolo', cols:['Métrica','Valor','Lectura'], rows:[
+        ['Potencia','99W prom · 123W sostenido · 178W máx','💪 La fuerza mejora, es real'],
+        ['Cadencia promedio','79 rpm','⚠️ Firma de modo ERG (flota en ~78)'],
+        ['Fuerza ≤58 rpm','solo 6% del tiempo','❌ Estímulo de fuerza no logrado'],
+        ['Cadencia ≥98 rpm','solo 11%','❌ Drills de cadencia parciales'],
+        ['Veredicto','Rodada aeróbica/tempo buena','Pero no el trabajo neuromuscular prescrito'],
       ]}],
-      _calc:'12 + 15 + 12 + 11 = 50 min',
-      coachNote:'<strong>⚡ La bici que SÍ desarrolla — fuerza + cadencia en una:</strong> Dos estímulos clave. FUERZA en Slope mode a 50-55 rpm empujando fuerte (101-117W) — recluta fibra, construye potencia de pedaleo (en ERG la Tacx default a 78 rpm y diluye esto, por eso SLOPE). CADENCIA a 100-110 rpm para subir su cadencia natural baja (62-66). Como la bici está mejorando, seguimos alimentándola. A media semana, lejos de la tirada larga del domingo.',
-      tip:'En fuerza: torque alto, baja cadencia, núcleo firme. En cadencia: pedaleo redondo sin rebotar. Es la sesión que hace crecer la bici.' } },
+      coachNote:'<strong>⚠️ Buena potencia, pero faltó el protocolo (mismo tema recurrente):</strong> La potencia subió bien (123W sostenido) — está más fuerte. Pero la sesión fue una rodada tempo, NO fuerza+cadencia: la cadencia promedió 79 rpm casi sin tiempo abajo (50-55) ni arriba (100-110). Ese 78-79 clavado es la firma de ERG, que diluye ambos estímulos.',
+      tip:'CLAVE: para la próxima, rodillo en modo SLOPE (no ERG). En Slope, la resistencia es fija y la cadencia la pones tú — ahí SÍ puedes grindear a 50-55 rpm (fuerza) y girar a 100-110 (cadencia). En ERG es casi imposible bajar a 50-55. Slope es la llave de este tipo de sesión.' } },
   { dayLabel:'JUE', dayDate:'25 Jun', type:'run', icon:'🏃', title:'Run #2 Fácil · Z2 Aeróbico (run-walk)', tag:'run', dur:'45 min',
     content:{ kind:'session', stats:[{v:'45 min',l:'Duración'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'5:1',l:'Run-walk'},{v:'Aeróbico',l:'Foco'}],
       sections:[{head:'Estructura — Carrera Fácil con Run-Walk · Total 45 min', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
@@ -1424,12 +1382,12 @@ const VALERIA_W8 = [
     content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'62–67%',l:'FTP'},{v:'85–90 + 100',l:'rpm'},{v:'Z2',l:'Resistencia'}],
       sections:[{head:'Estructura — Resistencia + Cadencia · Total 70 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
         ['Calentamiento','12 min','50→60%','65–78W','Libre'],
-        ['Bloque Z2 + 6×1min cadencia','48 min','62–67%','81–87W','85–90 rpm + 100+ cada 7 min'],
+        ['Bloque Z2 + 6×1min cadencia','48 min','62–67%','81–87W','base 85–90 + drills 100-110 (controlar cadencia)'],
         ['Enfriamiento','10 min','50%','65W','Soltar'],
       ]}],
       _calc:'12 + 48 + 10 = 70 min',
       coachNote:'<strong>Resistencia con cadencia embebida:</strong> Mantiene la base aeróbica de bici (su fortaleza) y sigue trabajando la cadencia alta dentro del largo. Moderada para no fatigar la tirada larga de mañana. Buen día para practicar nutrición/hidratación.',
-      tip:'Z2 cómodo, con los toques de cadencia a 100+. Mañana es la sesión reina: la primera larga.' } },
+      tip:'En ERG (entreno de TP en app Tacx): para los drills de cadencia, MIRA LA CADENCIA no la potencia — sube a 100-110 rpm y deja que el rodillo afloje. Mañana es la sesión reina: la primera larga.' } },
   { dayLabel:'DOM', dayDate:'28 Jun', type:'run', icon:'🏃', title:'Run #3 LARGA · 5 km · Z2 endurance (run-walk)', tag:'run', dur:'5 km (~55 min)',
     content:{ kind:'session', stats:[{v:'5 km',l:'Base endurance'},{v:'Z2 · 122–134',l:'bpm (TP)'},{v:'5:1',l:'Run-walk'},{v:'~55 min',l:'Aprox'}],
       sections:[{head:'Estructura — Tirada Larga Base (por distancia, Z2)', cols:['Segmento','Distancia/Tiempo','Zona FC','Nota'], rows:[
@@ -1780,12 +1738,9 @@ function getData(ath) {
   return (WEEK_DATA[ath] && WEEK_DATA[ath][wk]) ? WEEK_DATA[ath][wk] : null;
 }
 
-buildGrid('grid-jorge', JORGE, 'jorge');
 buildGrid('grid-valeria', VALERIA_W6, 'valeria');
-buildGrid('grid-charly', CHARLY, 'charly');
-buildGrid('grid-santiago', SANTIAGO, 'santiago');
 
-['jorge','valeria','charly','santiago'].forEach(function(a){ var w=computeCurrentWeek(a); if(w) CURRENT_WEEK[a]=w; });
+var _vw = computeCurrentWeek('valeria'); if(_vw) CURRENT_WEEK['valeria']=_vw;
 switchAth('valeria');
 
 // Auto-calculate and render Valeria's current cycle phase from today's date
