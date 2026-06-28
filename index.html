@@ -1402,73 +1402,75 @@ const VALERIA_W8 = [
 
 const VALERIA_W9 = [
   { dayLabel:'LUN', dayDate:'29 Jun', type:'rest', icon:'🧘', title:'Descanso · Recuperación activa', tag:'rest', dur:'—',
-    content:{ kind:'rest', note:'Descanso fijo post-W8. Prioritario: hidratación, sueño, revisión muscular. Verifica si el periodo inicia esta semana — si es así, confirma la fecha exacta para recalibrar el ciclo menstrual.'} },
+    content:{ kind:'rest', note:'Descanso fijo post-W8. Prioridad: hidratación, sueño, movilidad. Si el período inicia esta semana, confirma fecha exacta para recalibrar ciclo menstrual.'} },
 
-  { dayLabel:'MAR', dayDate:'30 Jun', type:'bike', icon:'🚴', title:'Bici Z2 Resistencia · 70% FTP · 65 min', tag:'bike', dur:'65 min',
-    content:{ kind:'session', stats:[{v:'65 min',l:'Duración'},{v:'70% FTP',l:'91W'},{v:'Z2',l:'Control'},{v:'~25km',l:'Aprox'}],
-      sections:[{head:'Estructura — Resistencia Aeróbica (ajustado a capacidad real) · Total 65 min', cols:['Segmento','Duración','% FTP','Watts','Zona'], rows:[
-        ['Calentamiento','10 min','50-60%','65-78W','Z1 → Z2 easy'],
-        ['Bloque Z2 resistencia','50 min','70%','91W','Aeróbica pura, controlada'],
-        ['Enfriamiento','5 min','40-50%','52-65W','Soltar'],
+  { dayLabel:'MAR', dayDate:'30 Jun', type:'swim', icon:'🏊', title:'DOBLE · Nado Técnica (30 min) + 🚴 Bici Resistencia (65 min)', tag:'swim', dur:'95 min total',
+    content:{ kind:'session', stats:[{v:'30 min',l:'Nado técnica'},{v:'+ 65 min',l:'Bici 70% FTP'},{v:'95 min total',l:'DOBLE sesión'},{v:'Integrado',l:'Sin descanso long'}],
+      sections:[{head:'Sesión Doble — Nado + Bici (acoplados, transición fluida)', cols:['Disciplina','Duración','Intensidad','Nota'], rows:[
+        ['Nado técnica','30 min','Z1-Z2 fácil, RPE 3-4','Movimiento, adaptación océano, forma de brazada. Sin prisa.'],
+        ['Transición','~5-10 min','Cambio + hidratación','Fuera del tiempo de entreno, descanso pasivo'],
+        ['Bici resistencia','65 min','70% FTP (91W)','Bloque Z2 endurance aeróbico, cadencia natural 85-90'],
       ]}],
-      _calc:'10 + 50 + 5 = 65 min',
-      coachNote:'<strong>Ajuste post-análisis:</strong> Semana 8 ejecutó a 75% FTP en "62-67%" y dijo ligero. Aquí prescribimos honestamente a 70% FTP, que es su capacidad verificada en endurance bici. Más volumen que W8 (65 min vs 64) pero intensidad realista. Controla FC en Z2, ritmo sostenible.',
-      tip:'Entreno de TP en app Tacx, ERG. Apunta a 91W en los 50 min del bloque. La potencia manda, la cadencia es libre (natural 85-90).' } },
+      coachNote:'<strong>ESTRUCTURA 2-2-2: Primer nado de la semana.</strong> Doble sesión para sumar volumen: nado técnica + adaptación océano (1.9km de Cozumel requiere aclimatación), seguido de bici resistencia aeróbica. La transición es recuperación activa. Total 95 min de trabajo; sin sesión doble extrema (ambas son Z2 baja).',
+      tip:'Nado: enfoque en técnica, no velocidad. Después: bici en ritmo sostenible 91W. Hidrátate bien entre sesiones.' } },
 
   { dayLabel:'MIÉ', dayDate:'1 Jul', type:'bike', icon:'⚡', title:'Bici Fuerza+Cadencia · 6×(6min 72% + 1min drill 110rpm)', tag:'bike', dur:'66 min',
-    content:{ kind:'session', stats:[{v:'66 min',l:'Total'},{v:'72% base',l:'~94W'},{v:'6×7',l:'Estructura'},{v:'Cadencia',l:'Drills'}],
-      sections:[{head:'Estructura — Fuerza Neuromuscular + Cadencia (protocolo ERG) · Total 66 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+    content:{ kind:'session', stats:[{v:'66 min',l:'Total'},{v:'72% base',l:'~94W fuerza'},{v:'6×7',l:'Estructura'},{v:'Cadencia',l:'Drills 110rpm'}],
+      sections:[{head:'Estructura — Fuerza Neuromuscular (protocolo ERG, cadencia controlada) · Total 66 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
         ['Calentamiento','12 min','50-60%','65-78W','Libre'],
-        ['6×(6min fuerza + 1min cadencia)','42 min','72% / 50-60%','94W / 65-78W','50-55 rpm / 110 rpm'],
+        ['6×(6min fuerza + 1min cadencia)','42 min','72% / 50-60%','94W / 65-78W','50-55 rpm grindeo / 110 rpm drill'],
         ['Enfriamiento','12 min','40-50%','52-65W','Soltar'],
       ]}],
       _calc:'12 + 42 + 12 = 66 min',
-      coachNote:'<strong>Fuerza desarrollada + tendencia de cadencia:</strong> Base de fuerza sube de 62-67% a 72% (94W) — Valeria está lista. Los drills de cadencia siguen el protocolo: baja a 50-60% en los 1 min de 110 rpm (el rodillo en ERG va a bajar la resistencia cuando subes cadencia). Mantiene el trabajo neuromuscular fuerte mientras desarrolla cadencia alta.',
-      tip:'ERG en TP/Tacx. Los 6 min: mantén deliberadamente 50-55 rpm a 72% (grindeo, torque alto). En cada 1 min: sube a 110 rpm y deja que el rodillo baje. Control de cadencia es la clave — no mires potencia.' } },
+      coachNote:'<strong>Sesión reina neuromuscular:</strong> Desarrollo de fuerza (72% FTP a 50-55 rpm = torque alto) integrado con drills de cadencia (110 rpm). Valeria ejecutó bien con 75% en W8, así que 72% aquí es sólido. ERG en app Tacx: controla cadencia, ignora potencia.',
+      tip:'6 min a 50-55 rpm grindeo, 1 min sube a 110 rpm (el rodillo afloja en ERG). Repite 6 veces. Cadencia es la llave.' } },
 
-  { dayLabel:'JUE', dayDate:'2 Jul', type:'run', icon:'🏃', title:'Run #2 Fácil · 45 min Z2 · run-walk 5:1', tag:'run', dur:'45 min',
-    content:{ kind:'session', stats:[{v:'45 min',l:'Tiempo'},{v:'~4.2 km',l:'Estimado (9:23/km)'},{v:'Z2',l:'122-134 bpm'},{v:'Run-walk 5:1',l:'Estructura'}],
-      sections:[{head:'Estructura — Carrera Fácil Aeróbica (tiempo base, distancia estimada) · Total 45 min', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
-        ['Activación caminata','5 min','Z1 <122','Dinámico, soltar'],
-        ['Run-walk 5:1','35 min','Z2 122-134','Correr 5 min / caminar 1 min · 5 ciclos aprox'],
+  { dayLabel:'JUE', dayDate:'2 Jul', type:'run', icon:'🏃', title:'Run #1 Fácil · 45 min Z2 · run-walk 5:1', tag:'run', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'45 min',l:'Tiempo'},{v:'~4.2 km',l:'Estimado'},{v:'Z2',l:'122-134 bpm'},{v:'Run-walk 5:1',l:'Estructura'}],
+      sections:[{head:'Estructura — Carrera Fácil Base Aeróbica · Total 45 min', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
+        ['Activación caminata','5 min','Z1 <122','Dinámico'],
+        ['Run-walk 5:1','35 min','Z2 122-134','Correr 5 min / caminar 1 min'],
         ['Enfriamiento caminata','5 min','Z1 <122','Bajar FC + estiramientos'],
       ]}],
       _calc:'5 + 35 + 5 = 45 min',
-      coachNote:'<strong>Segunda carrera de construcción:</strong> Base en TIEMPO (45 min Z2) porque es sesión de trabajo diario, no acumulación. Con el ritmo de Valeria (9:23/km), los 45 min generarán ~4.2 km — es volumen suficiente para una sesión intermedia. El sábado es la tirada larga donde gobernamos por DISTANCIA.',
-      tip:'Caminadora o terreno plano para Z2 limpio. FC 122-134 siempre. Si sube, camina.' } },
+      coachNote:'<strong>Segunda carrera (no larga):</strong> Sesión de trabajo intermedio en Z2, consolida la base. Tiempo fijo (45 min), distancia estimada ~4.2 km. Caminadora o terreno plano para control de zona.',
+      tip:'Z2 controlada, si pasa 134 FC camina. Consistencia es la meta.' } },
 
-  { dayLabel:'VIE', dayDate:'3 Jul', type:'swim', icon:'🏊', title:'Nado Técnico + 💪 Fuerza Gym', tag:'swim', dur:'45-50 min',
-    content:{ kind:'session', stats:[{v:'~1.2-1.5km',l:'Nado técnica'},{v:'~30 min',l:'Fuerza gym'},{v:'FC Z2',l:'Controlada'},{v:'Antilesiones',l:'Prioridad'}],
-      sections:[{head:'Estructura — Mantenimiento Nado + Fuerza Preventiva', cols:['Disciplina','Duración','Intensidad','Nota'], rows:[
-        ['Nado técnica','20 min','Z1-Z2 fácil','Movimiento, no intensidad'],
-        ['Series técnica','~8 min','RPE 3-4','Enfoque en forma, no velocidad'],
-        ['Fuerza gym','30 min','Controlada','Core, piernas, espalda — prevención lesiones masters'],
+  { dayLabel:'VIE', dayDate:'3 Jul', type:'swim', icon:'🏊', title:'DOBLE · Nado Volumen (40 min) + 💪 Fuerza Gym (25 min)', tag:'swim', dur:'65 min integrado',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Nado volumen'},{v:'~1.5-2km',l:'Distancia'},{v:'+ 25 min',l:'Fuerza gym'},{v:'65 min total',l:'Integrado'}],
+      sections:[{head:'Sesión Doble — Nado Volumen + Fuerza Protectora · Total 65 min', cols:['Disciplina','Duración','Intensidad','Nota'], rows:[
+        ['Nado volumen','40 min','Z2 fácil CSS','Acumulación de distancia en zona aeróbica. Técnica + ritmo.'],
+        ['Transición','~5 min','Salida agua + secado','Preparación para gym'],
+        ['Fuerza gym','25 min','Controlada, RPE 5-6','Core, piernas, espalda — prevención antilesiones máster'],
       ]}],
-      coachNote:'<strong>Día de transición y prevención:</strong> Nado mantiene el sistema aeróbico sin impacto; fuerza protege la estructura ósea y muscular (crítico en máster). Este día es desacelerador entre la bici dura (mié) y la bici larga (sáb).',
-      tip:'Nado en caminadora si está disponible para variar terreno. Gym: énfasis en estabilidad, no tamaño.' } },
+      _calc:'40 + 25 = 65 min integrado',
+      coachNote:'<strong>Segundo nado de la semana (volumen + fuerza):</strong> 40 min de nado en Z2 para acumular la capacidad de 1.9km Cozumel. Luego fuerza protectora de 25 min (no agotadora, solo prevención). Integrados en una sesión: el nado enfría, la fuerza termina de estimular sin fatiga acumulada.',
+      tip:'Nado: 40 min de Z2, variabilidad técnica. Gym: 3-4 ejercicios de estabilidad core/cadera/espalda, 2-3 series cada uno.' } },
 
-  { dayLabel:'SÁB', dayDate:'4 Jul', type:'bike', icon:'🚴', title:'Bici Resistencia + Cadencia · 70 min · 70-72% FTP', tag:'bike', dur:'70 min',
+  { dayLabel:'SÁB', dayDate:'4 Jul', type:'bike', icon:'🚴', title:'Bici Resistencia Larga · 70 min · 70-72% FTP + cadencia drills', tag:'bike', dur:'70 min',
     content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'70-72% FTP',l:'91-94W'},{v:'Cadencia drills',l:'Embebidos'},{v:'~26 km',l:'Aprox'}],
-      sections:[{head:'Estructura — Resistencia Larga con Cadencia (volumen de construcción) · Total 70 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
+      sections:[{head:'Estructura — Resistencia Larga (volumen + desarrollo cadencia) · Total 70 min', cols:['Segmento','Duración','% FTP','Watts','Cadencia'], rows:[
         ['Calentamiento','10 min','50-60%','65-78W','Libre'],
         ['Bloque Z2 + 6×1min cadencia','55 min','70% base / 50-60% drill','91W / 65-78W','85-90 rpm / 100-110 rpm'],
         ['Enfriamiento','5 min','40-50%','52-65W','Soltar'],
       ]}],
       _calc:'10 + 55 + 5 = 70 min',
-      coachNote:'<strong>Sesión reina de bici (volumen + trabajo integrado):</strong> 70 min endurance a 70% FTP más drills de cadencia para desarrollar ambas cualidades. Valeria ejecutó bien con 75% en W8, así que 70-72% aquí es sólido sin sobre-estresarla. Mantiene el motor aeróbico fuerte y la cadencia en desarrollo.',
-      tip:'Estructura: 55 min de Z2 interrumpido por 6 toques de 1 min a 100-110 rpm cada 8-9 min. ERG en TP. Los drills son ventanas de cadencia alta dentro del bloque largo.' } },
+      coachNote:'<strong>Sesión de volumen bici (resistencia larga):</strong> 70 min a 70-72% FTP, la sesión más larga de bici esta semana. Prepara para los 90 km de Cozumel (plano con vientos). Drills de cadencia integrados mantienen el desarrollo neuromuscular.',
+      tip:'Ritmo: 91-94W sostenido. Cada 8-9 min, 1 min de 100-110 rpm. Hidrátate cada 15 min.' } },
 
-  { dayLabel:'DOM', dayDate:'5 Jul', type:'run', icon:'🏃', title:'Run #3 LARGA · 6 km Z2 · run-walk · DISTANCIA FIJA', tag:'run', dur:'~60 min',
+  { dayLabel:'DOM', dayDate:'5 Jul', type:'run', icon:'🏃', title:'Run #2 LARGA · 6 km Z2 · run-walk · DISTANCIA FIJA', tag:'run', dur:'~60 min',
     content:{ kind:'session', stats:[{v:'6 km',l:'DISTANCIA FIJA ✓'},{v:'~60 min',l:'Estimado (9:23/km)'},{v:'Z2 122-134',l:'bpm (TP)'},{v:'Run-walk 5:1',l:'Estructura'}],
-      sections:[{head:'Estructura — Tirada Larga Base Endurance (GOBERNADA POR DISTANCIA) · Total 6 km', cols:['Segmento','Distancia/Tiempo','Zona FC','Nota'], rows:[
+      sections:[{head:'Estructura — Tirada Larga Endurance (DISTANCIA, no tiempo) · Total 6 km', cols:['Segmento','Distancia/Tiempo','Zona FC','Nota'], rows:[
         ['Activación caminata','5 min','Z1 <122','Soltar, dinámico'],
         ['Run-walk 5:1 hasta 6 km','~54 min','Z2 122-134','Correr 5 / caminar 1 TODA la distancia — NO SALGAS DE Z2'],
         ['Enfriamiento caminata','5 min','Z1 <122','Bajar FC + estiramientos + hidratación'],
       ]}],
-      _calc:'5 min + 54 min (6km a 9:23/km) + 5 min = ~64 min total',
-      coachNote:'<strong>🔴 PROTOCOLO NUEVO — GOBERNADA POR DISTANCIA:</strong> La tirada larga es 6 km PUNTO. No es "45-55 min". Ella corre los 6 km en Z2, controlando la FC. El tiempo es lo que resulte (probablemente 60-65 min a su ritmo actual). Esto construye la DUREZA REAL de correr 6 km + la zona aeróbica. Es la diferencia entre "aguantar" y "entrenar". La zona manda — si FC pasa 134, camina. La distancia es NO-NEGOCIABLE para Cozumel (meta final 21.1 km).',
-      tip:'Caminadora o terreno plano preferente (controla Z2 perfecto). Hidrátate a mitad. La meta: terminar los 6 km SOBRANDO en Z2, no vaciada. Si es en cuestas, camina todas las subidas. Distancia &gt; rapidez.' } },
+      _calc:'5 + 54 + 5 = ~64 min total',
+      coachNote:'<strong>🔴 Tirada larga semanal (DISTANCIA GOBERNADA):</strong> 6 km PUNTO. La zona manda (Z2 122-134), pero la distancia es NO-NEGOCIABLE. Esto la prepara para los 21.1 km de Cozumel: primero domina 6 km en Z2, luego sube a 7, 8... hasta 18 km (pico). Tiempo es lo que resulte (~60 min actual).',
+      tip:'Caminadora o terreno plano. Camina todas las subidas. Hidrátate. Meta: los 6 km sobrando en Z2, no vaciada.' } },
 ];
+
+
 
 
 
