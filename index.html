@@ -1400,6 +1400,57 @@ const VALERIA_W8 = [
 
 
 
+const JORGE_W9 = [
+  { dayLabel:'LUN', dayDate:'29 Jun', type:'rest', icon:'🧘', title:'Descanso', tag:'rest', dur:'—',
+    content:{ kind:'rest', note:'Descanso. Jorge está en retorno — prioridad es consistencia, no volumen.'} },
+
+  { dayLabel:'MAR', dayDate:'30 Jun', type:'run', icon:'🏃', title:'Run Fácil Retorno · 30 min Z1-Z2', tag:'run', dur:'30 min',
+    content:{ kind:'session', stats:[{v:'30 min',l:'Tiempo'},{v:'Z1-Z2',l:'Zona'},{v:'~3 km',l:'Aprox'},{v:'Conservador',l:'Prioridad'}],
+      sections:[{head:'Retorno a Carrera · 30 minutos muy fácil', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
+        ['Activación caminata','5 min','Z1 <122','Soltar, dinámico'],
+        ['Run-walk 5:1','20 min','Z1-Z2 <135','Correr 5 min / caminar 1 min × 3 ciclos'],
+        ['Enfriamiento caminata','5 min','Z1 <122','Bajar FC'],
+      ]}],
+      coachNote:'<strong>Retorno a carrera:</strong> Jorge sin actividad reciente. Prioridad absoluta: consistencia + SENSACIÓN de fácil. Si algo duele, camina. Si se siente fuerte, resiste la tentación de acelerar. El objetivo es llegar a viernes habiendo completado 2 carreras.',
+      tip:'Muy fácil. Si puedes hablar sin dificultad, estás en el ritmo correcto. Caminadora o terreno plano.' } },
+
+  { dayLabel:'MIÉ', dayDate:'1 Jul', type:'bike', icon:'🚴', title:'Bike Fácil Retorno · 40 min Z1-Z2', tag:'bike', dur:'40 min',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Tiempo'},{v:'~60% FTP',l:'~78W'},{v:'Z1-Z2',l:'Zona'},{v:'Rodillo o outdoor',l:'Flexible'}],
+      sections:[{head:'Retorno a Bici · 40 minutos muy fácil', cols:['Segmento','Duración','% FTP','Watts','Nota'], rows:[
+        ['Calentamiento','5 min','50-55%','65-72W','Soltar'],
+        ['Bloque principal','30 min','60%','78W','Conversacional, cadencia natural'],
+        ['Enfriamiento','5 min','50%','65W','Bajar FC'],
+      ]}],
+      coachNote:'<strong>Retorno a bici:</strong> Muy suave. Rodillo ERG o outdoor plano — lo que sea cómodo. Ritmo: completamente conversacional. Jorge ha estado sin actividad; el cuerpo necesita adaptarse sin sobrecarga.',
+      tip:'Si tiene rodillo: 60% FTP = 78W, cadencia libre (no controlar). Si es outdoor: mantén ritmo conversacional. Meta: llegar a viernes sin molestia.' } },
+
+  { dayLabel:'JUE', dayDate:'2 Jul', type:'run', icon:'🏃', title:'Run Fácil Retorno · 30 min Z1-Z2', tag:'run', dur:'30 min',
+    content:{ kind:'session', stats:[{v:'30 min',l:'Tiempo'},{v:'Z1-Z2',l:'Zona'},{v:'~3 km',l:'Aprox'},{v:'Segunda carrera',l:'Consistencia'}],
+      sections:[{head:'Retorno a Carrera · 30 minutos muy fácil (repetida)', cols:['Segmento','Duración','Zona FC','Nota'], rows:[
+        ['Activación caminata','5 min','Z1 <122','Soltar'],
+        ['Run-walk 5:1','20 min','Z1-Z2 <135','Correr 5 min / caminar 1 min × 3 ciclos'],
+        ['Enfriamiento caminata','5 min','Z1 <122','Estiramientos suaves'],
+      ]}],
+      coachNote:'<strong>Sesión 2 de carrera esta semana:</strong> Misma estructura que el martes. Si el martes fue fácil, el jueves debería serlo también. Si hubo molestia, reduce a 25 min hoy. Prioridad: que termine sonriendo.',
+      tip:'Muy fácil, conversacional. Caminadora o plano.' } },
+
+  { dayLabel:'VIE', dayDate:'3 Jul', type:'bike', icon:'🚴', title:'Bike Fácil Retorno · 40 min Z1-Z2', tag:'bike', dur:'40 min',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Tiempo'},{v:'~60% FTP',l:'~78W'},{v:'Z1-Z2',l:'Zona'},{v:'Segunda bici',l:'Consistencia'}],
+      sections:[{head:'Retorno a Bici · 40 minutos muy fácil (repetida)', cols:['Segmento','Duración','% FTP','Watts','Nota'], rows:[
+        ['Calentamiento','5 min','50-55%','65-72W','Soltar'],
+        ['Bloque principal','30 min','60%','78W','Conversacional, cadencia natural'],
+        ['Enfriamiento','5 min','50%','65W','Bajar FC'],
+      ]}],
+      coachNote:'<strong>Sesión 2 de bici esta semana:</strong> Misma estructura que el miércoles. Si el mié fue fácil, el vie debería serlo también. Fin de semana sin entrenamiento — descanso completo.',
+      tip:'Muy fácil. Ritmo conversacional. Viernes cierra la semana 1 del retorno.' } },
+
+  { dayLabel:'SÁB', dayDate:'4 Jul', type:'rest', icon:'⛔', title:'Descanso completo', tag:'rest', dur:'—',
+    content:{ kind:'rest', note:'Sábado de descanso completo. Recuperación después de 4 entrenamientos de retorno.'} },
+
+  { dayLabel:'DOM', dayDate:'5 Jul', type:'rest', icon:'⛔', title:'Descanso completo', tag:'rest', dur:'—',
+    content:{ kind:'rest', note:'Domingo de descanso completo. Fin de semana — movilidad pasiva, hidratación, sueño.'} },
+];
+
 const VALERIA_W9 = [
   { dayLabel:'LUN', dayDate:'29 Jun', type:'rest', icon:'🧘', title:'Descanso · Recuperación activa', tag:'rest', dur:'—',
     content:{ kind:'rest', note:'Descanso fijo post-W8. Prioridad: hidratación, sueño, movilidad. Si el período inicia esta semana, confirma fecha exacta para recalibrar ciclo menstrual.'} },
@@ -1698,7 +1749,7 @@ function switchAth(key) {
 
 // Week-aware data resolution
 const WEEK_DATA = {
-  jorge:    { 4: JORGE },
+  jorge:    { 4: JORGE, 9: JORGE_W9 },
   valeria:  { 4: VALERIA, 5: VALERIA_W5, 6: VALERIA_W6, 7: VALERIA_W7, 8: VALERIA_W8, 9: VALERIA_W9 },
   charly:   { 4: CHARLY },
   santiago: { 4: SANTIAGO },
