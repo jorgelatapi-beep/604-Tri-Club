@@ -849,6 +849,7 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
 
 <nav class="athlete-nav">
   <div class="ath-tab active" data-ath="valeria" onclick="switchAth('valeria')">Valeria<span class="ath-sub">IRONMAN 70.3 Cozumel · 20 Sep 2026</span></div>
+  <div class="ath-tab" data-ath="jorge" onclick="switchAth('jorge')">Jorge<span class="ath-sub">Retorno a Actividad</span></div>
 </nav>
 
 <div class="app-body">
@@ -960,6 +961,18 @@ td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; 
   </div><!-- /planview-valeria -->
   <div class="metrics-panel" id="metrics-valeria"></div>
   </div>
+<div class="athlete-panel" id="panel-jorge">
+  <div class="view-toggle">
+    <button class="vt-btn active" id="vt-plan-jorge" onclick="setView('jorge','plan')">Plan Semanal</button>
+  </div>
+  <div id="view-plan-jorge" class="view-content">
+    <div class="week-selector">
+      <button onclick="switchWeek('jorge',9)" id="btn-week-jorge-9">W9</button>
+    </div>
+    <div id="weekly-view-jorge"></div>
+  </div>
+</div>
+
 </div>
 
 <script>
