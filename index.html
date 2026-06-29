@@ -1419,24 +1419,30 @@ const VALERIA_W9 = [
   { dayLabel:'LUN', dayDate:'29 Jun', type:'rest', icon:'🧘', title:'Descanso · Recuperación activa', tag:'rest', dur:'—',
     content:{ kind:'rest', note:'Descanso fijo post-W8. Prioridad: hidratación, sueño, movilidad. Si el período inicia esta semana, confirma fecha exacta para recalibrar ciclo menstrual.'} },
 
-  { dayLabel:'MAR', dayDate:'30 Jun', type:'swim', icon:'🏊', title:'DOBLE · Nado Técnica (30 min) + Bici Resistencia (65 min)', tag:'swim', dur:'95 min',
-    content:{ kind:'session', stats:[{v:'~1100 m',l:'Nado técnica'},{v:'~24 km',l:'Bici (65min)'},{v:'95 min total',l:'DOBLE sesión'},{v:'Técnica + Z2',l:'Foco'}],
+  { dayLabel:'MAR', dayDate:'30 Jun', type:'swim', icon:'🏊', title:'DOBLE · Nado Técnica (30 min · 1100m) + Bici Resistencia (65 min)', tag:'swim', dur:'95 min',
+    content:{ kind:'session', stats:[{v:'1100 m exactos',l:'Nado técnica'},{v:'~24 km',l:'Bici (65min)'},{v:'95 min total',l:'DOBLE sesión'},{v:'Técnica + Z2',l:'Foco'}],
       sections:[
-        {head:'🏊 NADO TÉCNICA — Calentamiento (8 min · ~300m)', cols:['Bloque','Distancia','Cómo hacerlo','Foco'], rows:[
-          ['Crol suave','4×50m (R15s)','Crol relajado, respira cada 3 brazadas','Soltar hombros, despertar motor aeróbico'],
-          ['Patada con tabla','2×50m (R15s)','Tabla al frente, patada DESDE LA CADERA, pies en punta','Patada eficiente sin perder energía'],
+        {head:'🏊 NADO TÉCNICA — Calentamiento (8 min · 300m EXACTOS)', cols:['Bloque','Distancia','Descanso','Cómo hacerlo'], rows:[
+          ['Crol suave','4×50m = 200m','R15s entre 50s','Crol relajado, respira cada 3 brazadas, soltar hombros'],
+          ['Patada con tabla','2×50m = 100m','R15s entre 50s','Tabla al frente, patada DESDE LA CADERA, pies en punta'],
         ]},
-        {head:'🏊 NADO TÉCNICA — Bloque Principal (18 min · ~550m)', cols:['Drill','Distancia','Cómo hacerlo','Por qué'], rows:[
-          ['Catch-up (Toque)','4×50m + R15s','Un brazo extendido al frente, el otro completa la brazada y "toca" al adelantado antes de salir. Alterna.','Alarga la brazada, mejora el agarre — clave para eficiencia en océano'],
-          ['Respiración bilateral','4×50m + R15s','Respira cada 3 brazadas TODO el largo. Sin excepción. Si te cansas, baja velocidad pero NO el patrón.','Olas vienen de ambos lados — debes saber respirar ambos'],
-          ['Sculling (escultura)','2×50m + R20s','Brazos al frente, manos haciendo "ochos" debajo del agua. Patada suave.','Sensibilidad de la mano al agua — el "tacto" del nadador experto'],
-          ['Crol con cuenta de brazadas','3×50m + R20s','Cuenta cuántas brazadas haces por 25m. Reduce 1-2 en cada repetición SIN perder velocidad.','Economía: menos brazadas = menos energía en 1.9km'],
+        {head:'🏊 NADO TÉCNICA — Bloque Principal (18 min · 650m EXACTOS)', cols:['Drill','Distancia','Descanso','Cómo hacerlo · Por qué'], rows:[
+          ['1. Catch-up (Toque)','4×50m = 200m','R15s entre 50s','Un brazo extendido al frente · el otro completa la brazada y "toca" al adelantado antes de salir. Alarga la brazada, mejora el agarre.'],
+          ['2. Respiración bilateral','4×50m = 200m','R15s entre 50s','Respira cada 3 brazadas TODO el largo. Sin excepción. Olas vienen de ambos lados en Cozumel.'],
+          ['3. Sculling (escultura)','3×50m = 150m','R15s entre 50s','Brazos al frente, manos haciendo "ochos" debajo del agua. Patada suave. Sensibilidad de mano al agua.'],
+          ['4. Crol con cuenta de brazadas','2×50m = 100m','R15s entre 50s','Cuenta brazadas por 25m. Intenta reducir 1-2 sin perder velocidad. Economía energética.'],
         ]},
-        {head:'🏊 NADO TÉCNICA — Vuelta a la calma (4 min · ~150m)', cols:['Bloque','Distancia','Cómo hacerlo','Foco'], rows:[
-          ['Crol muy suave','100m','Respiración cada 4-5 brazadas, ritmo lento','Bajar FC progresivamente'],
-          ['Flotación','50m','Espalda o flotación con patada muy suave','Relajación + cool-down mental'],
+        {head:'🏊 NADO TÉCNICA — Vuelta a la calma (4 min · 150m EXACTOS)', cols:['Bloque','Distancia','Descanso','Cómo hacerlo'], rows:[
+          ['Crol muy suave','100m','Sin descanso','Respiración cada 4-5 brazadas, ritmo muy lento, bajar FC progresivamente'],
+          ['Flotación o espalda','50m','—','Relajación total, patada muy suave, cool-down mental'],
         ]},
-        {head:'🚴 BICI RESISTENCIA — Calentamiento (10 min)', cols:['Bloque','Duración','% FTP','Watts','Cadencia'], rows:[
+        {head:'🏊 VERIFICACIÓN DE DISTANCIA — TOTAL 1100m', cols:['Sección','Distancia','Tiempo aprox'], rows:[
+          ['Calentamiento','300m','8 min'],
+          ['Bloque Principal','650m','18 min'],
+          ['Vuelta a la calma','150m','4 min'],
+          ['TOTAL','1100m','30 min'],
+        ]},
+        {head:'🚴 BICI RESISTENCIA — Calentamiento (10 min)', cols:['Bloque','Duración','% FTP','Watts','Cadencia + Foco'], rows:[
           ['Activación','5 min','50% FTP','65W','Libre · ritmo conversacional fácil'],
           ['Progresivo','5 min','55-60% FTP','72-78W','Libre · subir gradualmente FC'],
         ]},
@@ -1445,8 +1451,8 @@ const VALERIA_W9 = [
         ]},
         {head:'🚴 BICI — Cómo ejecutar el bloque Z2', cols:['Aspecto','Detalle','Por qué'], rows:[
           ['Respiración','Por la nariz si puedes. Si jadeas, baja la potencia.','Indicador real de Z2 — si jadeas, ya saliste'],
-          ['Cadencia','85-90 rpm SIN forzar. Es tu cadencia natural eficiente.','Esta sesión NO es cadencia work — la base con cadencia económica'],
-          ['Postura','Manos relajadas en el manubrio, hombros bajos.','60 min en mala postura = dolor cuello mañana'],
+          ['Cadencia','85-90 rpm SIN forzar. Es tu cadencia natural eficiente.','Esta sesión NO es cadencia work — base con cadencia económica'],
+          ['Postura','Manos relajadas en el manubrio, hombros bajos.','60 min mala postura = dolor cuello mañana'],
           ['Hidratación','1 trago cada 5-7 min · 1 botella completa en 50 min','Sudoración indoor más alta que outdoor'],
         ]},
         {head:'🚴 BICI RESISTENCIA — Enfriamiento (5 min)', cols:['Bloque','Duración','% FTP','Watts','Foco'], rows:[
@@ -1454,9 +1460,9 @@ const VALERIA_W9 = [
           ['Spin out','2 min','40% FTP','52W','Cadencia libre, bajar FC'],
         ]},
       ],
-      _calc:'Nado: 8+18+4=30 min · Bici: 10+50+5=65 min · Total: 95 min',
-      coachNote:'<strong>🏊 Nado:</strong> 4 drills atacando los 4 pilares de eficiencia en océano: <em>agarre</em> (catch-up), <em>respiración flexible</em> (bilateral), <em>sensibilidad</em> (sculling), <em>economía</em> (cuenta de brazadas). NO es sesión de volumen — es construcción técnica para que en Cozumel nades 1.9km gastando menos energía. <strong>🚴 Bici:</strong> Z2 puro 50 min a 91W — el "ladrillo" del motor aeróbico. Cadencia natural (85-90 rpm) porque la cadencia work ya entra el miércoles. Tu única tarea: mantenerte conversacional 50 min seguidos.',
-      tip:'Entre nado y bici: 10 min de transición — hidrátate, come algo ligero (plátano + agua), cambia ropa. NO pegues las sesiones sin pausa. El nado deja los hombros activos; la bici recupera las piernas usando otro grupo muscular. La transición ES parte del entreno.' } },
+      _calc:'Nado: 300+650+150=1100m en 8+18+4=30 min · Bici: 10+50+5=65 min · Total: 95 min',
+      coachNote:'<strong>🏊 Foco nado:</strong> 1100m EXACTOS distribuidos en 4 drills que atacan los pilares de eficiencia en océano: <em>agarre</em> (catch-up, 200m), <em>respiración flexible</em> (bilateral, 200m), <em>sensibilidad</em> (sculling, 150m), <em>economía</em> (cuenta brazadas, 100m). NO es sesión de volumen — es construcción técnica para que en Cozumel nades 1.9km gastando menos energía. <strong>🚴 Foco bici:</strong> Z2 puro 50 min a 91W — el "ladrillo" del motor aeróbico. Cadencia natural (85-90 rpm) porque la cadencia work entra el miércoles.',
+      tip:'⚠️ MATEMÁTICAS VERIFICADAS: 300+650+150=1100m. Si tu reloj/Garmin marca menos al final, es porque hubo más descanso del previsto (probable). Lo importante es completar las 13 series de 50m del plan. ⚠️ Entre nado y bici: 10 min de transición — hidrátate, come algo ligero (plátano + agua), cambia ropa. NO pegues las sesiones sin pausa.' } },
 
   { dayLabel:'MIÉ', dayDate:'1 Jul', type:'bike', icon:'⚡', title:'Bici Fuerza+Cadencia · 6×(6min 72% + 1min drill 110rpm)', tag:'bike', dur:'66 min',
     content:{ kind:'session', stats:[{v:'66 min',l:'Total'},{v:'72% base',l:'~94W fuerza'},{v:'6×7 min',l:'Estructura'},{v:'NEURO',l:'Foco'}],
@@ -1527,38 +1533,44 @@ const VALERIA_W9 = [
       coachNote:'<strong>Segunda carrera de la semana (intermedia):</strong> Z2 puro · 45 min · run-walk 5:1. Es la base aeróbica entre los dos esfuerzos largos del fin de semana. NO es sesión de calidad — es la "moneda de cambio" del entrenamiento aeróbico: minutos sumados en Z2 sin tocar Z3+. Caminadora o terreno plano para CONTROL absoluto de la zona. En W8 viste el efecto: con caminata las pausas centran la FC en 126-131 (mitad de Z2), sin ellas se va a 130-134 (techo).',
       tip:'⚠️ LA CAMINATA DEL CICLO NO ES RECUPERACIÓN — ES PARTE DE LA TÉCNICA. Centra la FC en mitad de Z2 (no en el techo). Si en algún ciclo la FC pasa de 134, EXTIENDE la caminata hasta que baje a 125 antes de retomar. Tu objetivo: que los 5 ciclos los ejecutes en mitad de Z2 (126-131), no en su techo.' } },
 
-  { dayLabel:'VIE', dayDate:'3 Jul', type:'swim', icon:'🏊', title:'DOBLE · Nado Volumen (40 min) + Fuerza Gym (25 min)', tag:'swim', dur:'65 min',
-    content:{ kind:'session', stats:[{v:'1700-1900m',l:'Nado volumen'},{v:'25 min',l:'Fuerza preventiva'},{v:'CSS RPE 4-5',l:'Intensidad nado'},{v:'~Cozumel',l:'~1.9km objetivo'}],
+  { dayLabel:'VIE', dayDate:'3 Jul', type:'swim', icon:'🏊', title:'DOBLE · Nado Volumen (40 min · 1800m) + Fuerza Gym (25 min)', tag:'swim', dur:'65 min',
+    content:{ kind:'session', stats:[{v:'1800m exactos',l:'Nado volumen'},{v:'95% de Cozumel',l:'Cobertura (1.9km)'},{v:'25 min',l:'Fuerza preventiva'},{v:'CSS = RPE 4-5',l:'Intensidad'}],
       sections:[
-        {head:'🏊 NADO VOLUMEN — Calentamiento (8 min · ~300m)', cols:['Bloque','Distancia','Detalle','Foco'], rows:[
-          ['Crol progresivo','200m','4×50m: cada 50m un poco más rápido (R15s)','Despertar el motor aeróbico gradualmente'],
-          ['Drill catch-up','100m','2×50m catch-up (toque) con descanso 15s','Activar técnica antes del volumen'],
+        {head:'🏊 NADO VOLUMEN — Calentamiento (8 min · 300m EXACTOS)', cols:['Bloque','Distancia','Descanso','Cómo hacerlo'], rows:[
+          ['Crol progresivo','4×50m = 200m','R15s entre 50s','Cada 50m un poco más rápido. Despertar el motor aeróbico gradualmente.'],
+          ['Catch-up activación','2×50m = 100m','R10s entre 50s','Drill técnica para activar agarre antes del volumen.'],
         ]},
-        {head:'🏊 NADO VOLUMEN — Bloque Principal (28 min · ~1400m)', cols:['Set','Distancia/Tiempo','Cómo hacerlo','Intensidad'], rows:[
-          ['Set 1: 4×100m','400m + R 20s entre repeticiones','Crol continuo. Mantén ritmo SOSTENIBLE — el que podrías mantener 1.9km. Respira cada 3 brazadas.','CSS = RPE 4-5 · ~2:00-2:10/100m'],
-          ['Set 2: 2×200m','400m + R 30s entre repeticiones','Crol continuo. MISMO ritmo que Set 1, pero ahora doblando la distancia sin parar. Es donde se construye el aguante.','CSS = RPE 4-5'],
-          ['Set 3: 1×400m','400m continuo','Nado continuo SIN parar. Cuenta brazadas cada 100m — debe mantenerse estable. Si sube mucho = perdiste técnica.','CSS = RPE 5'],
-          ['Set 4: 2×100m fuerte','200m + R 30s','Últimos 2×100m a RPE 6 (un poquito más fuerte). NO sprint — esfuerzo "duro pero controlado".','RPE 6 · ~1:55/100m'],
+        {head:'🏊 NADO VOLUMEN — Bloque Principal (28 min · 1300m EXACTOS)', cols:['Set','Distancia','Descanso','Cómo hacerlo · Por qué'], rows:[
+          ['Set 1: 4×100m','4×100m = 400m','R20s entre 100s','Crol continuo a CSS (~2:00/100m). Respira cada 3 brazadas. Ritmo SOSTENIBLE que podrías mantener 1.9km. Construye ritmo aeróbico base.'],
+          ['Set 2: 2×200m','2×200m = 400m','R30s entre 200s','MISMO ritmo que Set 1 pero ahora doblando la distancia sin parar. Aquí se construye el AGUANTE — clave para Cozumel.'],
+          ['Set 3: 1×300m continuo','1×300m = 300m','— (sin descanso)','Crol continuo SIN parar. Cuenta brazadas cada 100m — debe mantenerse estable. Si sube mucho = perdiste técnica.'],
+          ['Set 4: 2×100m fuerte','2×100m = 200m','R30s entre 100s','RPE 6 (un poco más fuerte que CSS, ~1:55/100m). NO sprint — esfuerzo "duro pero controlado". Simula aceleración cerca de salida del agua.'],
         ]},
-        {head:'🏊 NADO VOLUMEN — Vuelta a la calma (4 min · ~200m)', cols:['Bloque','Distancia','Detalle','Foco'], rows:[
-          ['Crol muy fácil','150m','Respiración cada 4-5 brazadas, ritmo muy lento','Bajar FC progresivamente'],
-          ['Flotación/Espalda','50m','Espalda o flotación con patada suave','Relajación total'],
+        {head:'🏊 NADO VOLUMEN — Vuelta a la calma (4 min · 200m EXACTOS)', cols:['Bloque','Distancia','Descanso','Cómo hacerlo'], rows:[
+          ['Crol muy fácil','100m','Sin descanso','Respiración cada 4-5 brazadas, ritmo muy lento, bajar FC progresivamente'],
+          ['Espalda o flotación','100m','—','Patada suave en espalda. Relajación total. Cool-down mental.'],
+        ]},
+        {head:'🏊 VERIFICACIÓN DE DISTANCIA — TOTAL 1800m', cols:['Sección','Distancia','Tiempo aprox','% Cozumel (1900m)'], rows:[
+          ['Calentamiento','300m','8 min','—'],
+          ['Bloque Principal','1300m','28 min','68% nadando a ritmo'],
+          ['Vuelta a la calma','200m','4 min','—'],
+          ['TOTAL','1800m','40 min','94.7% de cobertura'],
         ]},
         {head:'💪 FUERZA GYM PREVENTIVA — Estructura (25 min)', cols:['Bloque','Duración','Detalle','Propósito'], rows:[
           ['Calentamiento','3 min','1min círculos cadera + 1min puentes glúteo (10 reps) + 1min rotaciones torso','Activación articular pre-fuerza'],
-          ['Circuito de 3 series','20 min','Ver ejercicios abajo · descanso 30-40s entre series','Estabilidad + prevención de lesiones máster'],
+          ['Circuito 3 series','20 min','4 ejercicios × 3 series · descanso 30-40s entre series','Estabilidad + prevención de lesiones máster'],
           ['Estiramientos','2 min','Cadera, espalda baja, hombros — 20-30s cada uno','Cool-down + flexibilidad'],
         ]},
         {head:'💪 GYM — Ejercicios del Circuito (3 series cada uno)', cols:['Ejercicio','Reps/Tiempo','Cómo hacerlo CORRECTAMENTE','Por qué'], rows:[
           ['1. Dead Bug','10 reps × lado','Acostada boca arriba, brazos al techo, rodillas a 90°. Baja brazo derecho + pierna izquierda SIN despegar la espalda baja del piso. Vuelve. Cambia lado. Control absoluto.','Core anti-extensión — protege la espalda baja en horas de bici/carrera'],
-          ['2. Single Leg Glute Bridge','10 reps × lado','Acostada boca arriba, una rodilla flexionada (pie en piso), otra pierna extendida. Empuja con el talón apoyado y levanta cadera SIN arquear espalda. Aprieta el glúteo arriba. Baja con control.','Activa glúteo (motor de la carrera) + previene dolor lumbar y rodilla'],
+          ['2. Single Leg Glute Bridge','10 reps × lado','Acostada boca arriba, una rodilla flexionada (pie en piso), otra pierna extendida. Empuja con el talón apoyado y levanta cadera SIN arquear espalda. Aprieta glúteo arriba. Baja con control.','Activa glúteo (motor de la carrera) + previene dolor lumbar y rodilla'],
           ['3. Superman','12 reps','Boca abajo, brazos extendidos al frente. Levanta SIMULTÁNEAMENTE brazos + piernas + pecho. Sostén 2 segundos arriba. Baja con control. NO rebotes.','Fortalece espalda baja — contrarresta postura encorvada de la bici'],
           ['4. Plank (con técnica)','30 seg','Codos directamente bajo hombros. Cuerpo COMPLETAMENTE recto (cadera ni alta ni baja). Aprieta glúteo + abdomen. Respira normal. NO contengas el aire.','Core estabilizador — base para correr y nadar eficientemente'],
         ]},
       ],
-      _calc:'Nado: 8+28+4=40 min · Gym: 3+20+2=25 min · Total: 65 min',
-      coachNote:'<strong>🏊 Estrategia nado:</strong> 4 sets piramidales (4×100 → 2×200 → 1×400 → 2×100 fuerte) que entrenan EXACTAMENTE lo que necesita en Cozumel: capacidad de mantener ritmo constante en distancias crecientes, con cambios de marcha al final (cuando otros nadadores aceleran cerca de salida del agua). <strong>💪 Estrategia gym:</strong> 4 ejercicios sin equipo, enfoque cadera-core-espalda — los 3 puntos de fallo más comunes en triatleta máster. NO es sesión de fuerza máxima — es <em>prevención y mantenimiento</em>.',
-      tip:'⚠️ NADO: Si en el 1×400m la cuenta de brazadas sube más de 2 por 100m, PARA y descansa 30s extra. Es señal que perdiste técnica = estás gastando energía de más. ⚠️ GYM: Calidad sobre cantidad. 8 reps perfectas valen más que 12 mal hechas. Si la espalda se arquea en cualquier ejercicio, simplifica.' } },
+      _calc:'Nado: 300+1300+200=1800m en 8+28+4=40 min · Gym: 3+20+2=25 min · Total: 65 min',
+      coachNote:'<strong>🏊 Estrategia nado:</strong> 1800m piramidales — el 94.7% de los 1.9km de Cozumel. 4 sets que entrenan EXACTAMENTE lo que necesita en la carrera: capacidad de mantener ritmo constante en distancias crecientes (4×100→2×200→1×300), con cambio de marcha al final (cuando otros nadadores aceleran cerca de salida del agua). <strong>💪 Estrategia gym:</strong> 4 ejercicios sin equipo, enfoque cadera-core-espalda — los 3 puntos de fallo más comunes en triatleta máster. NO es sesión de fuerza máxima — es <em>prevención y mantenimiento</em>.',
+      tip:'⚠️ MATEMÁTICAS VERIFICADAS NADO: 300+1300+200=1800m EXACTOS. En tu reloj/Garmin debe coincidir. Si suma menos, hubo más descanso del previsto o no completaste algún set. ⚠️ NADO: Si en el 1×300m la cuenta de brazadas sube más de 2 por 100m, PARA y descansa 30s extra. Es señal que perdiste técnica = estás gastando energía de más. ⚠️ GYM: Calidad sobre cantidad. 8 reps perfectas valen más que 12 mal hechas.' } },
 
   { dayLabel:'SÁB', dayDate:'4 Jul', type:'bike', icon:'🚴', title:'Bici Resistencia Larga · 70 min · 70-72% FTP + drills cadencia', tag:'bike', dur:'70 min',
     content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'~26 km',l:'Estimado'},{v:'70-72% FTP',l:'91-94W'},{v:'+ 6 drills',l:'Cadencia'}],
