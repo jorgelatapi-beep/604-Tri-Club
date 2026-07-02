@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PWA / App -->
+  <meta name="theme-color" content="#1a2030">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="604 Tri Club">
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22604%20Tri%20Club%22%2C%20%22short_name%22%3A%20%22604%20Tri%22%2C%20%22description%22%3A%20%22Plataforma%20de%20entrenamiento%20604%20Tri%20Club%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22background_color%22%3A%20%22%23f4f6f9%22%2C%20%22theme_color%22%3A%20%22%231a2030%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%2C%253Csvg%2520xmlns%253D%2522http%253A//www.w3.org/2000/svg%2522%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520viewBox%253D%25220%25200%2520512%2520512%2522%253E%250A%253Crect%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520rx%253D%2522112%2522%2520fill%253D%2522%25231a2030%2522/%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522248%2522%2520font-family%253D%2522Arial%2520Black%252C%2520sans-serif%2522%2520font-weight%253D%2522900%2522%2520font-size%253D%2522170%2522%2520fill%253D%2522%2523f0c842%2522%2520text-anchor%253D%2522middle%2522%253E604%253C/text%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522330%2522%2520font-family%253D%2522Arial%252C%2520sans-serif%2522%2520font-weight%253D%2522700%2522%2520font-size%253D%252252%2522%2520fill%253D%2522%2523ffffff%2522%2520text-anchor%253D%2522middle%2522%2520letter-spacing%253D%25226%2522%253ETRI%2520CLUB%253C/text%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522410%2522%2520font-family%253D%2522Arial%252C%2520sans-serif%2522%2520font-size%253D%252258%2522%2520text-anchor%253D%2522middle%2522%253E%25F0%259F%258F%258A%2520%25F0%259F%259A%25B4%2520%25F0%259F%258F%2583%253C/text%253E%250A%253C/svg%253E%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%0A%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%231a2030%22/%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22248%22%20font-family%3D%22Arial%20Black%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%22170%22%20fill%3D%22%23f0c842%22%20text-anchor%3D%22middle%22%3E604%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22330%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2252%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%226%22%3ETRI%20CLUB%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22410%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2258%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%8A%20%F0%9F%9A%B4%20%F0%9F%8F%83%3C/text%3E%0A%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%0A%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%231a2030%22/%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22248%22%20font-family%3D%22Arial%20Black%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%22170%22%20fill%3D%22%23f0c842%22%20text-anchor%3D%22middle%22%3E604%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22330%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2252%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%226%22%3ETRI%20CLUB%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22410%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2258%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%8A%20%F0%9F%9A%B4%20%F0%9F%8F%83%3C/text%3E%0A%3C/svg%3E">
+
+<title>Armando · Maratón BMO Vancouver — Training Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f6f9;
+  --bg2: #ffffff;
+  --bg3: #f0f2f5;
+  --border: #dde2ea;
+  --border2: #c8d0dc;
+  --gold: #b07e0a;
+  --gold-bg: #fdf3d7;
+  --gold-border: #f0c842;
+  --purple: #6d28d9;
+  --teal: #0d9488;
+  --red: #dc2626;
+  --green: #059669;
+  --blue: #2563eb;
+  --orange: #ea580c;
+  --text: #1a2030;
+  --text2: #445566;
+  --text3: #8899aa;
+  --swim: #0284c7;
+  --bike: #d97706;
+  --run: #059669;
+  --str: #db2777;
+  --rest: #7c3aed;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: #1a2030;
+  border-bottom: 3px solid var(--gold-border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--gold-border);
+  text-transform: uppercase;
+}
+.logo span { color: #8899aa; font-weight: 400; font-size: 13px; margin-left: 10px; letter-spacing: 1px; }
+.header-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #8899aa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.today-badge {
+  background: var(--gold-border);
+  color: #1a2030;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── ATHLETE TABS ── */
+.athlete-nav {
+  display: flex;
+  gap: 2px;
+  padding: 0 24px;
+  background: var(--bg2);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.ath-tab {
+  padding: 12px 22px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.ath-tab:hover { color: var(--text2); background: var(--bg3); }
+.ath-tab.active { color: #1a2030; border-bottom-color: var(--gold-border); background: transparent; }
+.ath-tab .ath-sub { font-weight: 400; font-size: 10px; display: block; color: var(--text3); letter-spacing: 0; margin-top: 1px; }
+
+/* ── MAIN ── */
+.main-inner { max-width: 1100px; }
+.athlete-panel { display: none; }
+.athlete-panel.active { display: block; }
+
+/* ── WEEK HEADER ── */
+.week-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.week-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+.week-range { font-size: 13px; color: var(--text3); }
+.phase-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.phase-base { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.tss-total { margin-left: auto; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text3); }
+.tss-total strong { color: var(--gold); font-size: 14px; }
+
+/* ── WEEK GRID ── */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.day-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 8px;
+  cursor: pointer;
+  transition: all .15s;
+  position: relative;
+  min-height: 84px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.day-card:hover { border-color: var(--border2); box-shadow: 0 2px 8px rgba(0,0,0,.1); transform: translateY(-1px); }
+.day-card.selected { border-color: #1a2030 !important; box-shadow: 0 2px 8px rgba(26,32,48,.15); }
+.day-card.today-card { border-color: var(--gold-border); background: #fffef5; }
+.today-pip {
+  position: absolute; top: 7px; right: 7px;
+  width: 6px; height: 6px;
+  background: var(--gold-border);
+  border-radius: 50%;
+}
+.day-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 1px;
+}
+.day-date { font-size: 10px; color: var(--text3); margin-bottom: 7px; }
+.day-icon { font-size: 20px; margin-bottom: 4px; display: block; }
+.day-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text);
+}
+.day-dur { font-size: 10px; color: var(--text3); margin-top: 3px; }
+.type-bar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 0 0 6px 6px;
+}
+.tb-swim { background: var(--swim); }
+.tb-bike { background: var(--bike); }
+.tb-run { background: var(--run); }
+.tb-str { background: var(--str); }
+.tb-rest { background: var(--rest); }
+
+/* ── SESSION DETAIL ── */
+.session-detail {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  animation: fadeIn .2s ease;
+}
+@keyframes fadeIn { from { opacity:0; transform: translateY(4px); } to { opacity:1; transform:translateY(0); } }
+.sd-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.sd-icon { font-size: 36px; }
+.sd-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+.sd-meta { font-size: 12px; color: var(--text3); margin-top: 3px; }
+.sd-tags { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.tag-swim { background: #e0f2fe; color: var(--swim); border: 1px solid #bae6fd; }
+.tag-bike { background: #fef3c7; color: var(--bike); border: 1px solid #fde68a; }
+.tag-run  { background: #d1fae5; color: var(--run); border: 1px solid #6ee7b7; }
+.tag-str  { background: #fce7f3; color: var(--str); border: 1px solid #fbcfe8; }
+.tag-rest { background: #ede9fe; color: var(--rest); border: 1px solid #c4b5fd; }
+.tag-today { background: var(--gold-bg); color: var(--gold); border: 1px solid var(--gold-border); }
+
+/* Stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.stat-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a2030;
+  display: block;
+}
+.stat-lbl { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+/* Section head */
+.section-head {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text2);
+  margin-bottom: 8px;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-head::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 14px;
+  background: #1a2030;
+  border-radius: 2px;
+}
+
+/* Table */
+table { width: 100%; border-collapse: collapse; border-radius: 6px; overflow: hidden; }
+th {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text3);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+}
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  vertical-align: top;
+  line-height: 1.5;
+  color: var(--text2);
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--bg3); }
+td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; color: var(--text); }
+
+/* Notes */
+.coach-note {
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-border);
+  border-left: 4px solid var(--gold-border);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 16px;
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #5a3e00;
+}
+.coach-note strong { color: var(--gold); }
+
+.info-box {
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  border-left: 4px solid var(--swim);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 16px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #0c4a6e;
+}
+.info-box strong { color: var(--swim); }
+
+.trainer-tip {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.trainer-tip strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* Rest */
+.rest-card {
+  text-align: center;
+  padding: 32px;
+  color: var(--text3);
+}
+.rest-card .big-icon { font-size: 48px; margin-bottom: 12px; }
+.rest-card p { font-size: 14px; line-height: 1.8; max-width: 400px; margin: 0 auto; color: var(--text2); }
+
+/* ── LAYOUT WITH SIDEBAR ── */
+.app-body {
+  display: flex;
+  min-height: calc(100vh - 56px - 52px);
+}
+
+/* ── WEEK SIDEBAR ── */
+.week-sidebar {
+  width: 200px;
+  min-width: 200px;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 108px;
+  height: calc(100vh - 108px);
+  overflow-y: auto;
+}
+.sidebar-section {
+  padding: 0 12px 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text3);
+  margin-top: 8px;
+}
+.week-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all .15s;
+  gap: 2px;
+}
+.week-item:hover { background: var(--bg3); }
+.week-item.active { border-left-color: #1a2030; background: var(--bg3); }
+.week-item.current { border-left-color: var(--gold-border); }
+.week-item.current.active { border-left-color: var(--gold-border); background: var(--gold-bg); }
+.wi-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: .5px;
+}
+.week-item.active .wi-label { color: #1a2030; }
+.wi-range { font-size: 10px; color: var(--text3); }
+.wi-phase {
+  font-size: 9px;
+  font-family: 'Space Mono', monospace;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-top: 1px;
+}
+.wi-badge {
+  display: inline-block;
+  font-size: 9px;
+  background: var(--gold-bg);
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 1px 5px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: .5px;
+  margin-top: 2px;
+  width: fit-content;
+}
+
+/* ── MAIN CONTENT ── */
+.main {
+  flex: 1;
+  padding: 20px 24px 40px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+
+
+/* ── CYCLE AUTO-TRACKER ── */
+.cycle-status {
+  background: #fff;
+  border: 1px solid #fbcfe8;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.cs-today {
+  display: flex;
+  flex-direction: column;
+  padding-right: 14px;
+  border-right: 1px solid #fbcfe8;
+}
+.cs-day {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #db2777;
+  line-height: 1;
+}
+.cs-day-lbl { font-size: 9px; color: #be185d; text-transform: uppercase; letter-spacing: .5px; }
+.cs-phase {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #9d174d;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.cs-next { font-size: 11px; color: #be185d; margin-top: 1px; }
+.cs-forecast {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cs-fc-item {
+  background: #fdf2f8;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+.cs-fc-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9d174d;
+  display: block;
+}
+.cs-fc-lbl { font-size: 8px; color: #be185d; text-transform: uppercase; letter-spacing: .5px; }
+.cs-config {
+  font-size: 10px;
+  color: #be185d;
+  margin-top: 6px;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* ── CYCLE PHASE MODULE (Valeria) ── */
+.cycle-banner {
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+  border: 1px solid #fbcfe8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.cycle-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.cycle-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9d174d;
+}
+.cycle-sub { font-size: 11px; color: #be185d; margin-bottom: 10px; line-height: 1.5; }
+.cycle-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+@media (max-width: 600px) { .cycle-phases { grid-template-columns: repeat(2, 1fr); } }
+.cphase {
+  background: #fff;
+  border: 1.5px solid #fbcfe8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all .15s;
+  text-align: center;
+}
+.cphase:hover { border-color: #f472b6; }
+.cphase.active { border-color: #db2777; background: #fdf2f8; box-shadow: 0 2px 6px rgba(219,39,119,.15); }
+.cphase-emoji { font-size: 16px; }
+.cphase-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #9d174d;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-top: 2px;
+}
+.cphase-days { font-size: 9px; color: #be185d; font-family: 'Space Mono', monospace; }
+.cphase-intensity {
+  font-size: 9px;
+  margin-top: 3px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: 600;
+}
+.int-high { background: #d1fae5; color: #065f46; }
+.int-mod  { background: #fef3c7; color: #92400e; }
+.int-low  { background: #e0e7ff; color: #3730a3; }
+.int-caution { background: #fed7aa; color: #9a3412; }
+.cycle-guidance {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 6px;
+  border-left: 3px solid #db2777;
+  font-size: 12px;
+  color: #831843;
+  line-height: 1.6;
+  display: none;
+}
+.cycle-guidance.show { display: block; }
+.cycle-disclaimer {
+  font-size: 10px;
+  color: #be185d;
+  margin-top: 8px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* intensity option box in sessions */
+.intensity-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+@media (max-width: 600px) { .intensity-options { grid-template-columns: 1fr; } }
+.int-opt {
+  border-radius: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+}
+.int-opt.green { background: #f0fdf4; border-color: #bbf7d0; }
+.int-opt.blue { background: #eff6ff; border-color: #bfdbfe; }
+.int-opt-head {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 6px;
+}
+.int-opt.green .int-opt-head { color: #15803d; }
+.int-opt.blue .int-opt-head { color: #1d4ed8; }
+.int-opt-body { font-size: 11.5px; line-height: 1.6; color: var(--text2); }
+
+/* ── METRICS VIEW ── */
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+  width: fit-content;
+}
+.vt-btn {
+  padding: 7px 18px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text3);
+  transition: all .15s;
+}
+.vt-btn:hover { color: var(--text); }
+.vt-btn.active { background: var(--bg2); color: #1a2030; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+
+.metrics-panel { display: none; }
+.metrics-panel.active { display: block; }
+.plan-view { }
+.plan-view.hidden { display: none; }
+
+/* metrics grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+@media (max-width: 700px) { .metrics-grid { grid-template-columns: 1fr; } }
+
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.metric-card.full { grid-column: 1 / -1; }
+.mc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.mc-icon { font-size: 20px; }
+.mc-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--text);
+}
+.mc-sub { font-size: 11px; color: var(--text3); margin-top: 1px; }
+.mc-badge {
+  margin-left: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.badge-done { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.badge-warn { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+/* stat summary row in metrics */
+.m-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.m-stat {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 7px 12px;
+  text-align: center;
+  min-width: 70px;
+}
+.ms-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a2030;
+  display: block;
+}
+.ms-lbl { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; }
+
+/* SVG charts */
+.chart-wrap {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.chart-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text3);
+  margin-bottom: 6px;
+}
+.chart-legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text2);
+}
+.legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* empty metrics */
+.metrics-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text3);
+}
+.metrics-empty .big { font-size: 40px; margin-bottom: 12px; }
+.metrics-empty p { font-size: 14px; line-height: 1.8; color: var(--text2); max-width: 380px; margin: 0 auto; }
+
+/* profile card */
+.profile-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.profile-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a2030;
+}
+.profile-goal {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+.profile-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.p-stat {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 6px 12px;
+  text-align: center;
+}
+.ps-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a2030;
+  display: block;
+}
+.ps-lbl { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; }
+.trend-up { color: var(--green); }
+.trend-down { color: var(--red); }
+
+@media (max-width: 900px) {
+  .week-sidebar { display: none; }
+}
+@media (max-width: 800px) { .week-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 500px) { .week-grid { grid-template-columns: repeat(3, 1fr); } .main { padding: 12px; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">604 Tri Club <span>Training Platform</span></div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="today-badge" id="today-badge">Hoy: …</div>
+    <div class="header-date">Semana 7 ⚡ · Junio 2026</div>
+  </div>
+</header>
+
+<nav class="athlete-nav">
+  <div class="ath-tab active" data-ath="armando" onclick="switchAth('armando')">Armando<span class="ath-sub">Maratón BMO Vancouver · 2 May 2027</span></div>
+</nav>
+
+<div class="app-body">
+
+<!-- ── WEEK SIDEBAR ── -->
+<div class="week-sidebar">
+  <div class="sidebar-section">Ciclo actual</div>
+  <div class="sidebar-section" style="margin-top:4px;">Bloque 0 — Evaluación</div>
+  <div class="week-item" id="sidebar-w1" onclick="selectWeek(1)">
+    <span class="wi-label">Semana 1</span>
+    <span class="wi-range">6–12 Jul</span>
+    <span class="wi-phase">Evaluación · RPE</span>
+    <span class="wi-badge">← Actual</span>
+  </div>
+  <div class="sidebar-section" style="margin-top:12px; font-size:11px; color:#999;">Próximas semanas se agregan conforme avanza el bloque de evaluación.</div>
+</div>
+<!-- /week-sidebar -->
+
+<div class="athlete-panel active" id="panel-armando">
+    
+  <div class="view-toggle">
+    <button class="vt-btn active" id="vt-plan-armando" onclick="setView('armando','plan')">Plan Semanal</button>
+    <button class="vt-btn" id="vt-metrics-armando" onclick="setView('armando','metrics')">Métricas</button>
+  </div>
+  <div class="plan-view" id="planview-armando">
+  <div class="week-header"><div class="week-title">Semana 1</div><div class="week-range">6–12 Julio</div><div class="phase-tag phase-base">Bloque 0 · Evaluación</div></div>
+    <div class="week-grid" id="grid-armando"></div>
+    <div class="session-detail" id="detail-armando"></div>
+  </div><!-- /planview-armando -->
+  <div class="metrics-panel" id="metrics-armando"></div>
+  </div>
+</div>
+
+<script>
+
+const _MESES_ABBR = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const _DIAS_ABBR = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+const _HOY = new Date();
+const TODAY_DATE = _HOY.getDate() + ' ' + _MESES_ABBR[_HOY.getMonth()];  // auto: ej. '17 Jun'
+
+// Mostrar la fecha real en el encabezado (auto-actualiza cada día)
+(function(){
+  function setBadge(){
+    const b = document.getElementById('today-badge');
+    if(b) b.textContent = 'Hoy: ' + _DIAS_ABBR[_HOY.getDay()] + ' ' + _HOY.getDate() + ' ' + _MESES_ABBR[_HOY.getMonth()];
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setBadge);
+  else setBadge();
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ── RENDER ──────────────────────────────────────
+
+const TYPE_CLS = {swim:'tb-swim', bike:'tb-bike', run:'tb-run', str:'tb-str', rest:'tb-rest'};
+const TAG_CLS  = {swim:'tag-swim', bike:'tag-bike', run:'tag-run', str:'tag-str', rest:'tag-rest'};
+
+function buildGrid(id, data, key) {
+  const g = document.getElementById(id);
+  g.innerHTML = '';
+  data.forEach((d,i) => {
+    const isToday = d.dayDate === TODAY_DATE;
+    const div = document.createElement('div');
+    div.className = 'day-card' + (isToday ? ' today-card' : '');
+    div.innerHTML = `${isToday?'<div class="today-pip"></div>':''}
+      <div class="day-label">${d.dayLabel}</div>
+      <div class="day-date">${d.dayDate}</div>
+      <span class="day-icon">${d.icon}</span>
+      <div class="day-name">${d.title}</div>
+      <div class="day-dur">${d.dur}</div>
+      <div class="type-bar ${TYPE_CLS[d.type]||''}"></div>`;
+    div.onclick = () => showDetail(key, i);
+    g.appendChild(div);
+  });
+}
+
+function showDetail(key, idx) {
+  const arr = getData(key);
+  const d = arr[idx];
+  const el = document.getElementById('detail-' + key);
+  document.getElementById('grid-' + key).querySelectorAll('.day-card')
+    .forEach((c,i) => c.classList.toggle('selected', i===idx));
+  const c = d.content;
+  let h = `<div class="sd-header">
+    <div class="sd-icon">${d.icon}</div>
+    <div>
+      <div class="sd-title">${d.title}</div>
+      <div class="sd-meta">${d.dayLabel} · ${d.dayDate} · ${d.dur}</div>
+    </div>
+    <div class="sd-tags">
+      <span class="tag ${TAG_CLS[d.type]||''}">${d.type.toUpperCase()}</span>
+      ${d.today?'<span class="tag tag-today">HOY</span>':''}
+    </div>
+  </div>`;
+  if(c.kind === 'rest') {
+    h += `<div class="rest-card"><div class="big-icon">🧘</div><p>${c.note}</p></div>`;
+  } else {
+    if(c.stats) { h += '<div class="stats-row">'; c.stats.forEach(s => { h += `<div class="stat-box"><span class="stat-val">${s.v}</span><span class="stat-lbl">${s.l}</span></div>`; }); h += '</div>'; }
+    if(c.sections) c.sections.forEach(sec => {
+      h += `<div class="section-head">${sec.head}</div><table><thead><tr>`;
+      sec.cols.forEach(col => h += `<th>${col}</th>`);
+      h += '</tr></thead><tbody>';
+      sec.rows.forEach(row => { h += '<tr>'; row.forEach(cell => h += `<td>${cell}</td>`); h += '</tr>'; });
+      h += '</tbody></table>';
+    });
+    if(c.poolNote) h += `<div class="info-box"><strong>🏊 Sesión en Alberca (regla permanente)</strong><br>Todas las sesiones de nado de Valeria son en alberca. Solo aguas abiertas cuando se especifique como fecha especial o competencia.</div>`;
+    if(c.cycleOptions) {
+      h += `<div class="intensity-options">
+        <div class="int-opt green">
+          <div class="int-opt-head">${c.cycleOptions.green.head}</div>
+          <div class="int-opt-body">${c.cycleOptions.green.body}</div>
+        </div>
+        <div class="int-opt blue">
+          <div class="int-opt-head">${c.cycleOptions.blue.head}</div>
+          <div class="int-opt-body">${c.cycleOptions.blue.body}</div>
+        </div>
+      </div>`;
+    }
+    if(c.coachNote) h += `<div class="coach-note">🎯 ${c.coachNote}</div>`;
+    if(c.tip) h += `<div class="trainer-tip"><strong>Nota del entrenador</strong>${c.tip}</div>`;
+  }
+  el.innerHTML = h;
+}
+
+function switchAth(key) {
+  document.querySelectorAll('.ath-tab').forEach(t => t.classList.toggle('active', t.dataset.ath===key));
+  document.querySelectorAll('.athlete-panel').forEach(p => p.classList.toggle('active', p.id==='panel-'+key));
+  // Auto-resolve this athlete's current week from today's date (no manual setting)
+  const cw = computeCurrentWeek(key); if(cw) CURRENT_WEEK[key] = cw;
+  const wk = CURRENT_WEEK[key] || 4;
+  const items = document.querySelectorAll('.week-item');
+  items.forEach(el => el.classList.remove('active','current'));
+  if(items[wk-1]) items[wk-1].classList.add('active','current');
+  const arr = getData(key);
+  if(!arr) return;
+  buildGrid('grid-'+key, arr, key);
+  const ti = arr.findIndex(d => d.dayDate===TODAY_DATE || d.today);
+  showDetail(key, ti >= 0 ? ti : arr.length-1);
+  if(key==='valeria') setTimeout(function(){ renderCycleStatus(); }, 50);
+}
+
+// Week-aware data resolution
+
+
+
+// ══════════════════════════════════════════════
+//  ARMANDO — Maratón BMO Vancouver · 2 Mayo 2027
+// ══════════════════════════════════════════════
+
+const ARMANDO_W1 = [
+  { dayLabel:'LUN', dayDate:'6 Jul', type:'run', icon:'🏃', title:'Bloque 0 · Run Evaluación #1 · 40 min RPE', tag:'run', dur:'40 min',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Continuo'},{v:'RPE conversacional',l:'Sin zona fija aún'},{v:'Provisional',l:'Zonas por calibrar'},{v:'Garmin puesto',l:'Obligatorio'}],
+      sections:[
+        {head:'🏃 CALENTAMIENTO (8 min)', cols:['Min','Bloque','Cómo hacerlo'], rows:[
+          ['0-4','Caminata','Paso normal, brazos sueltos, activar articulaciones'],
+          ['4-8','Trote muy suave progresivo','Ir subiendo el ritmo gradualmente hasta sentirse cómodo'],
+        ]},
+        {head:'🏃 BLOQUE PRINCIPAL — Continuo (27 min · SIN zona fija)', cols:['Min','Estructura','Regla de esfuerzo'], rows:[
+          ['0-27','Trote continuo','DEBE poder hablar en frases completas todo el tiempo. Si no puede, baja el ritmo — no se detiene, solo desacelera.'],
+        ]},
+        {head:'🏃 ENFRIAMIENTO (5 min)', cols:['Min','Bloque','Cómo hacerlo'], rows:[
+          ['0-3','Caminata progresiva lenta','Bajar ritmo gradualmente'],
+          ['3-5','Estiramientos','Cuádriceps, isquiotibiales, pantorrilla — 30s cada uno'],
+        ]},
+        {head:'📋 VERIFICACIÓN MATEMÁTICA — TOTAL 40 min', cols:['Sección','Duración'], rows:[
+          ['Calentamiento','8 min'], ['Bloque principal','27 min'], ['Enfriamiento','5 min'], ['TOTAL','8+27+5=40 min ✓'],
+        ]},
+      ],
+      _calc:'8+27+5=40 min',
+      coachNote:'<strong>Primer dato real de la Semana 1 (Bloque 0).</strong> No hay zona de FC fija todavía porque no tenemos FC en reposo ni volumen actual confirmado. La regla es RPE puro: conversacional todo el tiempo. Corre con el Garmin puesto — al terminar, sincroniza a Connect y comparte FC promedio/máxima. Con este dato empiezo a construir zonas reales para la Semana 2.',
+      tip:'⚠️ Si a los 15-20 min ya no puede hablar en frases completas, camina 1-2 min y retoma más despacio — eso también es información valiosa (indica el techo real de su base actual).' } },
+
+  { dayLabel:'MAR', dayDate:'7 Jul', type:'gym', icon:'💪', title:'Fuerza Corredor · Nivel Intermedio · Tren Inferior + Core', tag:'gym', dur:'40 min',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Total'},{v:'6 ejercicios',l:'Con carga'},{v:'3 series c/u',l:'Mancuernas/peso'},{v:'Nivel medio',l:'Confirmado'}],
+      sections:[
+        {head:'💪 CALENTAMIENTO (6 min)', cols:['Bloque','Cómo hacerlo'], rows:[
+          ['Movilidad articular','1 min círculos de cadera + 1 min círculos de tobillo + 1 min sentadillas sin peso'],
+          ['Activación','2 min marcha en el lugar elevando rodillas + 1 min puente de glúteo sin peso (10 reps lentas)'],
+        ]},
+        {head:'💪 CIRCUITO PRINCIPAL — 3 series (28 min)', cols:['Ejercicio','Series×Reps','Carga sugerida','Cómo hacerlo CORRECTAMENTE','Por qué (foco corredor)'], rows:[
+          ['1. Goblet Squat','3×10','Mancuerna sostenida al pecho, peso donde la rep 8-9 cueste (RPE 7-8)','Sostener la mancuerna vertical contra el pecho, bajar hasta muslos paralelos, rodillas siguen la línea de los pies, subir empujando por el talón','Fuerza de pierna con carga — traslada directo a la propulsión de la zancada'],
+          ['2. Peso Muerto Rumano (mancuernas)','3×10','Par de mancuernas, peso moderado — prioridad técnica sobre carga','Piernas casi rectas (ligera flexión de rodilla), bisagra de cadera empujando glúteos atrás, espalda plana todo el recorrido, bajar hasta sentir estiramiento en isquiotibiales','Cadena posterior — la debilidad más común que causa lesión en corredores de maratón'],
+          ['3. Zancada búlgara (pie trasero elevado)','3×8 por lado','Sin peso o mancuernas ligeras en cada mano','Pie trasero apoyado en banco/silla, baja controlado hasta que la rodilla delantera llegue a ~90°, sube empujando con el talón delantero','Fuerza y estabilidad unilateral — el 100% de la zancada al correr es apoyo en una sola pierna'],
+          ['4. Step-up con carga','3×10 por lado','Mancuernas a los lados, altura de banco a la rodilla','Sube completo al banco con una pierna, extiende cadera arriba, baja con control (no dejarse caer)','Potencia de pierna + control excéntrico en el descenso — relevante para bajadas en carrera'],
+          ['5. Plancha con toque de hombro','3×20 toques (10 por lado)','Sin peso','Posición de plancha alta, toca el hombro contrario con la mano sin rotar la cadera','Core anti-rotación — estabiliza el torso durante la zancada'],
+          ['6. Elevación de talones (calf raise) con peso','3×15','Mancuernas a los lados','Sube en punta de pies lo más alto posible, pausa 1 seg arriba, baja controlado','Fuerza de pantorrilla/Aquiles — zona de lesión frecuente en volumen alto de carrera'],
+          ['Descanso entre series','45-60 seg','—','Activo o pasivo según fatiga','—'],
+        ]},
+        {head:'💪 ENFRIAMIENTO (6 min)', cols:['Bloque','Cómo hacerlo'], rows:[
+          ['Estiramientos generales','Cuádriceps, isquiotibiales, glúteo, pantorrilla, espalda baja — 30s cada uno'],
+        ]},
+        {head:'📋 VERIFICACIÓN MATEMÁTICA — TOTAL 40 min', cols:['Sección','Duración'], rows:[
+          ['Calentamiento','6 min'], ['Circuito principal','28 min'], ['Enfriamiento','6 min'], ['TOTAL','6+28+6=40 min ✓'],
+        ]},
+      ],
+      _calc:'6+28+6=40 min',
+      coachNote:'<strong>Ajustado a experiencia media confirmada.</strong> Con base de gimnasio, el enfoque cambia de "evaluación bodyweight" a fuerza real orientada a corredor: cadena posterior (peso muerto rumano) y estabilidad unilateral (búlgara, step-up) son las dos áreas que más previenen lesión en maratonistas de 46 años, más que el trabajo bodyweight genérico de la Semana 0. La carga exacta la define Armando mismo: si la serie 3 de cualquier ejercicio se siente RPE 9-10, bajar peso la próxima vez; si se siente RPE 5-6, subir.',
+      tip:'⚠️ Prioridad total en TÉCNICA sobre carga — con "experiencia media" es común que la técnica de bisagra de cadera (peso muerto rumano) esté oxidada. Si hay dolor en espalda baja al hacerlo, bajar el peso a solo las mancuernas más ligeras disponibles o incluso sin peso hasta corregir el patrón.' } },
+
+  { dayLabel:'MIÉ', dayDate:'8 Jul', type:'run', icon:'🏃', title:'Bloque 0 · Run Evaluación #2 · 45 min RPE', tag:'run', dur:'45 min',
+    content:{ kind:'session', stats:[{v:'45 min',l:'Continuo'},{v:'RPE conversacional',l:'Confirmar patrón lunes'},{v:'Garmin puesto',l:'Obligatorio'},{v:'Provisional',l:'Zonas por calibrar'}],
+      sections:[
+        {head:'🏃 CALENTAMIENTO (8 min)', cols:['Min','Bloque','Cómo hacerlo'], rows:[
+          ['0-4','Caminata','Paso normal, activar articulaciones'],
+          ['4-8','Trote muy suave progresivo','Subir el ritmo gradualmente'],
+        ]},
+        {head:'🏃 BLOQUE PRINCIPAL — Continuo (32 min · SIN zona fija)', cols:['Min','Estructura','Regla de esfuerzo'], rows:[
+          ['0-32','Trote continuo','Mismo esfuerzo conversacional que el lunes — comparar sensación'],
+        ]},
+        {head:'🏃 ENFRIAMIENTO (5 min)', cols:['Min','Bloque','Cómo hacerlo'], rows:[
+          ['0-3','Caminata progresiva lenta','Bajar ritmo'],
+          ['3-5','Estiramientos','Cuádriceps, isquiotibiales, pantorrilla — 30s c/u'],
+        ]},
+        {head:'📋 VERIFICACIÓN MATEMÁTICA — TOTAL 45 min', cols:['Sección','Duración'], rows:[
+          ['Calentamiento','8 min'], ['Bloque principal','32 min'], ['Enfriamiento','5 min'], ['TOTAL','8+32+5=45 min ✓'],
+        ]},
+      ],
+      _calc:'8+32+5=45 min',
+      coachNote:'<strong>Segundo punto de dato.</strong> ¿La FC y el pace del lunes se repiten, o varían mucho? Si se repiten, tenemos un patrón confiable para construir zonas. Si varían mucho, necesitamos más sesiones antes de calibrar con confianza.',
+      tip:'⚠️ Comparar mentalmente con el lunes: ¿mismo esfuerzo a mismo ritmo, o tuvo que ir más despacio para mantener la conversación? Esa comparación es tan valiosa como los datos del reloj.' } },
+
+  { dayLabel:'JUE', dayDate:'9 Jul', type:'gym', icon:'💪', title:'Fuerza Corredor · Nivel Intermedio · Tren Superior + Core', tag:'gym', dur:'40 min',
+    content:{ kind:'session', stats:[{v:'40 min',l:'Total'},{v:'6 ejercicios',l:'Con carga'},{v:'3 series c/u',l:'Mancuernas/peso'},{v:'Complementa martes',l:'Foco distinto'}],
+      sections:[
+        {head:'💪 CALENTAMIENTO (6 min)', cols:['Bloque','Cómo hacerlo'], rows:[
+          ['Movilidad articular','1 min círculos de hombro + 1 min rotación de torso + 1 min gato-camello (columna)'],
+          ['Activación','2 min de remo con banda o mancuerna ligera, ritmo lento, sin peso relevante'],
+        ]},
+        {head:'💪 CIRCUITO PRINCIPAL — 3 series (28 min)', cols:['Ejercicio','Series×Reps','Carga sugerida','Cómo hacerlo CORRECTAMENTE','Por qué (foco corredor)'], rows:[
+          ['1. Remo con mancuerna a una mano','3×10 por lado','Mancuerna donde la rep 8-9 cueste (RPE 7-8)','Apoyo de una mano y rodilla en banco, espalda plana, jala el codo hacia atrás pegado al torso, baja controlado','Postura de tronco erguida — clave para no colapsar en los últimos km de maratón'],
+          ['2. Press de hombro con mancuernas (sentado o de pie)','3×10','Par de mancuernas moderadas','Empuja las mancuernas arriba sin arquear la espalda baja, baja hasta la altura de oreja, control en ambas fases','Resistencia de brazos para el braceo — se vuelve crítico a partir del km 30'],
+          ['3. Push-up (estándar o con peso en espalda si domina la técnica)','3×12 o máx técnica limpia','Bodyweight o mancuerna sobre espalda si RPE<6','Cuerpo recto de cabeza a talón, baja hasta casi tocar el pecho, sube completo','Fuerza de empuje complementaria — el tren superior estabiliza durante fatiga'],
+          ['4. Dead Bug con carga ligera','3×10 por lado','Mancuerna ligera en las manos (opcional)','Boca arriba, brazos y piernas a 90°, baja brazo y pierna contraria sin despegar espalda baja del piso','Core anti-extensión — controla el vaivén de tronco en carrera'],
+          ['5. Puente de glúteo a una pierna','3×10 por lado','Bodyweight, sin prisa','Una pierna extendida al aire, empuja con el talón de apoyo, aprieta glúteo arriba','Refuerza lo trabajado el martes desde otro ángulo — glúteo unilateral'],
+          ['6. Plancha lateral','3×25-30 seg por lado','Sin peso','Apoyo en antebrazo, cuerpo en línea recta, cadera no cae','Estabilidad lateral — previene compensaciones que generan dolor de rodilla/cadera en volumen alto'],
+          ['Descanso entre series','45-60 seg','—','Activo o pasivo según fatiga','—'],
+        ]},
+        {head:'💪 ENFRIAMIENTO (6 min)', cols:['Bloque','Cómo hacerlo'], rows:[
+          ['Estiramientos generales','Pecho, espalda, hombros, cadera, isquiotibiales — 30s cada uno'],
+        ]},
+        {head:'📋 VERIFICACIÓN MATEMÁTICA — TOTAL 40 min', cols:['Sección','Duración'], rows:[
+          ['Calentamiento','6 min'], ['Circuito principal','28 min'], ['Enfriamiento','6 min'], ['TOTAL','6+28+6=40 min ✓'],
+        ]},
+      ],
+      _calc:'6+28+6=40 min',
+      coachNote:'<strong>Complementa al martes, no lo repite.</strong> El martes fue tren inferior + cadena posterior; hoy es tren superior + core, con refuerzo de glúteo unilateral desde otro ángulo. Esta separación permite trabajar fuerza dos veces por semana sin repetir el mismo estímulo, algo que la versión de "evaluación bodyweight" no distinguía.',
+      tip:'⚠️ Si el martes dejó agujetas fuertes en piernas, hoy no hay problema — el foco de hoy es tren superior/core, las piernas solo trabajan en el puente unilateral (carga baja). ⚠️ Reportar después de esta sesión qué pesos usó en cada ejercicio — con eso empiezo a calibrar progresión real de cargas para la Semana 2.' } },
+
+  { dayLabel:'VIE', dayDate:'10 Jul', type:'run', icon:'🏃', title:'Bloque 0 · Run Recuperación · 35 min suave', tag:'run', dur:'35 min',
+    content:{ kind:'session', stats:[{v:'35 min',l:'Más suave'},{v:'RPE bajo',l:'Pre-sábado largo'},{v:'Garmin puesto',l:'Obligatorio'},{v:'Descarga',l:'Antes del long run'}],
+      sections:[
+        {head:'🏃 ESTRUCTURA COMPLETA (35 min)', cols:['Min','Bloque','Cómo hacerlo'], rows:[
+          ['0-7','Calentamiento','Caminata + trote muy suave progresivo'],
+          ['7-28','Bloque principal','Trote continuo, esfuerzo MÁS SUAVE que lunes/miércoles — a propósito, para llegar fresco al sábado'],
+          ['28-35','Enfriamiento','Caminata + estiramientos'],
+        ]},
+        {head:'📋 VERIFICACIÓN MATEMÁTICA — TOTAL 35 min', cols:['Sección','Duración'], rows:[
+          ['Calentamiento','7 min'], ['Bloque principal','21 min'], ['Enfriamiento','7 min'], ['TOTAL','7+21+7=35 min ✓'],
+        ]},
+      ],
+      _calc:'7+21+7=35 min',
+      coachNote:'<strong>Sesión deliberadamente descargada.</strong> El objetivo real de esta semana es el sábado — 60 minutos continuos van a decirme el techo de resistencia real de Armando. Llegar cansado al sábado por sobre-entrenar el viernes arruinaría ese dato.',
+      tip:'⚠️ Si las piernas se sienten pesadas hoy, está bien recortar a 25-30 min — la prioridad es sábado, no hoy.' } },
+
+  { dayLabel:'SÁB', dayDate:'11 Jul', type:'run', icon:'🏃', title:'Bloque 0 · Run Largo Evaluación · 60 min continuo', tag:'run', dur:'60 min',
+    content:{ kind:'session', stats:[{v:'60 min',l:'Continuo'},{v:'Sesión clave',l:'Define techo de resistencia'},{v:'RPE conversacional',l:'Todo el tiempo'},{v:'Garmin puesto',l:'Obligatorio'}],
+      sections:[
+        {head:'🏃 ESTRUCTURA COMPLETA (60 min)', cols:['Min','Bloque','Cómo hacerlo'], rows:[
+          ['0-10','Calentamiento','Caminata + trote muy suave progresivo'],
+          ['10-50','Bloque principal','Trote continuo, esfuerzo conversacional TODO el tramo — si no puede sostenerlo, camina en vez de forzar'],
+          ['50-60','Enfriamiento','Caminata + estiramientos completos (cuádriceps, isquiotibiales, pantorrilla, cadera)'],
+        ]},
+        {head:'📋 VERIFICACIÓN MATEMÁTICA — TOTAL 60 min', cols:['Sección','Duración'], rows:[
+          ['Calentamiento','10 min'], ['Bloque principal','40 min'], ['Enfriamiento','10 min'], ['TOTAL','10+40+10=60 min ✓'],
+        ]},
+        {head:'🎯 QUÉ ESTAMOS MIDIENDO HOY', cols:['Pregunta','Por qué importa'], rows:[
+          ['¿Completó los 60 min corriendo, o necesitó caminar?','Define si el long run de la Semana 2 sube o se mantiene'],
+          ['¿Cómo estuvo la FC en el minuto 40-50 vs minuto 10-20?','Deriva (cardiac drift) alto = base aeróbica limitada, aunque haya corrido un maratón antes'],
+          ['¿Cómo se sintió al día siguiente (domingo)?','Indicador real de si el volumen fue el correcto — preguntar el domingo'],
+        ]},
+      ],
+      _calc:'10+40+10=60 min',
+      coachNote:'<strong>La sesión más importante de la Semana 1.</strong> Este es el dato que define el techo real de Armando — no lo que corrió en un maratón hace tiempo, sino lo que su cuerpo tolera HOY. Con esto calculo cuánto puedo subir el long run semana a semana hacia los 29-32 km que necesita antes del taper.',
+      tip:'⚠️ Si a los 40 min ya está luchando por hablar, está bien terminar en 45-50 min en vez de forzar los 60 — ese dato (40-45 min es su techo actual) es tan útil como si hubiera completado los 60.' } },
+
+  { dayLabel:'DOM', dayDate:'12 Jul', type:'rest', icon:'🧘', title:'Comodín / Descanso', tag:'rest', dur:'—',
+    content:{ kind:'rest', note:'Día comodín — solo se usa si el sábado se complicó y hay que recorrer el long run aquí. Si el sábado se completó, este es descanso total: hidratación, sueño, movilidad pasiva opcional. Preguntar cómo se sintió al despertar — ese dato cierra la evaluación de la Semana 1.'} },
+];
+
+const WEEK_DATA = {
+  armando:  { 1: ARMANDO_W1 },
+};
+// --- Auto week detection (date-driven; no manual advancing needed) ---
+function _parseDayDate(str){
+  if(!str) return null;
+  const p = String(str).trim().split(/\s+/);
+  if(p.length<2) return null;
+  const day = parseInt(p[0],10);
+  const mon = _MESES_ABBR.indexOf(p[1]);
+  if(isNaN(day) || mon<0) return null;
+  return new Date(_HOY.getFullYear(), mon, day);
+}
+function computeCurrentWeek(ath){
+  const weeks = WEEK_DATA[ath]; if(!weeks) return null;
+  const today = new Date(_HOY.getFullYear(), _HOY.getMonth(), _HOY.getDate());
+  const nums = Object.keys(weeks).map(Number).sort((a,b)=>a-b);
+  let started=null, startedAt=null;
+  for(const n of nums){
+    const arr = weeks[n]; if(!arr||!arr.length) continue;
+    const ds = arr.map(d=>_parseDayDate(d.dayDate)).filter(Boolean).map(d=>d.getTime());
+    if(!ds.length) continue;
+    const start = new Date(Math.min.apply(null, ds));
+    const end   = new Date(Math.max.apply(null, ds));
+    if(today>=start && today<=end) return n;            // today is inside this week
+    if(start<=today && (startedAt===null || start.getTime()>startedAt)){ startedAt=start.getTime(); started=n; }
+  }
+  return started!==null ? started : nums[nums.length-1];  // fallback: latest started, else last
+}
+let CURRENT_WEEK = { armando:1 };
+
+function getData(ath) {
+  const wk = CURRENT_WEEK[ath] || 4;
+  return (WEEK_DATA[ath] && WEEK_DATA[ath][wk]) ? WEEK_DATA[ath][wk] : null;
+}
+
+switchAth('armando');
+var _aw = computeCurrentWeek('armando'); if(_aw) CURRENT_WEEK['armando']=_aw;
+
+function selectWeek(n) {
+  document.querySelectorAll('.week-item').forEach(el => el.classList.remove('active'));
+  const items = document.querySelectorAll('.week-item');
+  if(items[n-1]) items[n-1].classList.add('active');
+
+  const activeAth = document.querySelector('.ath-tab.active').dataset.ath;
+  CURRENT_WEEK[activeAth] = n;
+  const data = getData(activeAth);
+
+  if(!data) {
+    const det = document.getElementById('detail-' + activeAth);
+    if(det) det.innerHTML = `<div class="rest-card">
+      <div class="big-icon">📋</div>
+      <p><strong>Semana ${n}</strong> — El plan detallado se cargará conforme se acerque la fecha.<br><br>
+      ${activeAth==='valeria' ? 'La Semana 5 de Valeria ya está disponible — selecciónala.' : 'El entrenador actualizará esta semana próximamente.'}</p>
+    </div>`;
+    const g = document.getElementById('grid-' + activeAth);
+    if(g) g.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--text3);font-size:13px;">Sin sesiones cargadas para Semana ${n}</div>`;
+    CURRENT_WEEK[activeAth] = 4; // reset for safety
+    return;
+  }
+
+  // Rebuild grid for this week and open first today/first session
+  buildGrid('grid-' + activeAth, data, activeAth);
+  const todayIdx = data.findIndex(d => d.dayDate===TODAY_DATE || d.today);
+  showDetail(activeAth, todayIdx >= 0 ? todayIdx : 0);
+}
+
+
+
+
+
+
+// ══════════════════════════════════════════════
+//  CYCLE AUTO-TRACKER (Valeria)
+// ══════════════════════════════════════════════
+const CYCLE_CONFIG = {
+  anchorDate: '2026-06-01',  // Día 1 confirmado (primer sangrado)
+  cycleLength: 28,           // Punto de partida — se recalibra con datos reales
+};
+
+function getCycleInfo(dateObj) {
+  const anchor = new Date(CYCLE_CONFIG.anchorDate + 'T00:00:00');
+  const target = dateObj || new Date();
+  const t0 = new Date(target.getFullYear(), target.getMonth(), target.getDate());
+  const daysDiff = Math.floor((t0 - anchor) / 86400000);
+  let cycleDay = ((daysDiff % CYCLE_CONFIG.cycleLength) + CYCLE_CONFIG.cycleLength) % CYCLE_CONFIG.cycleLength + 1;
+
+  let phase, phaseIdx, nextPhase, daysToNext;
+  if (cycleDay <= 5) { phase='Menstrual'; phaseIdx=0; nextPhase='Folicular'; daysToNext=6-cycleDay; }
+  else if (cycleDay <= 13) { phase='Folicular'; phaseIdx=1; nextPhase='Ovulación'; daysToNext=14-cycleDay; }
+  else if (cycleDay <= 15) { phase='Ovulación'; phaseIdx=2; nextPhase='Lútea'; daysToNext=16-cycleDay; }
+  else { phase='Lútea'; phaseIdx=3; nextPhase='Próximo periodo'; daysToNext=CYCLE_CONFIG.cycleLength-cycleDay+1; }
+
+  return { cycleDay, phase, phaseIdx, nextPhase, daysToNext };
+}
+
+function addDays(d, n) { const r = new Date(d); r.setDate(r.getDate()+n); return r; }
+function fmtDate(d) {
+  const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  return d.getDate() + ' ' + meses[d.getMonth()];
+}
+
+function renderCycleStatus() {
+  const el = document.getElementById('cycle-status');
+  if(!el) return;
+  const today = new Date();
+  const info = getCycleInfo(today);
+  const anchor = new Date(CYCLE_CONFIG.anchorDate + 'T00:00:00');
+
+  // Forecast key dates
+  const daysSinceAnchor = Math.floor((new Date(today.getFullYear(),today.getMonth(),today.getDate()) - anchor)/86400000);
+  const cyclesPassed = Math.floor(daysSinceAnchor / CYCLE_CONFIG.cycleLength);
+  const currentCycleStart = addDays(anchor, cyclesPassed * CYCLE_CONFIG.cycleLength);
+  const nextPeriod = addDays(currentCycleStart, CYCLE_CONFIG.cycleLength);
+  const follicularStart = addDays(currentCycleStart, 5);
+  const ovulation = addDays(currentCycleStart, 13);
+
+  const phaseEmoji = ['🩸','🟢','⚠️','🌙'][info.phaseIdx];
+
+  el.innerHTML = `
+    <div class="cs-today">
+      <span class="cs-day">${info.cycleDay}</span>
+      <span class="cs-day-lbl">Día del ciclo</span>
+    </div>
+    <div>
+      <div class="cs-phase">${phaseEmoji} Fase ${info.phase}</div>
+      <div class="cs-next">${info.daysToNext > 0 ? info.daysToNext + ' día(s) → ' + info.nextPhase : 'Transición hoy → ' + info.nextPhase}</div>
+    </div>
+    <div class="cs-forecast">
+      <div class="cs-fc-item"><span class="cs-fc-date">${fmtDate(follicularStart)}</span><span class="cs-fc-lbl">🟢 Folicular</span></div>
+      <div class="cs-fc-item"><span class="cs-fc-date">${fmtDate(ovulation)}</span><span class="cs-fc-lbl">⚠️ Ovulación</span></div>
+      <div class="cs-fc-item"><span class="cs-fc-date">${fmtDate(nextPeriod)}</span><span class="cs-fc-lbl">🩸 Próx. periodo</span></div>
+    </div>
+    <div class="cs-config">Ancla: ${fmtDate(anchor)} (Día 1) · Ciclo: ${CYCLE_CONFIG.cycleLength} días (se recalibra con datos reales) · Cálculo basado en la fecha de hoy del dispositivo</div>
+  `;
+
+  // Auto-highlight current phase in the selector
+  selectCyclePhase(info.phaseIdx);
+}
+
+// ══════════════════════════════════════════════
+//  CYCLE PHASE PERIODIZATION (Valeria)
+// ══════════════════════════════════════════════
+const CYCLE_GUIDANCE = [
+  { // Menstrual
+    title:'🩸 Fase Menstrual (días 1–5) · Intensidad flexible',
+    text:'Hormonas en su punto más bajo. <strong>Escuchar el cuerpo es la regla.</strong> Si hay cólicos o fatiga marcada: mantener solo trabajo aeróbico Z1–Z2 y reducir volumen 10–15%. Si te sientes bien: entrenar normal — muchas mujeres rinden bien en esta fase. Prioridad en hierro (la pérdida menstrual lo agota) y sueño. Hidratación extra.'
+  },
+  { // Folicular
+    title:'🟢 Fase Folicular (días 6–13) · LUZ VERDE',
+    text:'Estrógeno en ascenso — la mejor fase para entrenar duro. <strong>Aquí van las sesiones de calidad:</strong> los intervalos de bici/carrera, la fuerza con más carga, y cualquier test. El cuerpo recupera más rápido, tolera mejor los carbohidratos y construye fuerza con eficiencia. Si vamos a subir la carga semanal, esta es la fase donde se siente fácil.'
+  },
+  { // Ovulación
+    title:'⚠️ Ovulación (día ~14) · Precaución articular',
+    text:'Estrógeno en pico. Aeróbicamente Valeria estará fuerte, pero hay <strong>mayor laxitud ligamentaria</strong> que eleva ligeramente el riesgo en movimientos explosivos o de carga máxima. Mantener los intervalos aeróbicos, pero cuidar la técnica en fuerza pesada y evitar cambios de dirección bruscos. Buen día para volumen Z2.'
+  },
+  { // Lútea
+    title:'🌙 Fase Lútea (días 15–28) · Modular intensidad',
+    text:'Progesterona en ascenso. <strong>Temprana (15–21):</strong> aún buen rendimiento, mantener el plan. <strong>Tardía (22–28):</strong> la temperatura corporal sube ~0.3–0.5°C, el RPE percibido es mayor y aparece la fatiga del SPM. Reemplazar las sesiones de calidad por volumen aeróbico Z2, priorizar técnica, hidratar más y aceptar que el mismo esfuerzo "cuesta más". No es debilidad — es fisiología.'
+  }
+];
+
+function selectCyclePhase(n) {
+  for(let i=0; i<4; i++) {
+    const el = document.getElementById('cphase-'+i);
+    if(el) el.classList.toggle('active', i===n);
+  }
+  const g = document.getElementById('cycle-guidance');
+  if(g) {
+    g.innerHTML = '<strong>'+CYCLE_GUIDANCE[n].title+'</strong><br>'+CYCLE_GUIDANCE[n].text;
+    g.classList.add('show');
+  }
+}
+
+// ══════════════════════════════════════════════
+//  METRICS ENGINE
+// ══════════════════════════════════════════════
+
+// ── Athlete profiles ──────────────────────────
+const PROFILES = {
+  armando: {
+    name:'Armando', age:46, goal:'Maratón BMO Vancouver · 2 May 2027',
+    zones:{ fcZ2:'Provisional — sin calibrar', ftp:'N/A', css:'N/A', lthr:'Pendiente FC reposo' },
+    sessions:[]
+  },
+};
+
+// ── View toggle ───────────────────────────────
+function setView(ath, view) {
+  const planBtn = document.getElementById('vt-plan-'+ath);
+  const metBtn  = document.getElementById('vt-metrics-'+ath);
+  const planDiv = document.getElementById('planview-'+ath);
+  const metDiv  = document.getElementById('metrics-'+ath);
+
+  if(view === 'plan') {
+    planBtn.classList.add('active'); metBtn.classList.remove('active');
+    planDiv.style.display = ''; metDiv.classList.remove('active');
+  } else {
+    metBtn.classList.add('active'); planBtn.classList.remove('active');
+    planDiv.style.display = 'none'; metDiv.classList.add('active');
+    renderMetrics(ath);
+  }
+}
+
+// ── Metrics renderer ──────────────────────────
+function renderMetrics(ath) {
+  const p = PROFILES[ath];
+  const el = document.getElementById('metrics-'+ath);
+
+  let html = buildProfile(p);
+
+  if(!p.sessions || p.sessions.length === 0) {
+    html += `<div class="metrics-empty">
+      <div class="big">📈</div>
+      <p>Las métricas se cargarán conforme se completen sesiones y se suban los archivos de actividad.<br><br>
+      El seguimiento de ${p.name} comenzará con la primera sesión registrada.</p>
+    </div>`;
+  } else {
+    p.sessions.forEach(s => { html += buildSessionCard(s); });
+  }
+
+  el.innerHTML = html;
+}
+
+function buildProfile(p) {
+  return `<div class="profile-card">
+    <div>
+      <div class="profile-name">${p.name}</div>
+      <div class="profile-goal">${p.goal}</div>
+      <div class="profile-stats">
+        <div class="p-stat"><span class="ps-val">${p.age}</span><span class="ps-lbl">Años</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.fcZ2}</span><span class="ps-lbl">FC Z2</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.ftp}</span><span class="ps-lbl">FTP</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.css}</span><span class="ps-lbl">CSS</span></div>
+        <div class="p-stat"><span class="ps-val">${p.zones.lthr}</span><span class="ps-lbl">LTHR</span></div>
+        <div class="p-stat"><span class="ps-val">${(PROFILES[Object.keys(PROFILES).find(k=>PROFILES[k]===p)] && PROFILES[Object.keys(PROFILES).find(k=>PROFILES[k]===p)].sessions || []).length}</span><span class="ps-lbl">Sesiones</span></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function buildSessionCard(s) {
+  const typeColor = {bike:'#d97706',swim:'#0284c7',run:'#059669',str:'#db2777'}[s.type]||'#666';
+  let html = `<div class="metric-card full" style="border-left:4px solid ${typeColor};margin-bottom:14px;">
+    <div class="mc-header">
+      <span class="mc-icon">${s.icon}</span>
+      <div>
+        <div class="mc-title">${s.title}</div>
+        <div class="mc-sub">${s.date}</div>
+      </div>
+      <span class="mc-badge badge-done" style="margin-left:auto;">Completada</span>
+    </div>
+    <div class="m-stats">
+      <div class="m-stat"><span class="ms-val">${s.summary.dur}</span><span class="ms-lbl">Duración</span></div>
+      ${s.summary.dist !== '—' ? `<div class="m-stat"><span class="ms-val">${s.summary.dist}</span><span class="ms-lbl">Distancia</span></div>` : ''}
+      <div class="m-stat"><span class="ms-val">${s.summary.fcAvg}</span><span class="ms-lbl">FC Prom.</span></div>
+      <div class="m-stat"><span class="ms-val">${s.summary.fcMax}</span><span class="ms-lbl">FC Máx.</span></div>
+      <div class="m-stat"><span class="ms-val">${s.summary.cal}</span><span class="ms-lbl">kcal</span></div>
+      <div class="m-stat"><span class="ms-val" style="font-size:12px;">${s.summary.extra}</span><span class="ms-lbl">Adicional</span></div>
+    </div>
+    <div class="metrics-grid">`;
+
+  s.charts.forEach(ch => {
+    html += `<div class="metric-card" style="padding:14px 16px;">
+      <div class="chart-label">${ch.title}</div>
+      <div style="font-size:10px;color:var(--text3);margin-bottom:8px;">${ch.sub}</div>
+      ${ch.kind==='hbar' ? buildHBar(ch) : buildVBar(ch)}
+    </div>`;
+  });
+
+  html += `</div>`;
+
+  if(s.note) {
+    html += `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:12px 14px;font-size:12px;color:var(--text2);line-height:1.7;">${s.note}</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+// ── Horizontal bar chart (FC zones) ──────────────────────
+function buildHBar(ch) {
+  let html = '';
+  ch.bars.forEach(b => {
+    const w = Math.max(b.val, 0.5);
+    const isTarget = b.target !== null && b.val >= b.target;
+    html += `<div style="margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+        <span style="font-size:11px;color:var(--text2);">${b.label}</span>
+        <span style="font-size:11px;font-weight:700;color:${b.color};">${b.val}%${b.target?` <span style="color:${isTarget?'var(--green)':'var(--red)'};">${isTarget?'✅':'⚠️'}</span>`:''}</span>
+      </div>
+      <div style="height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;">
+        <div style="height:100%;width:${w}%;background:${b.color};border-radius:4px;transition:width .4s;"></div>
+      </div>
+    </div>`;
+  });
+  return html;
+}
+
+// ── Vertical bar chart (cadence, power, swim pace, FC) ────────────────
+function buildVBar(ch) {
+  const W = 340, H = 140, PAD_L = 36, PAD_B = 28, PAD_T = 10, PAD_R = 8;
+  const chartW = W - PAD_L - PAD_R;
+  const chartH = H - PAD_T - PAD_B;
+  const vals = ch.vals;
+  const n = vals.length;
+
+  const yMin = ch.yMin !== undefined ? ch.yMin : 0;
+  const yMax = ch.yMax !== undefined ? ch.yMax : Math.ceil(Math.max(...vals) * 1.12);
+  const yRange = yMax - yMin;
+
+  const barW = (chartW / n) * 0.6;
+  const gap   = (chartW / n) * 0.4;
+
+  function yPx(v) { return PAD_T + chartH - ((v - yMin) / yRange) * chartH; }
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:${W}px;">`;
+
+  // Grid lines
+  const gridVals = 4;
+  for(let i = 0; i <= gridVals; i++) {
+    const v = yMin + (yRange / gridVals) * i;
+    const y = yPx(v);
+    svg += `<line x1="${PAD_L}" y1="${y}" x2="${W-PAD_R}" y2="${y}" stroke="#e2e8f0" stroke-width="1"/>`;
+    svg += `<text x="${PAD_L-4}" y="${y+3}" text-anchor="end" fill="#94a3b8" font-size="8" font-family="Space Mono,monospace">${Math.round(v)}</text>`;
+  }
+
+  // Target line
+  if(ch.target !== undefined) {
+    const ty = yPx(ch.target);
+    svg += `<line x1="${PAD_L}" y1="${ty}" x2="${W-PAD_R}" y2="${ty}" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>`;
+    svg += `<text x="${W-PAD_R+2}" y="${ty+3}" fill="#ef4444" font-size="8" font-family="Space Mono,monospace">${ch.target}</text>`;
+  }
+
+  // Target2 line
+  if(ch.target2 !== undefined) {
+    const ty2 = yPx(ch.target2);
+    svg += `<line x1="${PAD_L}" y1="${ty2}" x2="${W-PAD_R}" y2="${ty2}" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,3"/>`;
+    svg += `<text x="${W-PAD_R+2}" y="${ty2+3}" fill="#10b981" font-size="8" font-family="Space Mono,monospace">${ch.target2}</text>`;
+  }
+
+  // Bars
+  vals.forEach((v, i) => {
+    const x = PAD_L + (i / n) * chartW + gap/2;
+    const barH = ((v - yMin) / yRange) * chartH;
+    const y = PAD_T + chartH - barH;
+    const color = ch.colors ? ch.colors[i] : ch.color || '#0284c7';
+    const label = ch.customLabels ? ch.customLabels[i] : v;
+
+    svg += `<rect x="${x}" y="${y}" width="${barW}" height="${barH}" fill="${color}" rx="2" opacity="0.85"/>`;
+    svg += `<text x="${x + barW/2}" y="${y - 3}" text-anchor="middle" fill="${color}" font-size="8.5" font-weight="700" font-family="Barlow Condensed,sans-serif">${label}</text>`;
+    svg += `<text x="${x + barW/2}" y="${H - 6}" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Space Mono,monospace">${ch.xLabels[i]}</text>`;
+  });
+
+  // Axes
+  svg += `<line x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${H-PAD_B}" stroke="#cbd5e1" stroke-width="1.5"/>`;
+  svg += `<line x1="${PAD_L}" y1="${H-PAD_B}" x2="${W-PAD_R}" y2="${H-PAD_B}" stroke="#cbd5e1" stroke-width="1.5"/>`;
+
+  svg += `</svg>`;
+  return `<div class="chart-wrap">${svg}</div>`;
+}
+
+// ── Cadence trend (cross-session) for Valeria ───────────────────────
+// Will auto-build from sessions once more data is loaded
+
+
+
+// ══════════════════════════════════════════════
+//  PWA — Instalación y offline
+// ══════════════════════════════════════════════
+(function(){
+  let deferredPrompt = null;
+  // Floating install button
+  function makeInstallBtn(){
+    if(document.getElementById('pwa-install-btn')) return;
+    const b = document.createElement('button');
+    b.id = 'pwa-install-btn';
+    b.textContent = '📲 Instalar app';
+    b.style.cssText = 'position:fixed;bottom:18px;right:18px;z-index:9999;background:#1a2030;color:#f0c842;border:1px solid #f0c842;border-radius:24px;padding:11px 18px;font-family:sans-serif;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;';
+    b.onclick = async function(){
+      if(deferredPrompt){
+        deferredPrompt.prompt();
+        await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        b.remove();
+      }
+    };
+    document.body.appendChild(b);
+  }
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    deferredPrompt = e;
+    makeInstallBtn();
+  });
+  window.addEventListener('appinstalled', function(){
+    const b = document.getElementById('pwa-install-btn');
+    if(b) b.remove();
+  });
+  // iOS hint (no beforeinstallprompt on Safari)
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+  if(isIOS && !isStandalone){
+    window.addEventListener('load', function(){
+      setTimeout(function(){
+        if(document.getElementById('pwa-ios-hint')) return;
+        const h = document.createElement('div');
+        h.id = 'pwa-ios-hint';
+        h.innerHTML = 'Para instalar: toca <strong>Compartir</strong> ⬆️ y luego <strong>"Agregar a inicio"</strong> &nbsp;<span style="opacity:.6;cursor:pointer;" onclick="this.parentNode.remove()">✕</span>';
+        h.style.cssText = 'position:fixed;bottom:18px;left:18px;right:18px;z-index:9999;background:#1a2030;color:#fff;border-radius:12px;padding:12px 16px;font-family:sans-serif;font-size:13px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.25);';
+        document.body.appendChild(h);
+        setTimeout(function(){ if(h.parentNode) h.remove(); }, 12000);
+      }, 1500);
+    });
+  }
+  // Service worker (offline) — registra si el entorno lo permite
+  if('serviceWorker' in navigator){
+    try {
+      const swCode = 'self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!=="604tri-v2").map(k=>caches.delete(k)))));self.clients.claim();});self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(resp=>{const cp=resp.clone();caches.open("604tri-v2").then(c=>c.put(e.request,cp));return resp;}).catch(()=>caches.match(e.request)))});';
+      const blob = new Blob([swCode], {type:'application/javascript'});
+      navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(function(){});
+    } catch(e){}
+  }
+})();
+
+
+
+
+
+</script>
+</body>
+</html>
