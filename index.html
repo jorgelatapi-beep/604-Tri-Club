@@ -1538,72 +1538,66 @@ const VALERIA_W9 = [
       coachNote:'<strong>Dato objetivo, no elogio:</strong> el run del miércoles muestra que Valeria mantiene control de zona cuando la sesión es carrera, distinto al patrón de la bici del martes donde subió deliberadamente la intensidad. Esto no significa que una disciplina sea "mejor ejecutada" que otra — significa que su tolerancia percibida varía por disciplina, y eso es información para ajustar prescripciones en W10 de forma diferenciada (bici: recalibrar FTP al alza; run: mantener zonas actuales, funcionan). El único punto real a corregir es el enfriamiento cortado — no es cosmético, es donde se inicia la recuperación activa.',
       tip:'⚠️ Enfriamiento NO es opcional — completar los 5 min completos la próxima vez, aunque el bloque principal ya esté hecho. ⚠️ NEURO jueves: con nado+run completados miércoles, llega con carga acumulada del día — vigilar si la sesión de 6×7 se siente distinta a lo normal.' } },
 
-  { dayLabel:'JUE', dayDate:'2 Jul', type:'bike', icon:'⚡', title:'Bici Fuerza+Cadencia · 6×(6min 72% + 1min drill 110rpm)', tag:'bike', dur:'66 min',
-    content:{ kind:'session', stats:[{v:'66 min',l:'Total'},{v:'72% base',l:'~94W fuerza'},{v:'6×7 min',l:'Estructura'},{v:'NEURO',l:'Foco'}],
+  { dayLabel:'JUE', dayDate:'2 Jul', type:'bike', icon:'⚡', title:'⚠️ INCOMPLETA · Bici Fuerza+Cadencia · 33.2 de 66 min — cortada por cólico', tag:'bike', dur:'33.2 min',
+    content:{ kind:'session', stats:[{v:'⚠️ 33.2 de 66 min',l:'50% completado'},{v:'96W avg',l:'Cerca del target 94W'},{v:'85-109 rpm',l:'Cadencia NUNCA bajó a 50-55'},{v:'Cortada por cólico',l:'19:46h jueves'}],
       sections:[
-        {head:'🚴 CALENTAMIENTO (12 min)', cols:['Bloque','Duración','% FTP','Watts','Cadencia + Foco'], rows:[
-          ['Activación','6 min','50%','65W','Libre · soltar piernas + despertar FC'],
-          ['Progresivo','3 min','55-60%','72-78W','Libre · subir FC'],
-          ['Pre-activación cadencia','3 min','55%','72W','PRACTICAR: alternar 30s a 60 rpm + 30s a 100 rpm × 3 ciclos'],
+        {head:'✅ EJECUCIÓN REAL — Resumen', cols:['Métrica','Prescrito','Ejecutado','Análisis'], rows:[
+          ['Duración','66 min','33.2 min','Cortada a la mitad por cólico fuerte'],
+          ['Potencia promedio','94W (fuerza) / 65-78W (drill) alternado','96W constante','Cerca del target de fuerza, pero SIN alternar con el drill'],
+          ['Cadencia','50-55 rpm (fuerza) / 100-110 rpm (drill) alternado','85-109 rpm sostenido','NUNCA bajó a 50-55 — el estímulo de fuerza no se dio'],
+          ['FC promedio','Z2-Z4 esperado en el bloque','122 bpm, 54% en Z2','Consistente con esfuerzo moderado, no con bloques de fuerza real'],
         ]},
-        {head:'🚴 BLOQUE PRINCIPAL — 6 Repeticiones de 7 minutos (42 min)', cols:['Rep','Fase','Duración','% FTP','Cadencia · Cómo hacerlo'], rows:[
-          ['Rep 1','FUERZA','6 min','72% (94W)','50-55 rpm · GRINDEA con cuádriceps y glúteo — sentirás el torque'],
-          ['Rep 1','CADENCIA','1 min','50-60% (65-78W)','100-110 rpm · pies "ligeros" como tocar pedales con suavidad'],
-          ['Rep 2','FUERZA','6 min','72% (94W)','50-55 rpm · concéntrate en empujar TODA la vuelta del pedal'],
-          ['Rep 2','CADENCIA','1 min','50-60% (65-78W)','100-110 rpm · si rebotas en el sillín, baja un poco la cadencia'],
-          ['Rep 3','FUERZA','6 min','72% (94W)','50-55 rpm · CADENCIA es la llave (no la potencia)'],
-          ['Rep 3','CADENCIA','1 min','50-60% (65-78W)','100-110 rpm · respira por nariz, ritmo suave'],
-          ['Rep 4','FUERZA','6 min','72% (94W)','50-55 rpm · empieza a sentir fatiga local en cuádriceps — NORMAL'],
-          ['Rep 4','CADENCIA','1 min','50-60% (65-78W)','100-110 rpm · recuperación activa'],
-          ['Rep 5','FUERZA','6 min','72% (94W)','50-55 rpm · MANTÉN la cadencia, NO subas (el rodillo subirá resistencia)'],
-          ['Rep 5','CADENCIA','1 min','50-60% (65-78W)','100-110 rpm · piernas relajadas'],
-          ['Rep 6','FUERZA','6 min','72% (94W)','50-55 rpm · ÚLTIMA — agárrate, este es el estímulo más alto'],
-          ['Rep 6','CADENCIA','1 min','50-60% (65-78W)','100-110 rpm · soltar antes del enfriamiento'],
+        {head:'📊 LAP POR LAP', cols:['Lap','Duración','Watts avg/max','Cadencia avg/max','FC avg/max'], rows:[
+          ['1','6.0 min','69/75W','54/69 rpm','101/111'],
+          ['2','3.0 min','87/113W','82/96 rpm','113/120'],
+          ['3','3.0 min','101/114W','93/101 rpm','120/130'],
+          ['4','6.0 min','97/114W','93/102 rpm','125/133'],
+          ['5','1.0 min','115/126W','102/117 rpm','125/130'],
+          ['6','6.0 min','102/113W','95/102 rpm','130/142'],
+          ['7','1.0 min','122/130W','106/111 rpm','131/136'],
+          ['8','6.0 min','106/128W','88/111 rpm','130/139'],
+          ['9','1.0 min','129/135W','109/116 rpm','136/142'],
         ]},
-        {head:'🚴 ENFRIAMIENTO (12 min)', cols:['Bloque','Duración','% FTP','Watts','Foco'], rows:[
-          ['Bajada','5 min','50% (65W)','65W','Soltar progresivamente'],
-          ['Spin','5 min','45% (58W)','58W','Cadencia 85-90 rpm, libre'],
-          ['Vuelta a la calma','2 min','40% (52W)','52W','Casi soltando · bajar FC'],
-        ]},
-        {head:'🚴 CLAVES DEL PROTOCOLO ERG (CRÍTICO)', cols:['Concepto','Cómo aplicarlo','Por qué importa'], rows:[
-          ['Controla CADENCIA','Mira el cadenciómetro · NO la potencia','En ERG la potencia es fija, lo que cambia es la resistencia'],
-          ['Fuerza = 50-55 rpm','BAJA la cadencia a propósito · el rodillo subirá resistencia automáticamente','Resultado: TORQUE alto = estímulo de fuerza muscular'],
-          ['Cadencia = 100-110 rpm','SUBE la cadencia rápido · el rodillo bajará resistencia','Resultado: trabajo neuromuscular sin carga muscular'],
-          ['Sensor Tacx no confiable','Si la lectura salta mucho, guíate por sensación de la pierna','Tu Tacx Flow Smart tiene cadenciómetro impreciso — el cuerpo no miente'],
+        {head:'⚠️ DOS PROBLEMAS DISTINTOS, NO UNO SOLO', cols:['Problema','Causa probable','Qué hacer'], rows:[
+          ['1. Sesión cortada a la mitad','Cólico fuerte — motivo válido, misma regla que aplicamos el viernes: el cuerpo manda sobre el plan','Ninguna acción correctiva — parar fue lo correcto'],
+          ['2. Cadencia nunca bajó a 50-55 rpm en los 33 min que sí se hicieron','Posible que el Tacx NO estuviera en modo ERG — en modo libre, Valeria controla la cadencia sin que el rodillo la fuerce al rango bajo','Confirmar con ella si el Tacx app estaba en ERG antes de la próxima sesión NEURO'],
         ]},
       ],
-      _calc:'12 + 42 + 12 = 66 min',
-      coachNote:'<strong>SESIÓN REINA NEUROMUSCULAR.</strong> Esta es la sesión que más impacto tiene en tu economía de pedaleo para Cozumel. La fuerza a 50-55 rpm desarrolla la capacidad de PUSH (empuje en pedaleo) — clave para los 90km planos contra viento. Los drills a 100-110 rpm suben tu cadencia natural (que estaba en 62-66 rpm — muy baja para 90km). En W8 ejecutaste mal porque rodaste a tu cadencia natural (78 rpm). HOY: controla la cadencia DELIBERADAMENTE.',
-      tip:'⚠️ Si en la Rep 4-5 sientes que NO puedes mantener 50-55 rpm sin que el rodillo se atore, SUBE la cadencia a 60 rpm — la potencia del segmento es solo 94W, no debería atorarse. Si pasa, es señal que tu FTP real es menor (lo recalibramos). ⚠️ NO uses esta sesión para "probar" potencia más alta — el estímulo está en la cadencia controlada.' } },
-
-  { dayLabel:'VIE', dayDate:'3 Jul', type:'run', icon:'🔄', title:'AJUSTADO · Caminata (recomendada) + Fuerza Gym — sustituye nado', tag:'run', dur:'55 min',
-    content:{ kind:'session', stats:[{v:'Sustitución',l:'Fase menstrual — malestar'},{v:'30 min',l:'Caminata (Opción A)'},{v:'25 min',l:'Run suave (Opción B, alterna)'},{v:'25 min',l:'Gym sin cambio'}],
+      _calc:'Suma de laps ejecutados hasta el corte: 33.2 min de 66 min prescritos (incompleta por cólico) — dato verificado, no requiere ecuación adicional',
+      coachNote:'<strong>Parar por cólico fue la decisión correcta, no una falla.</strong> Es la misma regla que establecimos explícitamente para el viernes — el cuerpo manda sobre el plan. Lo que sí merece atención es independiente del cólico: en los 33 minutos completados, el protocolo de cadencia alternada (fuerza a 50-55 rpm / drill a 100-110 rpm) no se ejecutó — Valeria mantuvo cadencia moderada-alta constante (85-109 rpm) todo el tiempo. Esto sugiere que el Tacx no estaba en modo ERG, porque en ERG el rodillo sube resistencia automáticamente al bajar la cadencia, forzando el estímulo de fuerza. Sin ERG, ella nunca sintió esa resistencia y pedaleó a su cadencia natural.',
+      tip:'⚠️ Antes de repetir esta sesión: confirmar con Valeria que el Tacx app está en ERG (no en modo libre/manual) — sin eso, el estímulo neuromuscular específico de esta sesión no se produce aunque se complete el tiempo completo. ⚠️ El cólico del jueves por la noche + el flujo abundante del viernes son parte del mismo ciclo — vale la pena preguntarle si prefiere que ajustemos proactivamente los próximos 2-3 días en vez de decidir sesión por sesión.' } },
+  { dayLabel:'VIE', dayDate:'3 Jul', type:'run', icon:'🔄', title:'AJUSTADO · Run Z2 (30 min, confirmado por Valeria) + Fuerza Gym — sustituye nado', tag:'run', dur:'55 min',
+    content:{ kind:'session', stats:[{v:'Sustitución',l:'Flujo abundante — sin malestar general'},{v:'30 min',l:'Run Z2 122-134 bpm'},{v:'25 min',l:'Gym sin cambio'},{v:'Criterio de parada',l:'Flujo, NO cansancio'}],
       sections:[
         {head:'🔄 CAMBIO DE HOY — Por qué se sustituye el nado', cols:['Aspecto','Detalle'], rows:[
-          ['Motivo','Valeria reporta malestar/incomodidad para nadar hoy — fase menstrual'],
-          ['Principio aplicado','Fase menstrual pide reducir volumen/exigencia, no sustituir por algo de igual o mayor demanda'],
-          ['Por qué no bici por defecto','Ofrecida como alternativa de bajo impacto, pero Valeria prefiere correr o caminar — se respeta su preferencia'],
-          ['Por qué NO el run fácil completo','Ese es de 45 min estructurado Z2 — hoy se reduce el volumen, no se mantiene igual'],
+          ['Motivo real','Valeria confirma que se siente BIEN — el problema es flujo abundante, incómodo para nadar. No es fatiga ni malestar general.'],
+          ['Por qué no bici','Ofrecida como alternativa de bajo impacto, pero Valeria prefiere correr — se respeta su preferencia'],
+          ['Por qué Z2 y no Z1','Valeria confirma que puede sostener Z2 sin problema — al sentirse bien, no hay razón cardiovascular para restringir a Z1'],
+          ['Distinción clave','Energía/capacidad = Z2 confirmado. Comodidad con el flujo = criterio de parada distinto — NO son lo mismo, no confundir uno con otro'],
         ]},
-        {head:'🅰️ OPCIÓN RECOMENDADA — Caminata (30 min)', cols:['Bloque','Cómo hacerlo'], rows:[
-          ['Estructura','Caminata continua, ritmo cómodo — SIN estructura de zonas ni intervalos'],
-          ['Objetivo','Moverse y mantener circulación, no entrenar ni acumular carga'],
-          ['Terreno','El que sea más cómodo — no es necesario plano ni caminadora'],
+        {head:'🏃 RUN Z2 — Estructura (30 min)', cols:['Bloque','Duración','Zona/Cómo hacerlo'], rows:[
+          ['Calentamiento','5 min','Caminata + trote suave progresivo'],
+          ['Bloque principal','20 min','Z2 122-134 bpm, continuo — ritmo que ya sabe sostener'],
+          ['Enfriamiento','5 min','Caminata + estiramientos suaves'],
         ]},
-        {head:'🅱️ OPCIÓN ALTERNATIVA — Run muy suave (si prefiere correr, máx 25 min)', cols:['Bloque','Duración','Cómo hacerlo'], rows:[
-          ['Calentamiento caminata','5 min','Soltar, sin prisa'],
-          ['Trote muy suave','15 min máx','Z1 estricta (no Z2) — más lento de lo habitual a propósito'],
-          ['Enfriamiento caminata','5 min','Bajar ritmo + estiramientos suaves'],
+        {head:'⚠️ CRITERIO DE PARADA — Distinto al habitual', cols:['Situación','Qué hacer'], rows:[
+          ['FC sube de más / se siente cansada','Bajar a caminar — igual que cualquier sesión normal'],
+          ['Incomodidad por el flujo (aunque la FC esté bien)','PARAR o caminar de inmediato — esta señal manda hoy, no es negociable ni hay que "aguantar" para completar el plan'],
+          ['Necesita ir al baño / cambiar protección','Cortar la sesión ahí, sin excepción — no es fallar el entreno'],
         ]},
-        {head:'💪 FUERZA GYM — Sin cambio respecto al plan original (25 min)', cols:['Bloque','Duración','Detalle'], rows:[
-          ['Calentamiento','3 min','Movilidad articular suave'],
-          ['Circuito','20 min','4 ejercicios: Dead Bug, Single Leg Glute Bridge, Superman, Plank — mismos del plan original, RPE 5-6, sin forzar'],
-          ['Estiramientos','2 min','Cadera, espalda baja, hombros'],
+        {head:'💪 FUERZA GYM — Composición completa (25 min)', cols:['Ejercicio','Series×Reps','Cómo hacerlo paso a paso','Qué trabaja'], rows:[
+          ['Calentamiento (3 min)','—','1 min círculos de cadera + 1 min puentes de glúteo suaves (10 reps) + 1 min rotaciones de torso','Activación articular'],
+          ['1. Dead Bug','3×10 por lado','Acostada boca arriba, brazos extendidos hacia el techo, rodillas a 90°. Baja el brazo derecho hacia atrás de la cabeza JUNTO con la pierna izquierda extendiéndose hacia el piso — SIN que la espalda baja se despegue del suelo. Vuelve con control. Cambia de lado.','Core anti-extensión — protege espalda baja en bici/carrera'],
+          ['2. Single Leg Glute Bridge','3×10 por lado','Acostada boca arriba, una rodilla flexionada con pie en el piso, otra pierna extendida. Empuja con el talón de apoyo y levanta la cadera SIN arquear la espalda. Aprieta el glúteo arriba. Baja con control. Cambia de pierna.','Activa el glúteo — motor de la zancada'],
+          ['3. Superman','3×12','Boca abajo, brazos extendidos al frente. Levanta SIMULTÁNEAMENTE brazos, pecho y piernas. Sostén 2 segundos arriba. Baja con control, sin rebote.','Fortalece espalda baja'],
+          ['4. Plank (Plancha)','3×30 seg','Codos bajo los hombros, cuerpo recto de cabeza a talón, cadera ni alta ni caída. Aprieta glúteo y abdomen. Respira normal.','Core estabilizador'],
+          ['Descanso entre series','30-40 seg','Caminando, no sentada','—'],
+          ['Estiramientos (2 min)','—','Cadera, espalda baja, hombros — 20-30 seg cada uno','Cool-down'],
         ]},
       ],
-      _calc:'Opción A (recomendada): 30 (caminata) + 25 (gym) = 55 min · Opción B (alterna): 25 (run: 5+15+5) + 25 (gym) = 50 min',
-      coachNote:'<strong>Sustitución por fase menstrual, no por fatiga muscular.</strong> El nado se cambia porque Valeria reporta incomodidad para nadar hoy, no porque haya un problema de piernas cansadas. Caminar es la opción de menor exigencia y la recomendada por defecto; correr suave es aceptable como segunda opción si ella lo prefiere, manteniéndolo corto y en Z1 estricta. La sesión de gym se mantiene porque no está relacionada con el motivo del cambio — si en el momento se siente mejor no hacerla, se puede posponer sin problema.',
-      tip:'⚠️ Esta sustitución NO recupera el nado perdido — la semana se queda con 1 nado en vez de 2. No hay necesidad de compensarlo entre semana; se retoma la estructura 2-2-2 completa en W10. ⚠️ Si elige correr y en cualquier momento se siente incómoda, camina el resto — no hay ninguna razón para forzar continuar corriendo.' } },
+      _calc:'Run: 5+20+5=30 min · Gym: 3+20+2=25 min · Total: 55 min',
+      coachNote:'<strong>Sustitución por logística de flujo, no por fatiga.</strong> Valeria confirma sentirse bien y capaz de Z2 — el ajuste de hoy no es de intensidad cardiovascular, es de disciplina distinta (correr en vez de nadar) por comodidad con el flujo abundante. El criterio de parada de hoy es diferente al habitual: normalmente paramos por FC o cansancio; hoy paramos por incomodidad de flujo, aunque el cuerpo esté respondiendo bien. La sesión de gym sigue sin cambios porque no está relacionada con el motivo del ajuste.',
+      tip:'⚠️ Esta sustitución NO recupera el nado perdido — la semana se queda con 1 nado en vez de 2. No se compensa entre semana; se retoma la estructura 2-2-2 completa en W10. ⚠️ Si el flujo se vuelve incómodo a mitad del bloque de 20 min, para ahí — no hay ningún problema en que la sesión termine en 12-15 min en vez de 20.' } },
 
   { dayLabel:'SÁB', dayDate:'4 Jul', type:'bike', icon:'🚴', title:'Bici Resistencia Larga · 70 min · 70-72% FTP + drills cadencia', tag:'bike', dur:'70 min',
     content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'~26 km',l:'Estimado'},{v:'70-72% FTP',l:'91-94W'},{v:'+ 6 drills',l:'Cadencia'}],
@@ -1644,50 +1638,227 @@ const VALERIA_W9 = [
       coachNote:'<strong>Sesión de volumen aeróbico bici:</strong> 70 min con la mayor parte en Z2 sostenido. Es la sesión más larga de bici esta semana y prepara DIRECTAMENTE para los 90km planos de Cozumel. Los 6 drills de cadencia integrados mantienen el desarrollo neuromuscular del miércoles sin sobrecargar — son "recordatorios" de cadencia alta, no estímulo principal.',
       tip:'⚠️ Si en min 45+ sientes que NO puedes mantener 91W cómodamente, BAJA a 85W (65% FTP) — la prioridad es completar los 55 min en zona aeróbica, no clavar el wattaje exacto. ⚠️ Si la cadencia natural en los bloques base cae a < 80 rpm, atención: estás cansando — corrige conscientemente a 85.' } },
 
-  { dayLabel:'DOM', dayDate:'5 Jul', type:'run', icon:'🏃', title:'Run LARGA · 6 km Z2 · DISTANCIA FIJA · run-walk 5:1', tag:'run', dur:'~64 min',
-    content:{ kind:'session', stats:[{v:'6 km FIJO',l:'NO 5.9, NO 6.1'},{v:'~64 min',l:'Estimado a 9:23/km'},{v:'Z2',l:'122-134 bpm'},{v:'~7 ciclos',l:'Run-walk 5:1'}],
+  { dayLabel:'SÁB', dayDate:'4 Jul', type:'rest', icon:'⛔', title:'AJUSTADO · Descanso (ánimo/actividades) — reemplaza bici larga', tag:'rest', dur:'—',
+    content:{ kind:'rest', note:'Valeria descansó por estado de ánimo y actividades del día. La bici larga de 70 min prescrita para hoy NO se hizo — se movió al domingo (ver entrada siguiente). Decisión razonable: forzar una sesión de volumen cuando el ánimo no acompaña rara vez sale bien, y esta semana ya venía con cólico jueves + flujo viernes.'} },
+
+  { dayLabel:'DOM', dayDate:'5 Jul', type:'bike', icon:'🚴', title:'⚠️ EJECUTADA (movida de sábado) · Ruta T100 · 108 min — muy por encima de lo prescrito', tag:'bike', dur:'108.4 min',
+    content:{ kind:'session', stats:[{v:'⚠️ 108.4 min',l:'vs 70 min prescritos'},{v:'33.96 km',l:'Ruta T100 outdoor'},{v:'142 bpm avg',l:'162 máx'},{v:'64.3% Z4+Z5',l:'vs 0% esperado'}],
       sections:[
-        {head:'🏃 CALENTAMIENTO — Activación caminata (5 min)', cols:['Min','Bloque','Cómo hacerlo','Foco'], rows:[
-          ['0-2','Caminata fácil','Caminar a paso normal','Soltar piernas'],
-          ['2-4','Caminata dinámica','Caminar elevando rodillas suavemente + balanceo brazos','Activar cadera y hombros'],
-          ['4-5','Caminata progresiva','Casi-trote, ritmo creciente','FC sube a Z1 (100-120 bpm)'],
+        {head:'✅ EJECUCIÓN REAL — Resumen', cols:['Métrica','Prescrito (sáb, movido)','Ejecutado (dom)','Análisis'], rows:[
+          ['Duración','70 min','108.4 min','+38 min · 54% más de lo prescrito'],
+          ['Distancia','~26 km','33.96 km','Consistente con más tiempo + más intensidad'],
+          ['FC promedio','Z2 conversacional (~120-125)','142 bpm','Muy por encima de Z2'],
+          ['FC máxima','—','162 bpm','Z5b — esfuerzo exigente, no endurance'],
+          ['Z2 %','80%+ esperado','13.0%','Objetivo de zona NO cumplido'],
+          ['Z4+Z5 %','0% esperado','64.3%','Casi dos tercios del tiempo en zonas altas'],
         ]},
-        {head:'🏃 BLOQUE PRINCIPAL — Run-Walk 5:1 hasta 6 KM (~54 min)', cols:['Ciclo','Distancia esperada','Estructura','FC + Notas'], rows:[
-          ['1','~1 km en correr + walk','5 min CORRE + 1 min CAMINA','Z2 122-134 · Ritmo INICIAL muy fácil — no te dejes llevar'],
-          ['2','~1 km','5 min CORRE + 1 min CAMINA','Z2 122-134 · cuerpo caliente — MISMO ritmo'],
-          ['3','~1 km','5 min CORRE + 1 min CAMINA','Z2 122-134 · ecuador — autoevalúa: ¿puedes hablar?'],
-          ['4','~1 km','5 min CORRE + 1 min CAMINA','Z2 122-134 · si FC > 134 EXTIENDE la caminata'],
-          ['5','~1 km','5 min CORRE + 1 min CAMINA','Z2 122-134 · ya llevas 5km · NO aceleres aunque te sientas bien'],
-          ['6','~1 km','5 min CORRE + 1 min CAMINA','Z2 122-134 · sexto km — completa hasta 6km exactos'],
-          ['Ajuste final','Hasta llegar a 6.0km','Caminar si llegaste a 6km mid-ciclo','La DISTANCIA manda · no el tiempo'],
+        {head:'📊 LAP POR LAP (auto-lap cada 5km, terreno T100 — variable)', cols:['Lap','Duración','Distancia','Velocidad','FC avg/max'], rows:[
+          ['1','21.1 min','5.00 km','14.2 km/h','132/157'],
+          ['2','11.0 min','5.00 km','27.3 km/h','141/149'],
+          ['3','13.7 min','5.00 km','21.9 km/h','144/159'],
+          ['4','14.4 min','5.00 km','20.9 km/h','142/155'],
+          ['5','17.5 min','5.00 km','17.1 km/h','151/162'],
+          ['6','18.7 min','5.00 km','16.0 km/h','145/160'],
+          ['7','12.0 min','3.96 km','19.8 km/h','136/154'],
         ]},
-        {head:'🏃 ENFRIAMIENTO — Caminata + estiramientos (5 min)', cols:['Min','Bloque','Cómo hacerlo','Foco'], rows:[
-          ['0-3','Caminata progresivamente lenta','Caminar bajando ritmo gradualmente','FC baja a <122'],
-          ['3-5','Estiramientos estáticos','30s cada uno: cuádriceps, pantorrilla, isquiotibial, glúteo, psoas','Recuperación + flexibilidad'],
-        ]},
-        {head:'🏃 REGLAS CRÍTICAS PARA LA TIRADA LARGA', cols:['Regla','Cómo aplicarla','Por qué'], rows:[
-          ['DISTANCIA fija (6 km)','NO 5.9 km · NO 6.1 km · 6.0 EXACTO','En W8 corriste 3.74km cuando pedimos 55 min — la zona te frenó porque tu Z2 es lenta. Con DISTANCIA, no te detienes hasta llegar'],
-          ['Si FC sube a 134+','CAMINA hasta que baje a 125 antes de retomar','La zona MANDA dentro de la distancia · esto centra la FC en mitad de Z2'],
-          ['Si llegas a 6km mid-ciclo','Camina los metros restantes hasta enfriamiento','Completar 6km en Z2 > completar el ciclo completo'],
-          ['Ritmo esperado','~9:23-10:00 min/km (varía con FC)','Tu ritmo natural Z2 — NO intentes ir más rápido'],
-          ['Si te sientes increíble','RESISTE acelerar · sigue 9:23 igual','Quien acelera la larga, paga después · esto NO es carrera'],
-          ['Terreno','Caminadora o terreno PLANO','Cuestas suben la FC sola — sales de Z2 sin querer'],
-        ]},
-        {head:'🏃 CRITERIO DE ÉXITO', cols:['Métrica','Meta','Si NO se cumple'], rows:[
-          ['Distancia','6.0 km exactos','La sesión NO termina hasta los 6km'],
-          ['Tiempo en Z2','85%+ del tiempo total','Si fue < 70% Z2 → ajustamos ritmo W10'],
-          ['FC promedio','125-130 bpm','Si > 132 prom → era más rápido de lo aeróbico'],
-          ['Sensación al final','"Podría correr 2-3 km más"','Si terminas exhausta → recortamos volumen W10'],
+        {head:'⚠️ PATRÓN — Tercera vez esta semana que se excede la intensidad prescrita en bici', cols:['Día','Prescrito','Ejecutado','Zona real'], rows:[
+          ['Martes','Z2 70% FTP (91W)','113W (87% FTP)','46% del tiempo en Z5a'],
+          ['Jueves','NEURO alternado 50-55/100-110 rpm','Cadencia constante 85-109, sin protocolo','Incompleta por cólico'],
+          ['Domingo (hoy)','Z2 endurance 70 min','108 min, 64% en Z4+Z5','Ruta T100 — terreno exigente'],
         ]},
       ],
-      _calc:'5 + ~54 + 5 = ~64 min · DISTANCIA GOBERNADA: 6 km',
-      coachNote:'<strong>🔴 PRIMERA TIRADA LARGA GOBERNADA POR DISTANCIA:</strong> 6 km PUNTO. La zona (Z2 122-134) es el FILTRO, la distancia es el OBJETIVO. Esto cambia respecto a W8 — antes era por tiempo, lo cual te hizo correr solo 3.74km. AHORA: no paras hasta los 6km, pero respetando la zona (camina si la FC sube). Esta es la base para subir: 6 → 7 → 8 → 10 → 12 → 14 → 16 → 18 (pico) en las próximas 9 semanas. Pico es 18km porque 21.1 NO se corre en entrenamiento — se reserva para Cozumel.',
-      tip:'⚠️ MENTAL: Esta sesión es donde más fácil es romperse o aburrirse. Estrategia: divide los 6km en 3 tercios de 2km. Cada tercio es un mini-objetivo. ⚠️ FÍSICO: A los 5km vas a sentir tentación de "terminar fuerte" — RESISTE. Termina con la misma cadencia y ritmo del km 1. Si lo haces así, mañana las piernas estarán frescas para W10.' } },
+      _calc:'Suma de laps: 21.1+11.0+13.7+14.4+17.5+18.7+12.0=108.4 min',
+      coachNote:'<strong>Patrón consistente, no un evento aislado.</strong> Esta es la tercera sesión de bici de la semana que excede sustancialmente la intensidad prescrita. La ruta T100 tiene terreno variable (velocidades de 14-27 km/h lo confirman — hay subidas reales), lo que explica parte de la intensidad, pero no toda: FC promedio de 142 con 64% del tiempo en Z4+Z5 es un esfuerzo de tempo/umbral, no una rodada larga de resistencia. Combinado con el patrón del martes (87% FTP sostenido) y el hecho de que el jueves tampoco siguió el protocolo de cadencia, hay evidencia suficiente para reabrir la conversación de recalibración de FTP en W10 — no como sospecha aislada, sino como patrón de tres puntos de datos.',
+      tip:'⚠️ Esta sesión se movió del sábado (descanso) al domingo, y hoy (día siguiente) está planteado un run de 6 km — verificar primero si hoy es lunes, porque el lunes es descanso fijo sin excepciones. Independientemente del día, meter un run inmediatamente después de 108 min con 64% en zonas altas no da tiempo real de recuperación.' } },
+
+
+
+
+
 ];
 
+const VALERIA_W10 = [
+  { dayLabel:'LUN', dayDate:'6 Jul', type:'rest', icon:'🧘', title:'Descanso · Regla fija + recuperación post-domingo', tag:'rest', dur:'—',
+    content:{ kind:'rest', note:'Descanso fijo de lunes, sin excepciones. Doblemente justificado hoy: domingo fue una rodada de 108 min con 64% del tiempo en Z4-Z5 — el cuerpo necesita este día completo. Sin actividad estructurada. Hidratación + sueño 7-8h + movilidad pasiva opcional.'} },
 
+  { dayLabel:'MAR', dayDate:'7 Jul', type:'swim', icon:'🏊', title:'DOBLE · ✓ Bici Ejecutada (62.4 min) + ⚠️ Nado Incompleto (750m de 1100m — cerraron carriles)', tag:'swim', dur:'83.5 min ejecutados',
+    content:{ kind:'session', stats:[{v:'✓ 98W avg',l:'Bici — coincide con target'},{v:'⚠️ 750m de 1100m',l:'Nado — carriles retirados'},{v:'21.1 min nado',l:'70.7% Z1 · 26.9% Z2'},{v:'Orden: Bici→Nado',l:'Por logística'}],
+      sections:[
+        {head:'✅ BICI EJECUTADA — Resumen (hecha primero, por logística)', cols:['Métrica','Prescrito (recalibrado)','Ejecutado','Análisis'], rows:[
+          ['Duración','65 min','62.4 min','Cercano, -2.6 min'],
+          ['Watts promedio','98W (70% de 140W)','98W','✓ Coincide casi exacto — valida la recalibración de FTP'],
+          ['FC promedio','Z2 conversacional','124 bpm','✓ Dentro de Z2'],
+          ['Z2 %','80%+','69.7%','Bueno, algo por debajo del objetivo pero sin excesos'],
+          ['Z4+Z5 %','0%','0%','✓ Cumplido — contraste total con las 3 semanas anteriores'],
+          ['Cadencia promedio','85-90 rpm','79 rpm','Ligeramente baja, sin drills prescritos hoy (sesión Z2 pura)'],
+        ]},
+        {head:'📊 BICI — Lap por lap', cols:['Lap','Duración','Distancia','Velocidad','FC avg/max','Watts avg'], rows:[
+          ['1 (calent.)','10.0 min','3.79 km','22.7 km/h','107/120','77W'],
+          ['2 (bloque Z2)','50.0 min','21.71 km','26.1 km/h','127/139','103W'],
+          ['3 (enfr.)','2.4 min','0.90 km','22.5 km/h','122/130','65W'],
+        ]},
+        {head:'🎯 EVALUACIÓN COACH — Primera sesión con FTP recalibrado', cols:['Aspecto','Análisis'], rows:[
+          ['Validación del ajuste','98W ejecutado = 98W prescrito exacto — el FTP de 140W está bien calibrado'],
+          ['Contraste con semanas previas','0% en Z4/Z5 vs 46-64% en las tres sesiones anteriores — primera vez que se respeta la zona Z2 real'],
+          ['Orden invertido','Bici antes que nado, por logística del día — sin impacto negativo aparente en esta sesión'],
+        ]},
+        {head:'⚠️ NADO — EJECUCIÓN INCOMPLETA (causa externa: cerraron carriles de la alberca)', cols:['Métrica','Prescrito','Ejecutado','Análisis'], rows:[
+          ['Distancia','1100m','750m','68% de lo prescrito'],
+          ['Tiempo','30 min','21.1 min','70% de lo prescrito'],
+          ['FC promedio','Z1-Z2 técnica','116 bpm','✓ Dentro de zona esperada'],
+          ['Z1 %','—','70.7%','Consistente con trabajo técnico controlado'],
+          ['Z2 %','—','26.9%','—'],
+          ['Z3+ %','0% esperado','2.4%','Prácticamente nulo — sin forzar'],
+          ['Causa de interrupción','—','Retiraron los carriles de la alberca a media sesión','Externa, no física ni de disciplina'],
+        ]},
+        {head:'🎯 EVALUACIÓN COACH — Interrupción externa, no un fallo', cols:['Aspecto','Lectura'], rows:[
+          ['Calidad del fragmento nadado','Técnicamente correcta — FC controlada, sin excursiones a zonas altas'],
+          ['Causa','100% logística de la instalación, fuera del control de Valeria'],
+          ['¿Se compensa esta semana?','No — mismo principio que sesiones perdidas previas: no se repone entre semana, se retoma completo en W11'],
+          ['Acción preventiva','Confirmar si el retiro de carriles en esa alberca es predecible (horario fijo de nado libre/clases) para evitarlo en próximas semanas'],
+        ]},
+      ],
+      _calc:'Bici ejecutada: 10+50+2.4=62.4 min · Nado ejecutado (incompleto): 21.1 min / 750m de 1100m prescritos (interrumpido por causa externa)',
+      coachNote:'<strong>Primera sesión de bici bien ejecutada en Z2 real desde que empezamos a monitorear el patrón.</strong> 98W promedio coincide casi exacto con el target recalibrado (98W = 70% de 140W), 0% en Z4/Z5, FC 124 bpm consistente con esfuerzo conversacional. Esto valida que el ajuste de FTP hecho para W10 fue acertado — no hace falta subir más el número por ahora, hace falta ver si este patrón se repite en las próximas sesiones de bici antes de confirmarlo como la nueva normalidad. <strong>Sobre el nado:</strong> la interrupción fue por causa externa (retiro de carriles), no por decisión ni límite físico — el fragmento completado (750m) fue técnicamente limpio, sin necesidad de ajustar nada del enfoque.',
+      tip:'⚠️ El nado sigue pendiente para hoy — completar los 1100m con la estructura de siempre (ver abajo). ⚠️ Vale la pena notar si el orden invertido (bici→nado) afecta la sensación en el agua — la técnica normalmente se beneficia de cuerpo fresco al nadar primero.' } },
 
+  { dayLabel:'MIÉ', dayDate:'8 Jul', type:'run', icon:'⛰️', title:'✅ EJECUTADA · Cuestas — Introducción (4×20s) · 32.6 min', tag:'run', dur:'32.6 min',
+    content:{ kind:'session', stats:[{v:'✓ 12.0 min',l:'Calentamiento exacto'},{v:'✓ 150-152bpm',l:'Pico consistente 4 reps'},{v:'2491m',l:'Total recorrido'},{v:'120bpm avg',l:'155 max'}],
+      sections:[
+        {head:'✅ EJECUCIÓN REAL — Estructura vs prescrito', cols:['Fase','Prescrito','Ejecutado','Análisis'], rows:[
+          ['Calentamiento','12 min (5+4+3)','12.0 min exacto','✓ Coincidencia perfecta'],
+          ['Bloque (4×20s+2min)','9:20','9.2 min','✓ Prácticamente exacto'],
+          ['Enfriamiento','10 min','11.2 min','Un poco más largo, sin problema'],
+          ['TOTAL','31:20','32.6 min','✓ Estructura respetada'],
+        ]},
+        {head:'📊 FC pico real por repetición (medido en recuperación, no en la subida)', cols:['Repetición','FC max en la subida (18-20s)','FC max real (lap de recuperación)','Análisis'], rows:[
+          ['1','146 bpm','152 bpm','Pico real llega después — retraso normal de FC en esfuerzos cortos'],
+          ['2','144 bpm','152 bpm','Idéntico a la rep 1 — sin decaimiento'],
+          ['3','136 bpm','151 bpm','Consistente'],
+          ['4','124 bpm','150 bpm','La FC en la subida baja en apariencia, pero el pico real (150) es igual que las anteriores — NO hubo caída de esfuerzo real'],
+        ]},
+        {head:'🎯 EVALUACIÓN COACH', cols:['Aspecto','Resultado'], rows:[
+          ['Cumplimiento estructural','Excelente — calentamiento exacto, bloque casi exacto'],
+          ['Dosificación del RPE 7-8','Validada — FC pico consistente 150-152 en las 4 reps, sin decaer'],
+          ['Fatiga acumulada','Ninguna señal — la 4ª repetición costó igual que la 1ª'],
+          ['Primera sesión de calidad del programa','Ejecutada limpia — listo para considerar subir a 5-6 repeticiones la próxima vez'],
+        ]},
+      ],
+      _calc:'Ejecutado: Calent 5+4+3=12.0 · Bloque 4×(0.3+2.0)=9.2 · Enfr 10.0+1.2=11.2 · Total=32.6 min',
+      coachNote:'<strong>Primera sesión de calidad del programa, ejecutada casi perfecta.</strong> La estructura coincide con lo prescrito lap por lap. Lo más valioso del análisis: la FC pico real (medida en el lap de recuperación, no en la subida misma, porque 20 segundos no le dan tiempo a la FC de reflejar el esfuerzo) fue consistente en 150-152 bpm en las 4 repeticiones — esto confirma que el RPE 7-8 estuvo bien dosificado y que no hubo fatiga progresiva entre reps.',
+      tip:'⚠️ Con esta ejecución limpia y sin señales de sobrecarga, la próxima sesión de cuestas puede subir a 5-6 repeticiones — el cuerpo demostró que tolera bien el estímulo. ⚠️ Preguntar cómo sintió las piernas al día siguiente (jueves, antes del NEURO) antes de confirmar la progresión.' } },
+  { dayLabel:'JUE', dayDate:'9 Jul', type:'bike', icon:'⚡', title:'Bici Fuerza+Cadencia (NEURO) · 6×(6min 72% + 1min drill) · FTP recalibrado', tag:'bike', dur:'66 min',
+    content:{ kind:'session', stats:[{v:'66 min',l:'Total'},{v:'72% (101W)',l:'Fuerza'},{v:'ERG obligatorio',l:'Confirmar antes'},{v:'6×7 min',l:'Estructura'}],
+      sections:[
+        {head:'🚴 CALENTAMIENTO (12 min)', cols:['Bloque','Duración','% FTP','Watts','Cadencia'], rows:[
+          ['Activación','6 min','50%','70W','Libre'],['Progresivo','3 min','55-60%','77-84W','Libre'],
+          ['Pre-activación cadencia','3 min','55%','77W','Alternar 30s a 60rpm + 30s a 100rpm ×3'],
+        ]},
+        {head:'🚴 BLOQUE PRINCIPAL — 6 Repeticiones de 7 min (42 min)', cols:['Rep','Fase','Duración','% FTP','Watts','Cadencia'], rows:[
+          ['1','FUERZA','6 min','72%','101W','50-55 rpm · GRINDEA'],['1','CADENCIA','1 min','55%','77W','100-110 rpm · pies ligeros'],
+          ['2','FUERZA','6 min','72%','101W','50-55 rpm'],['2','CADENCIA','1 min','55%','77W','100-110 rpm'],
+          ['3','FUERZA','6 min','72%','101W','50-55 rpm · CADENCIA es la llave'],['3','CADENCIA','1 min','55%','77W','100-110 rpm'],
+          ['4','FUERZA','6 min','72%','101W','50-55 rpm'],['4','CADENCIA','1 min','55%','77W','100-110 rpm'],
+          ['5','FUERZA','6 min','72%','101W','50-55 rpm · MANTÉN, no subas'],['5','CADENCIA','1 min','55%','77W','100-110 rpm'],
+          ['6','FUERZA','6 min','72%','101W','50-55 rpm · ÚLTIMA'],['6','CADENCIA','1 min','55%','77W','100-110 rpm · soltar'],
+        ]},
+        {head:'🚴 ENFRIAMIENTO (12 min)', cols:['Bloque','Duración','% FTP','Watts'], rows:[
+          ['Bajada','5 min','50%','70W'],['Spin','5 min','45%','63W'],['Vuelta a calma','2 min','40%','56W'],
+        ]},
+        {head:'🚴 VERIFICACIÓN OBLIGATORIA ANTES DE EMPEZAR — Prueba que Valeria hace ella misma', cols:['Paso','Cómo hacerlo','Qué significa'], rows:[
+          ['1. Revisar en la app Tacx que el workout cargado diga "ERG" (no "Slope" ni "Manual")','Antes de arrancar, en la pantalla del workout activo','Si dice ERG, confirmado — procede normal'],
+          ['2. Si no está seguro o no aparece la etiqueta: prueba funcional en los primeros 30s de la Rep 1','Al bajar a 50-55 rpm en el primer bloque de fuerza, presta atención a las piernas: ¿sientes que el pedal se pone MÁS PESADO cuando bajas la cadencia?','SÍ se puso pesado = ERG activo, correcto. NO cambió nada = ERG apagado, avisa antes de seguir'],
+          ['3. Si ERG está apagado','Detente y actívalo desde la app antes de continuar — no vale la pena hacer los 66 min sin el estímulo correcto','—'],
+        ]},
+      ],
+      _calc:'12+42+12=66 min',
+      coachNote:'<strong>Repetición de la sesión que falló en protocolo la semana pasada</strong> — no por el cólico (eso justificó parar), sino porque la cadencia nunca bajó a 50-55 rpm en los 33 min completados. Antes de empezar hoy, confirma modo ERG. Sin eso, esta sesión no genera el estímulo de fuerza que buscamos aunque completes los 66 minutos.',
+      tip:'⚠️ Si en cualquier repetición el rodillo NO sube resistencia al bajar a 50-55 rpm, DETENTE y verifica el modo antes de seguir — completar la sesión sin ERG activo es tiempo sin el estímulo correcto.' } },
 
+  { dayLabel:'VIE', dayDate:'10 Jul', type:'swim', icon:'🏊', title:'DOBLE · Nado Volumen (1800m · 40 min · CSS recalibrado) + Fuerza Gym (25 min)', tag:'swim', dur:'65 min',
+    content:{ kind:'session', stats:[{v:'1800m',l:'94.7% de Cozumel'},{v:'CSS 1:53/100m',l:'Recalibrado'},{v:'25 min',l:'Gym sin cambio'},{v:'65 min total',l:'DOBLE'}],
+      sections:[
+        {head:'🏊 NADO VOLUMEN — Calentamiento (8 min · 300m)', cols:['Bloque','Distancia','Descanso','Cómo hacerlo'], rows:[
+          ['Crol progresivo','4×50m=200m','R15s','Cada 50m un poco más rápido'],['Catch-up activación','2×50m=100m','R10s','Drill técnica antes del volumen'],
+        ]},
+        {head:'🏊 NADO VOLUMEN — Bloque Principal (28 min · 1300m · CSS 1:53/100m)', cols:['Set','Distancia','Descanso','Cómo hacerlo'], rows:[
+          ['Set 1: 4×100m','400m','R20s','CSS ~1:53/100m, respira cada 3 brazadas'],
+          ['Set 2: 2×200m','400m','R30s','Mismo ritmo, doblando distancia sin parar'],
+          ['Set 3: 1×300m continuo','300m','—','Sin parar, cuenta brazadas cada 100m estable'],
+          ['Set 4: 2×100m fuerte','200m','R30s','RPE 6, ~1:48/100m — cambio de marcha final'],
+        ]},
+        {head:'🏊 NADO VOLUMEN — Vuelta a la calma (4 min · 200m)', cols:['Bloque','Distancia','Cómo hacerlo'], rows:[
+          ['Crol muy fácil','100m','Ritmo muy lento'],['Espalda/flotación','100m','Relajación total'],
+        ]},
+        {head:'🏊 VERIFICACIÓN — TOTAL 1800m', cols:['Sección','Distancia','Tiempo'], rows:[
+          ['Calentamiento','300m','8 min'],['Bloque Principal','1300m','28 min'],['Vuelta a calma','200m','4 min'],['TOTAL','1800m','40 min'],
+        ]},
+        {head:'💪 FUERZA GYM — Composición completa (25 min)', cols:['Ejercicio','Series×Reps','Cómo hacerlo paso a paso','Qué trabaja'], rows:[
+          ['Calentamiento (3 min)','—','1min círculos cadera + 1min puentes glúteo (10 reps) + 1min rotaciones torso','Activación'],
+          ['1. Dead Bug','3×10 por lado','Boca arriba, brazos al techo, rodillas a 90°. Baja brazo derecho + pierna izquierda SIN despegar espalda baja. Cambia lado.','Core anti-extensión'],
+          ['2. Single Leg Glute Bridge','3×10 por lado','Boca arriba, una rodilla flexionada, otra extendida. Empuja con talón, cadera arriba sin arquear. Cambia pierna.','Activa glúteo'],
+          ['3. Superman','3×12','Boca abajo, brazos al frente. Levanta brazos+pecho+piernas simultáneo. Sostén 2s. Baja con control.','Espalda baja'],
+          ['4. Plank','3×30 seg','Codos bajo hombros, cuerpo recto, aprieta glúteo+abdomen, respira normal.','Core estabilizador'],
+          ['Descanso entre series','30-40 seg','Caminando','—'],
+          ['Estiramientos (2 min)','—','Cadera, espalda baja, hombros — 20-30s c/u','Cool-down'],
+        ]},
+      ],
+      _calc:'Nado: 300+1300+200=1800m en 8+28+4=40 min · Gym: 3+20+2=25 min · Total: 65 min',
+      coachNote:'<strong>Primera sesión de volumen con CSS real (1:53/100m).</strong> Los sets ahora reflejan tu ritmo confirmado, no el asumido de 2:00. 1800m sigue cubriendo 94.7% de Cozumel.',
+      tip:'⚠️ Si 1:53/100m se siente demasiado cómodo en el Set 1, es señal de que la CSS real es aún más rápida — repórtalo para seguir ajustando.' } },
+
+  { dayLabel:'SÁB', dayDate:'11 Jul', type:'bike', icon:'🚴', title:'Bici Resistencia Larga · 70 min · FTP recalibrado + drills cadencia', tag:'bike', dur:'70 min',
+    content:{ kind:'session', stats:[{v:'70 min',l:'Duración'},{v:'98W base',l:'70% de 140W'},{v:'6 drills cadencia',l:'Embebidos'},{v:'~26-27 km',l:'Estimado'}],
+      sections:[
+        {head:'🚴 CALENTAMIENTO (10 min)', cols:['Min','% FTP','Watts','Cadencia'], rows:[
+          ['0-3','50%','70W','Libre'],['3-7','55-60%','77-84W','Libre'],['7-10','65%','91W','85-90 rpm'],
+        ]},
+        {head:'🚴 BLOQUE PRINCIPAL — Z2 + Drills (55 min)', cols:['Min','Bloque','% FTP','Watts','Cadencia'], rows:[
+          ['0-9','BASE Z2','70%','98W','85-90 rpm'],['9-10','DRILL 1','55%','77W','100-110 rpm'],
+          ['10-18','BASE Z2','70%','98W','85-90 rpm'],['18-19','DRILL 2','55%','77W','100-110 rpm'],
+          ['19-27','BASE Z2','70%','98W','85-90 rpm'],['27-28','DRILL 3','55%','77W','100-110 rpm'],
+          ['28-36','BASE Z2','70%','98W','85-90 rpm'],['36-37','DRILL 4','55%','77W','100-110 rpm'],
+          ['37-45','BASE Z2','70%','98W','85-90 rpm'],['45-46','DRILL 5','55%','77W','100-110 rpm'],
+          ['46-54','BASE Z2','70%','98W','85-90 rpm'],['54-55','DRILL 6','55%','77W','100-110 rpm'],
+        ]},
+        {head:'🚴 ENFRIAMIENTO (5 min)', cols:['Min','% FTP','Watts'], rows:[
+          ['0-2','50%','70W'],['2-4','45%','63W'],['4-5','40%','56W'],
+        ]},
+      ],
+      _calc:'10+55+5=70 min',
+      coachNote:'<strong>Volumen bici con números recalibrados.</strong> 98W (70% de 140W) reemplaza los 91W previos. Objetivo: mantener Z2 real esta vez — la semana pasada esta misma sesión se ejecutó como esfuerzo de tempo (108 min, 64% en Z4-Z5) en la ruta T100. Hoy, si es indoor con ERG, más fácil mantener el número exacto.',
+      tip:'⚠️ Si vas a rodar outdoor otra vez, ten en cuenta que el terreno variable empuja la intensidad hacia arriba sin querer — considera indoor esta semana para consolidar el número real de Z2.' } },
+
+  { dayLabel:'DOM', dayDate:'12 Jul', type:'run', icon:'🏃', title:'Run LARGA · 7 km Z2 · DISTANCIA FIJA · run-walk 5:1', tag:'run', dur:'~66 min',
+    content:{ kind:'session', stats:[{v:'7 km FIJO',l:'Progresión desde 6km'},{v:'~66 min',l:'Estimado a 9:23/km'},{v:'Z2',l:'122-134 bpm · 85-89% FCU'},{v:'Primera vez',l:'a esta distancia'}],
+      sections:[
+        {head:'🏃 CALENTAMIENTO (5 min)', cols:['Min','Bloque','Zona objetivo','Cómo hacerlo'], rows:[
+          ['0-2','Caminata fácil','Z1 Recovery, <121 bpm (<85% FCU)','Soltar piernas'],['2-4','Caminata dinámica','Z1 Recovery, <121 bpm (<85% FCU)','Rodillas suave + balanceo brazos'],['4-5','Caminata progresiva','Z1 Recovery → subiendo hacia Z2 (121-125 bpm aprox)','Casi-trote'],
+        ]},
+        {head:'🏃 BLOQUE PRINCIPAL — Run-Walk 5:1 hasta 7 KM (~56 min)', cols:['Ciclo','Distancia esperada','Estructura','Notas'], rows:[
+          ['1','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · ritmo inicial fácil'],
+          ['2','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · mismo ritmo'],
+          ['3','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · ecuador, autoevalúa'],
+          ['4','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · si FC>134 (>89% FCU) extiende caminata'],
+          ['5','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · ya 5km, no aceleres'],
+          ['6','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · sexto km'],
+          ['7','~1 km','5min correr+1min camina','Z2 122-134 bpm (85-89% FCU) · PRIMERA VEZ a 7km — nueva distancia'],
+          ['Ajuste final','Hasta 7.0km','Caminar si llega mid-ciclo','La DISTANCIA manda'],
+        ]},
+        {head:'🏃 ENFRIAMIENTO (5 min)', cols:['Min','Bloque','Zona objetivo','Cómo hacerlo'], rows:[
+          ['0-3','Caminata lenta','Z1 Recovery, <121 bpm (<85% FCU) — bajando desde Z2','Bajar ritmo'],['3-5','Estiramientos','Z1 Recovery, <121 bpm (<85% FCU)','Cuádriceps, pantorrilla, isquiotibial, glúteo, psoas'],
+        ]},
+        {head:'🏃 REGLAS CRÍTICAS', cols:['Regla','Por qué'], rows:[
+          ['DISTANCIA fija 7km, no 6.9 ni 7.1','Progresión real desde los 6km planeados de la semana pasada (que no se ejecutaron)'],
+          ['Si FC sube a 134+, CAMINA hasta 125','La zona manda dentro de la distancia'],
+          ['Terreno PLANO o caminadora','Cuestas suben FC sin querer'],
+          ['Si te sientes increíble, RESISTE acelerar','Esto no es carrera'],
+        ]},
+      ],
+      _calc:'5+~56+5=~66 min · DISTANCIA GOBERNADA: 7 km',
+      coachNote:'<strong>Primera vez a 7 km — absorbe el paso saltado de la semana pasada.</strong> La W9 tenía 6 km programados pero nunca se ejecutaron (sábado descanso, domingo bici). En vez de repetir 6 km esta semana, seguimos la progresión a 7 km directamente — decisión consciente de no sumar otra sesión a una semana ya irregular. Si 7 km se siente notablemente más duro que los 6 km de hace dos semanas, es señal para reconsiderar el ritmo de progresión en W11.',
+      tip:'⚠️ Presta atención especial a cómo se siente el km 6-7 (territorio nuevo) comparado con el km 1-5 (ya conocido). Esa comparación es el dato más importante de la sesión.' } },
+];
 
 const CHARLY = [
   { dayLabel:'LUN', dayDate:'25 May', type:'str', icon:'💪', title:'Fuerza B', tag:'str', dur:'45 min',
@@ -2215,7 +2386,7 @@ const ARMANDO_W1 = [
 const WEEK_DATA = {
   jorge:    { 4: JORGE, 9: JORGE_W9 },
   armando:  { 1: ARMANDO_W1 },
-  valeria:  { 4: VALERIA, 5: VALERIA_W5, 6: VALERIA_W6, 7: VALERIA_W7, 8: VALERIA_W8, 9: VALERIA_W9 },
+  valeria:  { 4: VALERIA, 5: VALERIA_W5, 6: VALERIA_W6, 7: VALERIA_W7, 8: VALERIA_W8, 9: VALERIA_W9, 10: VALERIA_W10 },
   charly:   { 4: CHARLY },
   santiago: { 4: SANTIAGO },
 };
@@ -3072,13 +3243,17 @@ function buildVBar(ch) {
       }, 1500);
     });
   }
-  // Service worker (offline) — registra si el entorno lo permite
+  // Service worker: DESACTIVADO — el registro anterior via blob URL causaba que
+  // dispositivos con el SW ya instalado quedaran atorados sirviendo versiones viejas
+  // (fetch handler con URL de blob es fragil, el scope no se resuelve de forma confiable).
+  // Desregistramos cualquier SW ya instalado de esta pagina para liberar a los dispositivos atorados.
   if('serviceWorker' in navigator){
-    try {
-      const swCode = 'self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!=="604tri-v2").map(k=>caches.delete(k)))));self.clients.claim();});self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(resp=>{const cp=resp.clone();caches.open("604tri-v2").then(c=>c.put(e.request,cp));return resp;}).catch(()=>caches.match(e.request)))});';
-      const blob = new Blob([swCode], {type:'application/javascript'});
-      navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(function(){});
-    } catch(e){}
+    navigator.serviceWorker.getRegistrations().then(function(regs){
+      regs.forEach(function(reg){ reg.unregister(); });
+    }).catch(function(){});
+    if('caches' in window){
+      caches.keys().then(function(names){ names.forEach(function(n){ caches.delete(n); }); }).catch(function(){});
+    }
   }
 })();
 
