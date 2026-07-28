@@ -1,0 +1,12 @@
+{
+  "name": "604 Tri Club - Jorge",
+  "short_name": "604 Tri Jorge",
+  "description": "Plan de entrenamiento de Jorge: base aeróbica, pérdida de peso y preparación de larga distancia.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f3f5f8",
+  "theme_color": "#1a2030",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
