@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1a2030">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="604 Tri Jorge">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>604 Tri Club · Jorge · Base Aeróbica</title>
+<style>
+:root{--ink:#172033;--muted:#6f7d8e;--bg:#f3f5f8;--card:#fff;--line:#dfe4eb;--gold:#f0c842;--nav:#1a2030;--swim:#0284c7;--bike:#d97706;--run:#059669;--rest:#7c3aed;--danger:#b42318}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
+header{background:var(--nav);color:#fff;padding:20px 28px;border-bottom:4px solid var(--gold);position:sticky;top:0;z-index:10}
+.brand{font-size:23px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.brand b{color:var(--gold)}.brand span{font-size:12px;color:#aeb8c6;margin-left:12px;font-weight:600}
+.header-sub{font-size:12px;color:#aeb8c6;margin-top:5px}.install-btn{margin-top:10px;background:var(--gold);color:#172033;border:0;border-radius:8px;padding:9px 13px;font-weight:900;cursor:pointer}.install-btn[hidden]{display:none}
+.wrap{max-width:1180px;margin:0 auto;padding:22px}
+.profile{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(20,30,50,.05)}
+h1{font-size:27px;margin:0 0 5px}h2{font-size:17px;margin:0 0 10px}p{line-height:1.55}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.chip{background:#f1f3f6;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700}
+.goal{background:#fff9dd;border-color:#efd76b}.safety{border-left:4px solid var(--danger);font-size:12px;color:#4a5565}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.principle{background:#f7f8fa;border:1px solid var(--line);padding:10px;border-radius:8px;font-size:11px;line-height:1.4}.principle b{display:block;font-size:12px;margin-bottom:2px}
+.tabs{display:flex;gap:7px;overflow:auto;margin:18px 0 12px}.tab{border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 15px;font-weight:800;cursor:pointer;white-space:nowrap}.tab.active{background:var(--nav);color:#fff;border-color:var(--nav)}
+.week-head{display:flex;align-items:flex-end;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px;flex-wrap:wrap}.week-head h2{font-size:24px;margin:0}.phase{background:#e8f7ef;color:#05603c;border-radius:5px;padding:5px 8px;font-size:11px;font-weight:800;text-transform:uppercase}.load{margin-left:auto;font-size:12px;color:var(--muted)}.focus{font-size:13px;color:var(--muted);width:100%}
+.daygrid{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-bottom:15px}.day{background:#fff;border:1px solid var(--line);border-radius:9px;padding:11px 9px;min-height:116px;cursor:pointer;position:relative;transition:.15s}.day:hover,.day.active{transform:translateY(-1px);box-shadow:0 4px 13px rgba(20,30,50,.09)}.day.active{border-color:var(--nav)}.day .dow{font-size:10px;color:var(--muted);font-weight:900;letter-spacing:1px}.day .ico{font-size:22px;margin:7px 0}.day .nm{font-size:12px;font-weight:800;line-height:1.25}.day .du{font-size:10px;color:var(--muted);margin-top:6px}.bar{height:4px;position:absolute;bottom:0;left:0;right:0;border-radius:0 0 9px 9px}.bar.swim{background:var(--swim)}.bar.bike{background:var(--bike)}.bar.run{background:var(--run)}.bar.rest{background:var(--rest)}
+.detail{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(20,30,50,.05)}.detail-head{display:flex;gap:13px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:13px}.detail-head .big{font-size:37px}.detail-head h3{margin:0;font-size:22px}.meta{font-size:12px;color:var(--muted);margin-top:3px}.objective{background:#f7f8fa;border:1px solid var(--line);padding:12px;border-radius:8px;margin:14px 0;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;background:#f1f3f6;color:var(--muted);padding:8px;border-bottom:1px solid var(--line);text-transform:uppercase;font-size:9px;letter-spacing:.8px}td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45}td:first-child{font-weight:800;width:19%}td:nth-child(2){width:16%;font-weight:700}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.note{padding:12px;border-radius:8px;font-size:12px;line-height:1.5}.garmin{background:#eaf5ff;border:1px solid #bdddf4}.coach{background:#fff8d8;border:1px solid #ead16b}.note b{display:block;margin-bottom:4px}
+.footerbox{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.footerbox h2{margin-bottom:8px}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.metric{background:#f7f8fa;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:11px}.metric b{display:block;font-size:13px;margin-bottom:3px}
+.small{font-size:11px;color:var(--muted);line-height:1.5}
+@media(max-width:900px){.profile{grid-template-columns:1fr}.principles{grid-template-columns:repeat(2,1fr)}.daygrid{grid-template-columns:repeat(4,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.wrap{padding:12px}.daygrid{grid-template-columns:repeat(2,1fr)}.notes{grid-template-columns:1fr}.principles{grid-template-columns:1fr}.brand span{display:block;margin:3px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="brand"><b>604</b> Tri Club <span>Training Platform · Jorge</span></div><div class="header-sub">Jorge · Bloque 1 sin fechas · Base aeróbica + pérdida de peso</div><button id="installBtn" class="install-btn" hidden>Instalar en este dispositivo</button></header>
+<div class="wrap">
+<section class="profile">
+<div class="panel">
+<h1>Jorge Latapi</h1>
+<div style="color:var(--muted);font-size:13px">46 años · 186 cm · 140 kg · Retorno al entrenamiento</div>
+<div class="chips"><span class="chip goal">Meta: base aeróbica sólida</span><span class="chip goal">Reducción de peso sostenible</span><span class="chip">Futuro 70.3 sub-7 h</span><span class="chip">Sin competencia definida</span></div>
+<div class="principles">
+<div class="principle"><b>Lunes</b>Descanso fijo.</div>
+<div class="principle"><b>Entre semana</b>Máximo 60 minutos.</div>
+<div class="principle"><b>Fin de semana</b>Solo sesiones largas y aeróbicas.</div>
+<div class="principle"><b>Calidad de carrera</b>Velocidad, fuerza y cuestas preferentemente entre semana.</div><div class="principle"><b>Frecuencia</b>Una actividad principal al día.</div>
+<div class="principle"><b>Piscina</b>Martes y jueves, 25 m.</div>
+<div class="principle"><b>Carrera plana</b>Banda o pista entre semana.</div>
+<div class="principle"><b>Terreno exterior</b>Largos y cuestas caminadas.</div>
+<div class="principle"><b>Intensidad</b>RPE y prueba del habla antes de zonas.</div>
+</div>
+</div>
+<div class="panel safety">
+<h2>Marco de seguridad</h2>
+<p>Bloque deliberadamente submáximo. No incluye test FTP, CSS máximo ni prueba máxima de carrera. Con hipertensión controlada y retorno tras inactividad, las primeras cuatro semanas priorizan ejercicio dinámico moderado, consistencia y observación de la respuesta individual.</p>
+<p><b>Detener y buscar valoración médica</b> ante dolor u opresión de pecho, desmayo, mareo importante, falta de aire desproporcionada, dolor de cabeza intenso inusual o síntomas neurológicos. Evitar contener la respiración durante esfuerzos.</p>
+</div>
+</section>
+<section class="panel" style="margin-bottom:16px;border-left:4px solid var(--run)"><h2>Regla de distribución de carrera</h2><p style="margin:0;font-size:13px">Durante este primer bloque no hay velocidad máxima. En bloques posteriores, la calidad de carrera, incluyendo velocidad, fuerza específica y cuestas, se programará preferentemente de martes a viernes. El fin de semana quedará reservado para el largo, ejecutado de forma aeróbica y controlada.</p></section>
+<div class="tabs" id="tabs"></div>
+<section class="panel" id="week"></section>
+<section class="footerbox">
+<h2>Datos que registraremos después de cada sesión</h2>
+<div class="metrics">
+<div class="metric"><b>RPE final</b>Escala 1–10.</div>
+<div class="metric"><b>FC y potencia</b>Promedio, máxima y bloques.</div>
+<div class="metric"><b>Dolor o molestias</b>0–10 y ubicación.</div>
+<div class="metric"><b>Sueño y HRV</b>Tendencia, no un día aislado.</div>
+<div class="metric"><b>Peso</b>Promedio semanal matutino.</div>
+</div>
+<p class="small">La pérdida de peso no se buscará mediante sesiones excesivas ni entrenamientos largos sin combustible. El entrenamiento crea capacidad y gasto energético; el déficit debe ser sostenible y no comprometer recuperación, presión arterial ni calidad futura. La Semana 4 produce benchmarks submáximos para diseñar el siguiente bloque con datos reales.</p>
+</section>
+</div>
+<script src="week1.js"></script>
+<script src="week2.js"></script>
+<script src="week3.js"></script>
+<script src="week4.js"></script>
+<script>
+const WEEKS=[WEEK1,WEEK2,WEEK3,WEEK4];
+let wi=0,di=0;
+function renderTabs(){const el=document.getElementById('tabs');el.innerHTML=WEEKS.map((w,i)=>`<button class="tab ${i===wi?'active':''}" onclick="selectWeek(${i})">${w.title}<br><span style="font-size:10px;font-weight:500">${w.phase}</span></button>`).join('')}
+function selectWeek(i){wi=i;di=0;renderTabs();renderWeek()}
+function selectDay(i){di=i;renderWeek()}
+function renderWeek(){const w=WEEKS[wi],d=w.days[di];document.getElementById('week').innerHTML=`<div class="week-head"><h2>${w.title}</h2><span class="phase">${w.phase}</span><span class="load">${w.load}</span><div class="focus">${w.focus}</div></div><div class="daygrid">${w.days.map((x,i)=>`<div class="day ${i===di?'active':''}" onclick="selectDay(${i})"><div class="dow">${x.day}</div><div class="ico">${x.icon}</div><div class="nm">${x.name}</div><div class="du">${x.dur}</div><div class="bar ${x.type}"></div></div>`).join('')}</div><div class="detail"><div class="detail-head"><div class="big">${d.icon}</div><div><h3>${d.name}</h3><div class="meta">${d.day} · ${d.dur}</div></div></div><div class="objective"><b>Objetivo:</b> ${d.objective}</div><table><thead><tr><th>Bloque</th><th>Duración / distancia</th><th>Instrucción</th></tr></thead><tbody>${d.steps.map(s=>`<tr><td>${s[0]}</td><td>${s[1]}</td><td>${s[2]}</td></tr>`).join('')}</tbody></table><div class="notes"><div class="note garmin"><b>Garmin / TrainingPeaks</b>${d.garmin}</div><div class="note coach"><b>Nota del entrenador</b>${d.coach}</div></div></div>`}
+renderTabs();renderWeek();
+let deferredPrompt;const installBtn=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.hidden=false});
+installBtn.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.hidden=true});
+window.addEventListener('appinstalled',()=>{installBtn.hidden=true});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+</script>
+</body></html>
