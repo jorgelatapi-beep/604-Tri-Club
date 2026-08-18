@@ -1,0 +1,55 @@
+{
+  "athlete": "Jorge Latapi",
+  "project": "604 Tri Club",
+  "updated": "2026-08-18",
+  "primary_goal": {
+    "event": "Vancouver T100 100 km",
+    "date": "2027-08-15",
+    "priority": "A"
+  },
+  "current_phase": {
+    "name": "Re-entry + Aerobic Foundation",
+    "status": "planned_not_started",
+    "start_date": null,
+    "objectives": [
+      "Build a strong aerobic base",
+      "Return to consistent triathlon training",
+      "Improve durability before introducing substantial intensity",
+      "Support sustainable body-mass reduction while preserving training quality"
+    ]
+  },
+  "weekly_rules": {
+    "monday": "Rest",
+    "weekday_max_minutes": 60,
+    "pool_days": ["Tuesday", "Thursday"],
+    "pool_length_m": 25,
+    "weekday_flat_run": "Treadmill or track when practical",
+    "run_quality": "Preferably Tuesday-Friday once appropriate",
+    "weekend_run": "Long aerobic outdoor run",
+    "weekend_bike": "Long aerobic ride",
+    "bricks": "Only short and purposeful when necessary",
+    "main_sessions_per_day": 1
+  },
+  "equipment": {
+    "watch": "Garmin Fenix 7X Pro",
+    "bike_computer": "Garmin Edge 520",
+    "heart_rate_monitor": "Garmin HRM 600",
+    "indoor_trainer": "Tacx",
+    "power_meter": true,
+    "gym_access": true
+  },
+  "workflow": {
+    "planning": "604 Tri Club",
+    "workout_entry": "TrainingPeaks",
+    "execution": "Garmin",
+    "post_workout_review": "ChatGPT + Garmin/TrainingPeaks data or FIT file",
+    "coaching_cycle": ["Plan", "Execute", "Analyze", "Adjust"]
+  },
+  "current_block": {
+    "weeks_planned": 4,
+    "dated": false,
+    "quality_policy": "No maximal running speed work during initial re-entry block",
+    "benchmark_policy": "Use submaximal benchmarks before setting definitive zones"
+  },
+  "privacy_note": "Health, medical and body-composition data are intentionally not stored here because this repository is public."
+}
