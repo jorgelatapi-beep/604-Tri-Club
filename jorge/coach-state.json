@@ -37,7 +37,10 @@
     "indoor_trainer": "Tacx",
     "power_meter": true,
     "home_gym": {
-      "bench": true,
+      "bench": {
+        "available": true,
+        "adjustable_incline": true
+      },
       "pullup_dip_ab_tower": true,
       "adjustable_dumbbells": true,
       "dumbbell_handles": ["14 in", "16 in"],
