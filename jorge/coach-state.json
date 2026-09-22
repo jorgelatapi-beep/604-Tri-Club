@@ -1,7 +1,7 @@
 {
   "athlete": "Jorge Latapi",
   "project": "604 Tri Club",
-  "updated": "2026-08-18",
+  "updated": "2026-09-22",
   "primary_goal": {
     "event": "Vancouver T100 100 km",
     "date": "2027-08-15",
@@ -36,7 +36,20 @@
     "heart_rate_monitor": "Garmin HRM 600",
     "indoor_trainer": "Tacx",
     "power_meter": true,
-    "gym_access": true
+    "home_gym": {
+      "bench": true,
+      "pullup_dip_ab_tower": true,
+      "adjustable_dumbbells": true,
+      "dumbbell_handles": ["14 in", "16 in"],
+      "short_bar_connector_max_length": "40.5 in",
+      "plates": {
+        "5_lb": 20,
+        "3_lb": 4,
+        "2.5_lb": 4,
+        "1.25_lb": 4,
+        "total_plate_weight_lb": 117
+      }
+    }
   },
   "workflow": {
     "planning": "604 Tri Club",
